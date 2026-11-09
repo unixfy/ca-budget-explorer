@@ -1,0 +1,2835 @@
+{
+	"fiscalYear": "2026-27",
+	"pit": "e",
+	"publication": "Enacted",
+	"publicationDate": "Enacted on June 29, 2026",
+	"years": {
+		"py": "2024-25",
+		"cy": "2025-26",
+		"by": "2026-27"
+	},
+	"units": "thousands",
+	"generatedAt": "2026-11-09T05:14:30.908Z",
+	"generalFund": {
+		"years": {
+			"py": {
+				"beginningBalance": 54258113,
+				"revenues": 220049352,
+				"transfers": {
+					"total": 13589978,
+					"bsa": 4598000,
+					"surplusHolding": 0,
+					"safetyNet": 900000,
+					"other": 8091978,
+					"loans": 537517,
+					"revenueTransfers": 13052461
+				},
+				"revenuesAndTransfers": 233639330,
+				"expenditures": 231190249,
+				"endingBalance": 56707194,
+				"encumbrances": 27997953,
+				"sfeu": 28709241,
+				"prop98": null
+			},
+			"cy": {
+				"beginningBalance": 56707194,
+				"revenues": 236881243,
+				"transfers": {
+					"total": 8935518,
+					"bsa": 7100000,
+					"surplusHolding": 0,
+					"safetyNet": 0,
+					"other": 1835518,
+					"loans": 1333432,
+					"revenueTransfers": 7602086
+				},
+				"revenuesAndTransfers": 245816761,
+				"expenditures": 245302935,
+				"endingBalance": 57221020,
+				"encumbrances": 27997953,
+				"sfeu": 29223067,
+				"prop98": {
+					"prop98": 87746000,
+					"nonProp98": 157557000,
+					"source": {
+						"label": "Budget Summary — Summary Charts (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+						"page": 2
+					}
+				}
+			},
+			"by": {
+				"beginningBalance": 57221020,
+				"revenues": 237358829,
+				"transfers": {
+					"total": -10604697,
+					"bsa": -3574000,
+					"surplusHolding": -6388100,
+					"safetyNet": 0,
+					"other": -642597,
+					"loans": -1005300,
+					"revenueTransfers": -9599397
+				},
+				"revenuesAndTransfers": 226754132,
+				"expenditures": 251477209,
+				"endingBalance": 32497943,
+				"encumbrances": 27997953,
+				"sfeu": 4499990,
+				"prop98": {
+					"prop98": 92931000,
+					"nonProp98": 158546000,
+					"source": {
+						"label": "Budget Summary — Summary Charts (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+						"page": 2
+					}
+				}
+			}
+		},
+		"sources": [
+			{
+				"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+			},
+			{
+				"label": "Budget Summary — Summary Charts (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf"
+			}
+		]
+	},
+	"reserves": {
+		"accounts": [
+			{
+				"id": "bsa",
+				"name": "Budget Stabilization Account",
+				"short": "Rainy Day Fund (BSA)",
+				"fundCode": "1011",
+				"description": "The constitutional rainy-day fund created by Proposition 2 (2014). It receives 1.5% of General Fund revenue each year plus a share of capital-gains revenue; withdrawals require a budget emergency.",
+				"balance": {
+					"py": 18596422,
+					"cy": 11496422,
+					"by": 15070422
+				},
+				"beginPy": 23194422,
+				"inCombined": true,
+				"sources": [
+					{
+						"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+					},
+					{
+						"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+					}
+				],
+				"change": {
+					"py": -4598000,
+					"cy": -7100000,
+					"by": 3574000
+				}
+			},
+			{
+				"id": "psssa",
+				"name": "Public School System Stabilization Account",
+				"short": "School reserve (PSSSA)",
+				"fundCode": "1029",
+				"description": "Proposition 98 reserve for TK-12 schools and community colleges, filled in strong capital-gains years and drawn when the school funding guarantee falls.",
+				"balance": {
+					"py": 5324029,
+					"cy": 9194991,
+					"by": 9194991
+				},
+				"beginPy": 0,
+				"inCombined": true,
+				"sources": [
+					{
+						"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+					},
+					{
+						"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+					}
+				],
+				"change": {
+					"py": 5324029,
+					"cy": 3870962,
+					"by": 0
+				}
+			},
+			{
+				"id": "sfeu",
+				"name": "Special Fund for Economic Uncertainties",
+				"short": "Discretionary reserve (SFEU)",
+				"description": "The General Fund’s discretionary reserve — the part of the ending fund balance not set aside for encumbrances. A positive SFEU is how the State measures a balanced budget.",
+				"balance": {
+					"py": 28709241,
+					"cy": 29223067,
+					"by": 4499990
+				},
+				"beginPy": null,
+				"inCombined": true,
+				"sources": [
+					{
+						"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+					}
+				],
+				"change": {
+					"py": null,
+					"cy": 513826,
+					"by": -24723077
+				}
+			},
+			{
+				"id": "safetyNet",
+				"name": "Safety Net Reserve",
+				"short": "Safety Net Reserve",
+				"fundCode": "1019",
+				"description": "Reserve for CalWORKs and Medi-Cal costs in a downturn. It was fully drawn down in the past year.",
+				"balance": {
+					"py": 0,
+					"cy": 0,
+					"by": 0
+				},
+				"beginPy": 900000,
+				"inCombined": true,
+				"sources": [
+					{
+						"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+					},
+					{
+						"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+					}
+				],
+				"change": {
+					"py": -900000,
+					"cy": 0,
+					"by": 0
+				}
+			},
+			{
+				"id": "surplusHolding",
+				"name": "Projected Surplus Temporary Holding Account",
+				"short": "Surplus Holding Account",
+				"fundCode": "1032",
+				"description": "Created in 2024 to park part of a projected surplus until revenues are realized; the money is allocated in the following fiscal year. Not counted in the official “combined reserves”.",
+				"balance": {
+					"py": 0,
+					"cy": 0,
+					"by": 6388100
+				},
+				"beginPy": 0,
+				"inCombined": false,
+				"sources": [
+					{
+						"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+						"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+					}
+				],
+				"change": {
+					"py": 0,
+					"cy": 0,
+					"by": 6388100
+				}
+			}
+		],
+		"combined": {
+			"py": 52629692,
+			"cy": 49914480,
+			"by": 28765403
+		},
+		"withHolding": {
+			"py": 52629692,
+			"cy": 49914480,
+			"by": 35153503
+		}
+	},
+	"specialFunds": {
+		"begin": {
+			"py": 62715537,
+			"cy": 59711580,
+			"by": 46339600
+		},
+		"revenues": {
+			"py": 81328422,
+			"cy": 77757904,
+			"by": 101669804
+		},
+		"expenditures": {
+			"py": 84332379,
+			"cy": 91129884,
+			"by": 95129056
+		},
+		"end": {
+			"py": 59711580,
+			"cy": 46339600,
+			"by": 52880348
+		},
+		"reserveAccounts": {
+			"py": 23920451,
+			"cy": 20691413,
+			"by": 30653513
+		},
+		"sources": [
+			{
+				"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+			}
+		]
+	},
+	"federalAndBond": {
+		"federal": {
+			"py": 160091459,
+			"cy": 178422080,
+			"by": 187189993
+		},
+		"bond": {
+			"py": 1610464,
+			"cy": 10520393,
+			"by": 5103532
+		},
+		"sources": [
+			{
+				"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+			},
+			{
+				"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+			}
+		]
+	},
+	"allFunds": {
+		"ebudgetAllFunds": 793667305,
+		"state": 351709797,
+		"federal": 187189993,
+		"reimbursements": 45529129,
+		"nongovernmental": 209238386,
+		"interimLoans": 0,
+		"sources": [
+			{
+				"label": "ebudget.ca.gov API: statistics (agency totals, all funds)",
+				"url": "https://ebudget.ca.gov/api/budget/e/2026-27/statistics"
+			},
+			{
+				"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+				"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+			},
+			{
+				"label": "ebudget.ca.gov budget detail — expenditures by fund (reimbursements, nongovernmental cost funds)",
+				"url": "https://ebudget.ca.gov/budget/e/2026-27/BudgetDetail"
+			}
+		]
+	},
+	"plan": {
+		"stages": [
+			{
+				"pit": "p",
+				"label": "Governor's Budget",
+				"date": "Released on January 09, 2026",
+				"beginningBalance": 53451209,
+				"revenuesAndTransfers": 227385219,
+				"expenditures": 248330128,
+				"endingBalance": 32506300,
+				"sfeu": 4508347,
+				"bsa": 14350422,
+				"psssa": 4102343,
+				"transcribed": false,
+				"source": {
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Governor's Budget)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/BS_SCH1.pdf"
+				}
+			},
+			{
+				"pit": "m",
+				"label": "May Revision",
+				"date": "Revised on May 14, 2026",
+				"beginningBalance": 56190000,
+				"revenuesAndTransfers": 222874000,
+				"expenditures": 246566000,
+				"endingBalance": 32498000,
+				"sfeu": 4500000,
+				"bsa": 15075000,
+				"psssa": 10325000,
+				"transcribed": true,
+				"source": {
+					"label": "May Revision — Summary Charts, “General Fund Budget Summary” (millions, transcribed)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				}
+			},
+			{
+				"pit": "e",
+				"label": "Enacted Budget",
+				"date": "Enacted on June 29, 2026",
+				"beginningBalance": 57221020,
+				"revenuesAndTransfers": 226754132,
+				"expenditures": 251477209,
+				"endingBalance": 32497943,
+				"sfeu": 4499990,
+				"bsa": 15070422,
+				"psssa": 9194991,
+				"transcribed": false,
+				"source": {
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			}
+		]
+	},
+	"problem": {
+		"summary": "In January the Governor’s Budget projected a $2.9 billion shortfall for 2026-27 and a deficit of roughly $22 billion in 2027-28. Higher revenue at the May Revision plus new revenue, spending reductions and fund shifts balanced both years; the Enacted Budget keeps that framework, ends 2026-27 with $4.5B in the SFEU and rebuilds the Rainy Day Fund to $15.1B.",
+		"facts": [
+			{
+				"id": "gb-shortfall",
+				"label": "Shortfall projected in the Governor’s Budget",
+				"amount": 2900000,
+				"printed": "$2.9 billion",
+				"year": "2026-27",
+				"quoteId": "p-q6"
+			},
+			{
+				"id": "gb-outyear-deficit",
+				"label": "Deficit projected for the following year",
+				"amount": 22000000,
+				"printed": "$22 billion",
+				"year": "2027-28",
+				"quoteId": "p-q7"
+			},
+			{
+				"id": "gb-revenue-up",
+				"label": "General Fund revenue upgrade since the 2025 Budget Act (3-year window)",
+				"amount": 42000000,
+				"printed": "$42 billion",
+				"quoteId": "p-q8"
+			},
+			{
+				"id": "mr-bigthree",
+				"label": "Big Three tax revenues above January forecast (3-year window)",
+				"amount": 16500000,
+				"printed": "$16.5 billion",
+				"quoteId": "m-q9"
+			},
+			{
+				"id": "mr-spending-lower",
+				"label": "General Fund spending below the Governor’s Budget estimate",
+				"amount": 1800000,
+				"printed": "$1.8 billion",
+				"year": "2026-27",
+				"quoteId": "m-q10"
+			},
+			{
+				"id": "mr-gb-shortfall",
+				"label": "January shortfall (as restated in the May Revision)",
+				"amount": 2900000,
+				"printed": "$2.9 billion",
+				"year": "2026-27",
+				"quoteId": "m-q11"
+			},
+			{
+				"id": "e-prior-savings",
+				"label": "Ongoing savings from 2025 Budget Act reductions",
+				"amount": 12000000,
+				"printed": "$12 billion",
+				"quoteId": "e-q12"
+			},
+			{
+				"id": "e-sfeu",
+				"label": "Discretionary reserve (SFEU), budget year",
+				"amount": 4500000,
+				"printed": "$4.5 billion",
+				"year": "2026-27",
+				"quoteId": "e-q13"
+			},
+			{
+				"id": "e-sfeu-next",
+				"label": "Discretionary reserve (SFEU), following year",
+				"amount": 403000,
+				"printed": "$403 million",
+				"quoteId": "e-q13"
+			},
+			{
+				"id": "e-sha",
+				"label": "Transfer into the Surplus Holding Account",
+				"amount": 6400000,
+				"printed": "$6.4 billion",
+				"year": "2026-27",
+				"quoteId": "e-q14"
+			},
+			{
+				"id": "e-bsa-deposit",
+				"label": "Deposit into the Rainy Day Fund (BSA)",
+				"amount": 3600000,
+				"printed": "$3.6 billion",
+				"year": "2026-27",
+				"quoteId": "e-q15"
+			},
+			{
+				"id": "e-bsa-suspension",
+				"label": "BSA “true-up” deposit suspended for the current year",
+				"amount": 5400000,
+				"printed": "$5.4 billion",
+				"year": "2025-26",
+				"quoteId": "e-q16"
+			},
+			{
+				"id": "e-bsa-withdrawn",
+				"label": "Withdrawn from the BSA over the last two fiscal years",
+				"amount": 12200000,
+				"printed": "$12.2 billion",
+				"quoteId": "e-q17"
+			},
+			{
+				"id": "e-bsa-balance",
+				"label": "BSA balance, budget year",
+				"amount": 15100000,
+				"printed": "$15.1 billion",
+				"year": "2026-27",
+				"quoteId": "e-q18"
+			},
+			{
+				"id": "e-psssa",
+				"label": "Public School System Stabilization Account",
+				"amount": 9200000,
+				"printed": "$9.2 billion",
+				"year": "2026-27",
+				"quoteId": "e-q19"
+			},
+			{
+				"id": "e-combined",
+				"label": "Combined reserves (BSA + SFEU + PSSSA)",
+				"amount": 28800000,
+				"printed": "$28.8 billion",
+				"year": "2026-27",
+				"quoteId": "e-q19"
+			},
+			{
+				"id": "e-set-aside",
+				"label": "Set aside incl. the Surplus Holding Account",
+				"amount": 35200000,
+				"printed": "$35.2 billion",
+				"year": "2026-27",
+				"quoteId": "e-q20"
+			}
+		],
+		"solutions": [
+			{
+				"id": "revenue",
+				"label": "Revenue",
+				"amount": 3600000,
+				"printed": "$3.6 billion",
+				"year": "2026-27",
+				"description": "New or extended taxes: business credit limits, software sales tax, MCO tax renewal.",
+				"quoteId": "m-q21"
+			},
+			{
+				"id": "spending",
+				"label": "Spending Reductions and Reforms",
+				"amount": 411000,
+				"printed": "$411 million",
+				"year": "2026-27",
+				"description": "Program reductions, e.g. Medi-Cal asset test limits.",
+				"quoteId": "m-q22"
+			},
+			{
+				"id": "offsets",
+				"label": "General Fund Offsets",
+				"amount": 390700,
+				"printed": "$390.7 million",
+				"year": "2026-27",
+				"description": "Paying for General Fund costs from other funds (e.g. Behavioral Health Services Fund).",
+				"quoteId": "m-q23"
+			}
+		],
+		"solutionsNote": "The Enacted Budget Summary does not print a single table of budget solutions. Categories are the May Revision’s, which the 2026 Budget Act “largely maintains”; revenue measures are as enacted.",
+		"revenueMeasures": [
+			{
+				"id": "mco",
+				"label": "Managed Care Organization (MCO) Tax renewal",
+				"byYear": {
+					"2026-27": 575000,
+					"2027-28": 2300000,
+					"2028-29": 2300000,
+					"2029-30": 1700000
+				},
+				"quoteId": "e-q24"
+			},
+			{
+				"id": "credits",
+				"label": "Business tax credit limitation",
+				"byYear": {
+					"2026-27": 1000000,
+					"2027-28": 3300000,
+					"2028-29": 4700000,
+					"2029-30": 4200000
+				},
+				"quoteId": "e-q25"
+			},
+			{
+				"id": "software",
+				"label": "Sales tax on electronically delivered software",
+				"byYear": {
+					"2026-27": 450000,
+					"2027-28": 900000,
+					"2028-29": 900000,
+					"2029-30": 900000
+				},
+				"quoteId": "e-q26"
+			}
+		],
+		"quotes": [
+			{
+				"id": "e-framework",
+				"text": "The 2026 Budget Act largely maintains the May Revision framework, which balances the budget in both the 2026-27 and 2027-28 fiscal years, and significantly reduces the projected structural deficits in 2028-29 and 2029-30.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "e-onetime",
+				"text": "Further, the Budget includes a number of strategic investments, mostly one-time, that are possible in large part because of increased revenue since the 2025 Budget Act.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "e-balanced-def",
+				"text": "California is required to adopt a balanced budget for the 2026-27 fiscal year, measured by maintaining a positive balance in the state’s Special Fund for Economic Uncertainties (SFEU).",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "e-sha-why",
+				"text": "Established in 2024, the Surplus Holding Account allows the state to set aside a portion of anticipated surplus funds for allocation in a subsequent fiscal year.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "p-nonew",
+				"text": "As a result, the Budget does not include new significant spending proposals.",
+				"doc": "Governor's Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "p-q6",
+				"text": "At the same time, however, constitutional funding requirements, the need for an adequate discretionary budget reserve, and higher program costs are additional commitments that exceed the level of increased revenues, resulting in a modest projected shortfall of $2.9 billion.",
+				"doc": "Governor's Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "p-q7",
+				"text": "While the Budget is balanced in the 2026-27 fiscal year, with a discretionary reserve of $4.5 billion, it projects a deficit of roughly $22 billion in the 2027-28 fiscal year and shortfalls in the two years following.",
+				"doc": "Governor's Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "p-q8",
+				"text": "The Budget forecast reflects General Fund revenues that are higher by more than $42 billion over the budget window, from 2024-25 through 2026-27, than projected at the 2025 Budget Act—an increase driven by higher cash receipts, higher stock market levels, and an improved economic outlook.",
+				"doc": "Governor's Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "m-q9",
+				"text": "Estimated General Fund revenues from the Big Three sources (Personal Income, Corporate, and Sales and Use Taxes) are $16.5 billion higher than projected in January over the three-year budget window.",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "m-q10",
+				"text": "This is approximately $1.8 billion lower than estimated at the Governor’s Budget.",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "m-q11",
+				"text": "In January, the Governor’s Budget provided a plan to close a shortfall estimated at $2.9 billion in fiscal year 2026-27, ending with a discretionary reserve of $4.5 billion.",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			},
+			{
+				"id": "e-q12",
+				"text": "The 2025 Budget Act included numerous spending reductions that, at the time of enactment, were estimated to result in almost $12 billion in ongoing savings.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "e-q13",
+				"text": "In responsibly balancing the budget over the next two fiscal years, the 2026 Budget Act includes SFEU balances of $4.5 billion in 2026-27 and $403 million in 2027-28.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "e-q14",
+				"text": "To assist in providing for a positive SFEU in 2027-28 and more prudently manage the state’s resources, the Budget includes a transfer of $6.4 billion into the Projected Surplus Temporary Holding Account (Surplus Holding Account) in 2026-27.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "e-q15",
+				"text": "However, the budget includes a $3.6 billion deposit into the BSA in 2026-27 and a minor “true-up” for the 2024-25 fiscal year.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q16",
+				"text": "As a result of the increase in revenue, the total suspension in 2025-26 is $5.4 billion.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q17",
+				"text": "Over the last two fiscal years, the state has withdrawn approximately $12.2 billion from the BSA and suspended deposits into the BSA for the 2024-25 and 2025-26 fiscal years.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q18",
+				"text": "After accounting for these actions, the BSA balance in 2026-27 is $15.1 billion—an increase of $3.9 billion compared to the 2025 Budget Act level of $11.2 billion.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q19",
+				"text": "In addition, the budget includes $4.5 billion in the SFEU and $9.2 billion in the Public School System Stabilization Account—bringing the combined reserves in 2026-27 to $28.8 billion.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q20",
+				"text": "When accounting for the balance in the Surplus Holding Account, the budget sets aside approximately $35.2 billion for future funding obligations in the 2026-27 fiscal year.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "m-q21",
+				"text": "Revenue —$3.6 billion in total solutions in 2026-27 —growing to $5.1 billion in 2027-28 and decreasing slightly to $4.4 billion in 2029-30.",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "m-q22",
+				"text": "Spending Reductions and Reforms —$411 million in total solutions in 2026-27 — growing to $711.9 million by 2029-30.",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "m-q23",
+				"text": "General Fund Offsets —$390.7 million in total solutions in 2026-27 decreasing slightly to $256.5 million by 2029-30, including:",
+				"doc": "May Revision 2026-27 — Introduction",
+				"source": {
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q24",
+				"text": "Managed Care Organization (MCO) Tax —The Budget reflects the renewal of a House of Representatives (H.R.) 1 compliant MCO Tax, effective January 1, 2027, increasing revenue by a projected $575 million in 2026-27, $2.3 billion in 2027-28 and 2028-29, and $1.7 billion in 2029-30, to support the Medi-Cal program and maintain targeted rate increases for primary, maternal, and non-specialty mental health care.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				}
+			},
+			{
+				"id": "e-q25",
+				"text": "The limitation is projected to increase General Fund revenue by $1 billion in 2026-27, $3.3 billion in 2027-28, $4.7 billion in 2028-29, and $4.2 billion in 2029-30.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			},
+			{
+				"id": "e-q26",
+				"text": "This is projected to increase General Fund revenue by $450 million in 2026-27 and $900 million in 2027-28 and annually thereafter.",
+				"doc": "Enacted Budget Summary 2026-27 — Introduction",
+				"source": {
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				}
+			}
+		]
+	},
+	"differences": [
+		{
+			"id": "transfers",
+			"title": "Transfers & loans move money between funds",
+			"body": "Schedule 8 lists General Fund revenue of $237.4B before transfers. Net transfers and loans of −$10.6B — mostly deposits into reserve accounts that are legally separate funds — bring “revenues and transfers” to $226.8B. Across all state funds the transfers net to almost nothing (−$0.35B): what leaves the General Fund shows up as special-fund revenue.",
+			"amount": -10604697,
+			"tone": "moves",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "balance",
+			"title": "Spending is partly paid from last year’s balance",
+			"body": "The General Fund starts 2026-27 with $57.2B carried in: $28.0B already committed (encumbrances) and $29.2B in the discretionary reserve, built up as revenue ran more than $42 billion above the 2025 Budget Act forecast from 2024-25 through 2026-27 (Governor’s Budget estimate). Spending of $251.5B exceeds revenues and transfers by $24.7B, and that gap is covered by drawing the balance down to $32.5B. The State measures a balanced budget by a positive SFEU at year end ($4.5B), so a planned draw on the carry-in is consistent with a balanced budget.",
+			"amount": -24723077,
+			"tone": "removes",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf",
+					"page": 1
+				}
+			]
+		},
+		{
+			"id": "reserves",
+			"title": "Reserves sit outside the General Fund",
+			"body": "The Rainy Day Fund ($15.1B), the school reserve ($9.2B) and the Surplus Holding Account ($6.4B) are special funds. A deposit is a General Fund transfer out (it lowers “revenues and transfers”) and special-fund revenue in, so it inflates special-fund revenue ($101.7B) and balances ($52.9B, of which $30.7B are these reserves).",
+			"amount": 30653513,
+			"tone": "moves",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "encumbrances",
+			"title": "Not all of the fund balance is available",
+			"body": "Of the $32.5B General Fund ending balance, $28.0B is the Reserve for Liquidation of Encumbrances — money already committed to contracts and orders not yet paid (an accrual/timing item under GAAP). Only the SFEU ($4.5B) is a true discretionary reserve.",
+			"amount": 27997953,
+			"tone": "neutral",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "federal-bond",
+			"title": "Federal funds and bonds aren’t state revenue",
+			"body": "$187.2B of federal funds and $5.1B of bond-financed spending are in total spending but not in Schedule 8 revenue: federal grants arrive for specific programs and bond proceeds are borrowing, repaid later through General Fund debt service.",
+			"amount": 192293525,
+			"tone": "adds",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "all-funds",
+			"title": "“All funds” counts some dollars twice",
+			"body": "ebudget’s $793.7B “all funds” figure adds $45.5B of reimbursements (one department paying another — already counted where the money started) and $209.2B of nongovernmental cost funds (pension trusts, university own funds, local property tax and similar pass-throughs). This explorer leaves both out, so total spending is $538.9B (state $351.7B + federal $187.2B).",
+			"amount": 254767515,
+			"tone": "removes",
+			"sources": [
+				{
+					"label": "ebudget.ca.gov API: statistics (agency totals, all funds)",
+					"url": "https://ebudget.ca.gov/api/budget/e/2026-27/statistics"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				},
+				{
+					"label": "ebudget.ca.gov budget detail — expenditures by fund (reimbursements, nongovernmental cost funds)",
+					"url": "https://ebudget.ca.gov/budget/e/2026-27/BudgetDetail"
+				}
+			]
+		},
+		{
+			"id": "gaap",
+			"title": "Budget basis isn’t accounting basis",
+			"body": "Budget-year and current-year figures are estimates. Schedule 1 notes that the encumbrance reserve follows Generally Accepted Accounting Principles and Government Code sections 13306–13307, but the budget is a plan, not an audit: actual results are reported later (the past-year column already reflects them) and accrual and timing adjustments mean the State’s audited financial statements will not match these figures exactly.",
+			"amount": null,
+			"tone": "neutral",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "rounding",
+			"title": "Thousands vs. millions vs. billions",
+			"body": "Schedules print thousands of dollars; Summary Charts print millions; the narrative rounds to tenths of a billion. Each rounding step can shift a total by a few units — e.g. the Introduction’s “$28.8 billion” combined reserves is the rounded sum of three schedule lines. Every figure on this page is checked against its source within the rounding of the printed unit.",
+			"amount": null,
+			"tone": "neutral",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf"
+				}
+			]
+		}
+	],
+	"checks": [
+		{
+			"id": "gf-identity-py",
+			"label": "2024-25: beginning balance + revenues & transfers − expenditures = ending fund balance (General Fund)",
+			"expected": 56707194,
+			"actual": 56707194,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-split-py",
+			"label": "2024-25: ending fund balance = encumbrance reserve + SFEU",
+			"expected": 56707194,
+			"actual": 56707194,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-py",
+			"label": "2024-25: Schedule 1 GF revenues & transfers = Schedule 8 total",
+			"expected": 233639330,
+			"actual": 233639330,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-parts-py",
+			"label": "2024-25: Schedule 8 GF revenues + transfers & loans = revenues, transfers & loans",
+			"expected": 233639330,
+			"actual": 233639330,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s9-py",
+			"label": "2024-25: Schedule 1 GF expenditures = Schedule 9 grand total",
+			"expected": 231190249,
+			"actual": 231190249,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-identity-py",
+			"label": "2024-25: special funds beginning + revenues − expenditures = ending (Schedule 10 totals)",
+			"expected": 59711580,
+			"actual": 59711580,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-s1-py",
+			"label": "2024-25: special funds ending balance, Schedule 1 = Schedule 10",
+			"expected": 59711580,
+			"actual": 59711580,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-reu-py",
+			"label": "2024-25: special-fund Reserves for Economic Uncertainties = special-fund ending balance",
+			"expected": 59711580,
+			"actual": 59711580,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "state-total-py",
+			"label": "2024-25: GF + special + bond expenditures = Schedule 1 expenditure total",
+			"expected": 317133092,
+			"actual": 317133092,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-s10-py",
+			"label": "2024-25: BSA balance, Schedule 1 = Schedule 10 (fund 1011)",
+			"expected": 18596422,
+			"actual": 18596422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-flow-py",
+			"label": "2024-25: BSA beginning + transfers in − expenditures = ending (Schedule 10)",
+			"expected": 18596422,
+			"actual": 18596422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "psssa-s10-py",
+			"label": "2024-25: PSSSA balance, Schedule 1 = Schedule 10 (fund 1029)",
+			"expected": 5324029,
+			"actual": 5324029,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-identity-cy",
+			"label": "2025-26: beginning balance + revenues & transfers − expenditures = ending fund balance (General Fund)",
+			"expected": 57221020,
+			"actual": 57221020,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-split-cy",
+			"label": "2025-26: ending fund balance = encumbrance reserve + SFEU",
+			"expected": 57221020,
+			"actual": 57221020,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-cy",
+			"label": "2025-26: Schedule 1 GF revenues & transfers = Schedule 8 total",
+			"expected": 245816761,
+			"actual": 245816761,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-parts-cy",
+			"label": "2025-26: Schedule 8 GF revenues + transfers & loans = revenues, transfers & loans",
+			"expected": 245816761,
+			"actual": 245816761,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s9-cy",
+			"label": "2025-26: Schedule 1 GF expenditures = Schedule 9 grand total",
+			"expected": 245302935,
+			"actual": 245302935,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-identity-cy",
+			"label": "2025-26: special funds beginning + revenues − expenditures = ending (Schedule 10 totals)",
+			"expected": 46339600,
+			"actual": 46339600,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-s1-cy",
+			"label": "2025-26: special funds ending balance, Schedule 1 = Schedule 10",
+			"expected": 46339600,
+			"actual": 46339600,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-reu-cy",
+			"label": "2025-26: special-fund Reserves for Economic Uncertainties = special-fund ending balance",
+			"expected": 46339600,
+			"actual": 46339600,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "state-total-cy",
+			"label": "2025-26: GF + special + bond expenditures = Schedule 1 expenditure total",
+			"expected": 346953212,
+			"actual": 346953212,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-s10-cy",
+			"label": "2025-26: BSA balance, Schedule 1 = Schedule 10 (fund 1011)",
+			"expected": 11496422,
+			"actual": 11496422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-flow-cy",
+			"label": "2025-26: BSA beginning + transfers in − expenditures = ending (Schedule 10)",
+			"expected": 11496422,
+			"actual": 11496422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "psssa-s10-cy",
+			"label": "2025-26: PSSSA balance, Schedule 1 = Schedule 10 (fund 1029)",
+			"expected": 9194991,
+			"actual": 9194991,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "continuity-cy",
+			"label": "2025-26: GF beginning balance = prior year’s ending balance",
+			"expected": 56707194,
+			"actual": 56707194,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-identity-by",
+			"label": "2026-27: beginning balance + revenues & transfers − expenditures = ending fund balance (General Fund)",
+			"expected": 32497943,
+			"actual": 32497943,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-split-by",
+			"label": "2026-27: ending fund balance = encumbrance reserve + SFEU",
+			"expected": 32497943,
+			"actual": 32497943,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-by",
+			"label": "2026-27: Schedule 1 GF revenues & transfers = Schedule 8 total",
+			"expected": 226754132,
+			"actual": 226754132,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s8-parts-by",
+			"label": "2026-27: Schedule 8 GF revenues + transfers & loans = revenues, transfers & loans",
+			"expected": 226754132,
+			"actual": 226754132,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "gf-s9-by",
+			"label": "2026-27: Schedule 1 GF expenditures = Schedule 9 grand total",
+			"expected": 251477209,
+			"actual": 251477209,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-identity-by",
+			"label": "2026-27: special funds beginning + revenues − expenditures = ending (Schedule 10 totals)",
+			"expected": 52880348,
+			"actual": 52880348,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-s1-by",
+			"label": "2026-27: special funds ending balance, Schedule 1 = Schedule 10",
+			"expected": 52880348,
+			"actual": 52880348,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "sf-reu-by",
+			"label": "2026-27: special-fund Reserves for Economic Uncertainties = special-fund ending balance",
+			"expected": 52880348,
+			"actual": 52880348,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "state-total-by",
+			"label": "2026-27: GF + special + bond expenditures = Schedule 1 expenditure total",
+			"expected": 351709797,
+			"actual": 351709797,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-s10-by",
+			"label": "2026-27: BSA balance, Schedule 1 = Schedule 10 (fund 1011)",
+			"expected": 15070422,
+			"actual": 15070422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-flow-by",
+			"label": "2026-27: BSA beginning + transfers in − expenditures = ending (Schedule 10)",
+			"expected": 15070422,
+			"actual": 15070422,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "psssa-s10-by",
+			"label": "2026-27: PSSSA balance, Schedule 1 = Schedule 10 (fund 1029)",
+			"expected": 9194991,
+			"actual": 9194991,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "continuity-by",
+			"label": "2026-27: GF beginning balance = prior year’s ending balance",
+			"expected": 57221020,
+			"actual": 57221020,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "transfers-net-by",
+			"label": "2026-27: GF transfers out ≈ special-fund transfers in (net across state funds shown by Schedule 8 total)",
+			"expected": -352661,
+			"actual": -352661,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-begin-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” begin (millions) = Schedule 1 rounded",
+			"expected": 56707000,
+			"actual": 56707000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-revenues-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” revenues (millions) = Schedule 1 rounded",
+			"expected": 245817000,
+			"actual": 245817000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-expenditures-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” expenditures (millions) = Schedule 1 rounded",
+			"expected": 245303000,
+			"actual": 245303000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-end-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” end (millions) = Schedule 1 rounded",
+			"expected": 57221000,
+			"actual": 57221000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-encumbrances-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” encumbrances (millions) = Schedule 1 rounded",
+			"expected": 27998000,
+			"actual": 27998000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-sfeu-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” sfeu (millions) = Schedule 1 rounded",
+			"expected": 29223000,
+			"actual": 29223000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-bsa-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” bsa (millions) = Schedule 1 rounded",
+			"expected": 11496000,
+			"actual": 11496000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-psssa-cy",
+			"label": "2025-26: Summary Charts “General Fund Budget Summary” psssa (millions) = Schedule 1 rounded",
+			"expected": 9195000,
+			"actual": 9195000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-prop98-cy",
+			"label": "2025-26: Prop 98 + non-Prop 98 (chart, millions) = total GF expenditures",
+			"expected": 245303000,
+			"actual": 245303000,
+			"difference": 0,
+			"tolerance": 1000,
+			"ok": true,
+			"status": "ties",
+			"note": "Chart figures are rounded to millions.",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				}
+			]
+		},
+		{
+			"id": "chart-revsub-cy",
+			"label": "2025-26: chart GF revenue subtotal + BSA transfer = revenues & transfers",
+			"expected": 245816761,
+			"actual": 245817000,
+			"difference": 239,
+			"tolerance": 1000,
+			"ok": true,
+			"status": "ties",
+			"note": "Chart figures are rounded to millions.",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 4
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-bsa-transfer-cy",
+			"label": "2025-26: chart BSA transfer = Schedule 10 BSA transfers (sign flipped)",
+			"expected": 7100000,
+			"actual": 7100000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 4
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-begin-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” begin (millions) = Schedule 1 rounded",
+			"expected": 57221000,
+			"actual": 57221000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-revenues-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” revenues (millions) = Schedule 1 rounded",
+			"expected": 226754000,
+			"actual": 226754000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-expenditures-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” expenditures (millions) = Schedule 1 rounded",
+			"expected": 251477000,
+			"actual": 251477000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-end-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” end (millions) = Schedule 1 rounded",
+			"expected": 32498000,
+			"actual": 32498000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-encumbrances-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” encumbrances (millions) = Schedule 1 rounded",
+			"expected": 27998000,
+			"actual": 27998000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-sfeu-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” sfeu (millions) = Schedule 1 rounded",
+			"expected": 4500000,
+			"actual": 4500000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-bsa-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” bsa (millions) = Schedule 1 rounded",
+			"expected": 15070000,
+			"actual": 15070000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-psssa-by",
+			"label": "2026-27: Summary Charts “General Fund Budget Summary” psssa (millions) = Schedule 1 rounded",
+			"expected": 9195000,
+			"actual": 9195000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-prop98-by",
+			"label": "2026-27: Prop 98 + non-Prop 98 (chart, millions) = total GF expenditures",
+			"expected": 251477000,
+			"actual": 251477000,
+			"difference": 0,
+			"tolerance": 1000,
+			"ok": true,
+			"status": "ties",
+			"note": "Chart figures are rounded to millions.",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 2
+				}
+			]
+		},
+		{
+			"id": "chart-revsub-by",
+			"label": "2026-27: chart GF revenue subtotal + BSA transfer = revenues & transfers",
+			"expected": 226754132,
+			"actual": 226754000,
+			"difference": -132,
+			"tolerance": 1000,
+			"ok": true,
+			"status": "ties",
+			"note": "Chart figures are rounded to millions.",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 4
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "chart-bsa-transfer-by",
+			"label": "2026-27: chart BSA transfer = Schedule 10 BSA transfers (sign flipped)",
+			"expected": -3574000,
+			"actual": -3574000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Budget Summary — Summary Charts (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf",
+					"page": 4
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-sfeu",
+			"label": "Narrative SFEU = Schedule 1 SFEU (2026-27)",
+			"expected": 4500000,
+			"actual": 4499990,
+			"difference": -10,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $4.5 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-bsa",
+			"label": "Narrative BSA balance = Schedule 1 (2026-27)",
+			"expected": 15100000,
+			"actual": 15070422,
+			"difference": -29578,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $15.1 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-psssa",
+			"label": "Narrative PSSSA = Schedule 1 (2026-27)",
+			"expected": 9200000,
+			"actual": 9194991,
+			"difference": -5009,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $9.2 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-bsa-deposit",
+			"label": "Narrative BSA deposit = Schedule 10 BSA transfer in (2026-27)",
+			"expected": 3600000,
+			"actual": 3574000,
+			"difference": -26000,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $3.6 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-sha",
+			"label": "Narrative Surplus Holding transfer = Schedule 10 fund 1032 (2026-27)",
+			"expected": 6400000,
+			"actual": 6388100,
+			"difference": -11900,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $6.4 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 2
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-combined",
+			"label": "Narrative combined reserves = BSA + SFEU + PSSSA (2026-27)",
+			"expected": 28800000,
+			"actual": 28765403,
+			"difference": -34597,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $28.8 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "narr-set-aside",
+			"label": "Narrative “set aside” = combined reserves + Surplus Holding Account (2026-27)",
+			"expected": 35200000,
+			"actual": 35153503,
+			"difference": -46497,
+			"tolerance": 50000,
+			"ok": true,
+			"status": "ties",
+			"note": "Narrative prints $35.2 billion.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				},
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "bsa-fcs-net",
+			"label": "2024-25 + 2025-26: Schedule 10 BSA net transfers = BSA fund condition statement total (withdrawals + deposits + true-ups + suspensions)",
+			"expected": -11698000,
+			"actual": -11698000,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				},
+				{
+					"label": "9658 Budget Stabilization Account — Fund Condition Statement (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/8000/9658FCS.pdf",
+					"page": 1
+				}
+			]
+		},
+		{
+			"id": "narr-bsa-withdrawn",
+			"label": "Narrative “withdrawn from the BSA over the last two fiscal years” = BSA withdrawals, Art. XVI §22(a)(2)(A) lines of the BSA fund condition statement (2024-25 + 2025-26)",
+			"expected": 12200000,
+			"actual": 12026000,
+			"difference": -174000,
+			"tolerance": 50000,
+			"ok": false,
+			"status": "explained",
+			"note": "Narrative prints $12.2 billion. Compared with gross withdrawals ($4.9B + $7.1B); Schedule 10’s net $11.7B also nets $0.33B of true-up deposits.",
+			"sources": [
+				{
+					"label": "Enacted Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf",
+					"page": 3
+				},
+				{
+					"label": "9658 Budget Stabilization Account — Fund Condition Statement (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/8000/9658FCS.pdf",
+					"page": 1
+				}
+			],
+			"explanation": {
+				"summary": "The narrative’s “approximately $12.2 billion” is the 2024 Budget Act’s authorization — $5.1 billion in 2024-25 and $7.1 billion in 2025-26 (2024-25 Enacted Budget Summary, Introduction p. 3; restated in the 2025-26 Enacted Budget Summary, Introduction p. 3). The amounts booked as withdrawals in the BSA fund condition statement are $4.9B and $7.1B. (The rest of the gap to Schedule 10’s net figure is the 2024-25 true-up deposits, which Schedule 10 nets against the withdrawals — see the “BSA net transfers” check.)",
+				"items": [
+					{
+						"label": "2024-25 BSA withdrawal: booked vs. authorized",
+						"amount": -174000,
+						"cause": "The 2024 Budget Act summary describes a $5.1 billion 2024-25 withdrawal; every BSA fund condition statement since the 2024 Budget Act books it at 4,926,000K (2024-25 Enacted 9658 FCS p. 1, “(BSA Withdrawal) … -4,926,000”; 2026-27 Enacted 9658 FCS p. 1). The narrative carries the rounded authorization forward.",
+						"sources": [
+							{
+								"label": "California State Budget 2024-25 (Enacted Budget Summary) — Introduction",
+								"url": "https://ebudget.ca.gov/2024-25/pdf/Enacted/BudgetSummary/Introduction.pdf",
+								"page": 3
+							},
+							{
+								"label": "California State Budget 2025-26 (Enacted Budget Summary) — Introduction",
+								"url": "https://ebudget.ca.gov/2025-26/pdf/Enacted/BudgetSummary/Introduction.pdf",
+								"page": 3
+							},
+							{
+								"label": "9658 Budget Stabilization Account — Fund Condition Statement (2024 Budget Act)",
+								"url": "https://ebudget.ca.gov/2024-25/pdf/Enacted/GovernorsBudget/8000/9658FCS.pdf",
+								"page": 1
+							},
+							{
+								"label": "9658 Budget Stabilization Account — Fund Condition Statement (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/8000/9658FCS.pdf",
+								"page": 1
+							}
+						]
+					}
+				],
+				"unexplained": 0
+			}
+		},
+		{
+			"id": "narr-shortfall",
+			"label": "January shortfall: Governor’s Budget = as restated in May Revision",
+			"expected": 2900000,
+			"actual": 2900000,
+			"difference": 0,
+			"tolerance": 0,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "Governor's Budget Summary 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf"
+				},
+				{
+					"label": "May Revision 2026-27 — Introduction",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf"
+				}
+			]
+		},
+		{
+			"id": "flows-gf-balance",
+			"label": "2026-27: flows.json “drawn from fund balances” (General Fund) = Schedule 1 change in fund balance",
+			"expected": -24723077,
+			"actual": -24723077,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+				}
+			]
+		},
+		{
+			"id": "flows-sf-balance",
+			"label": "2026-27: flows.json special-fund balance change = Schedule 10 change",
+			"expected": 6540748,
+			"actual": 6540748,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+				}
+			]
+		},
+		{
+			"id": "stats-state",
+			"label": "2026-27: ebudget statistics state funds total = Schedule 9 budget total",
+			"expected": 351709797,
+			"actual": 351709797,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"sources": [
+				{
+					"label": "ebudget.ca.gov API: statistics (agency totals, all funds)",
+					"url": "https://ebudget.ca.gov/api/budget/e/2026-27/statistics"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "all-funds",
+			"label": "2026-27: ebudget “all funds” = state + federal + reimbursements + nongovernmental cost funds + loan-financed interim payments",
+			"expected": 793667305,
+			"actual": 793667305,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Reimbursement and nongovernmental totals come from the explorer’s expenditure ETL (meta.json), summed from ebudget’s per-department fund detail.",
+			"sources": [
+				{
+					"label": "ebudget.ca.gov API: statistics (agency totals, all funds)",
+					"url": "https://ebudget.ca.gov/api/budget/e/2026-27/statistics"
+				},
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				},
+				{
+					"label": "ebudget.ca.gov budget detail — expenditures by fund (reimbursements, nongovernmental cost funds)",
+					"url": "https://ebudget.ca.gov/budget/e/2026-27/BudgetDetail"
+				}
+			]
+		},
+		{
+			"id": "explorer-general-py",
+			"label": "2024-25: explorer general spending total (meta.json) = Schedule 9",
+			"expected": 231190249,
+			"actual": 231190249,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-special-py",
+			"label": "2024-25: explorer special spending total (meta.json) = Schedule 9",
+			"expected": 84332379,
+			"actual": 84332379,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-bond-py",
+			"label": "2024-25: explorer bond spending total (meta.json) = Schedule 9",
+			"expected": 1610464,
+			"actual": 1610464,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-federal-py",
+			"label": "2024-25: explorer federal spending total (meta.json) = Schedule 9",
+			"expected": 160091459,
+			"actual": 160091459,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-general-cy",
+			"label": "2025-26: explorer general spending total (meta.json) = Schedule 9",
+			"expected": 245302935,
+			"actual": 245298604,
+			"difference": -4331,
+			"tolerance": 1,
+			"ok": false,
+			"status": "explained",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			],
+			"explanation": {
+				"summary": "Department by department, the explorer’s general-fund total for 2025-26 matches Schedule 9 except in 3 department(s). Each difference is a documented disagreement between official DOF publications (department budget detail vs. the statewide summary schedule). The explorer keeps the department detail so every tree adds up; Schedule 9’s figure is the official statewide total.",
+				"items": [
+					{
+						"label": "1996 General Obligation Bonds-BCS — general funds, 2025-26: department detail $202,890K vs. Schedule 9 $199,842K",
+						"amount": 3048,
+						"cause": "General obligation bond debt service (Business and Consumer Services) is a statewide item with no department page. ebudget’s expenditures-by-fund (rwaCntl/support/1996) and program list (orgProgram/1996, program 1620 “GO Bonds - Debt Service - BCS”) report 2025-26 General Fund spending of $202,890K; Schedule 9 (p. 4, “Totals,1996-General Obligation Bonds-BCS”) reports $199,842K. No other official document reconciles the two; the explorer keeps the department-level figure.",
+						"sources": [
+							{
+								"label": "ebudget.ca.gov API: rwaCntl/support/1996",
+								"url": "https://ebudget.ca.gov/api/budget/e/2026-27/rwaCntl/support/1996"
+							},
+							{
+								"label": "ebudget.ca.gov API: orgProgram/1996",
+								"url": "https://ebudget.ca.gov/api/budget/e/2026-27/orgProgram/1996"
+							},
+							{
+								"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf",
+								"page": 4
+							}
+						]
+					},
+					{
+						"label": "3340 California Conservation Corps — general funds, 2025-26: department detail $119,292K vs. Schedule 9 $125,688K",
+						"amount": -6396,
+						"cause": "California Conservation Corps, 2025-26 capital outlay: the department’s Summary of Projects (3340 PDF p. 7) lists $6,396K for project 0003516 “Residential Center, Greenwood: New Residential Center”, but the FUNDING block under it and the Detail of Appropriations (pp. 7–8; General Fund capital outlay “TOTALS, EXPENDITURES –”) attribute no fund to it, so ebudget’s capital outlay by fund (rwaCntl/capOutlay/3340) and the explorer’s department funding total omit it. Schedule 9 (p. 6, 3340 capital outlay) counts it as General Fund. The explorer’s 3340 program tree shows the project amount as an unreconciled infrastructure line.",
+						"sources": [
+							{
+								"label": "3340 department budget detail — Summary of Projects (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/3000/3340.pdf",
+								"page": 7
+							},
+							{
+								"label": "ebudget.ca.gov API: rwaCntl/capOutlay/3340",
+								"url": "https://ebudget.ca.gov/api/budget/e/2026-27/rwaCntl/capOutlay/3340"
+							},
+							{
+								"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf",
+								"page": 6
+							}
+						]
+					},
+					{
+						"label": "8570 Department of Food and Agriculture — general funds, 2025-26: department detail $233,353K vs. Schedule 9 $234,336K",
+						"amount": -983,
+						"cause": "Department of Food and Agriculture, 2025-26 General Fund capital outlay: the department’s Summary of Projects (8570 PDF p. 15, project 0014655 Meadowview Biological Control Office, preliminary plans) and Detail of Appropriations (p. 16, item 301 “$595”) and rwaCntl report $595K; Schedule 9 (p. 14, 8570 capital outlay, General Fund) reports $1,578K.",
+						"sources": [
+							{
+								"label": "8570 department budget detail — Summary of Projects (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/8000/8570.pdf",
+								"page": 15
+							},
+							{
+								"label": "8570 department budget detail — Detail of Appropriations — capital outlay (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/8000/8570.pdf",
+								"page": 16
+							},
+							{
+								"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf",
+								"page": 14
+							}
+						]
+					}
+				],
+				"unexplained": 0
+			}
+		},
+		{
+			"id": "explorer-special-cy",
+			"label": "2025-26: explorer special spending total (meta.json) = Schedule 9",
+			"expected": 91129884,
+			"actual": 91143884,
+			"difference": 14000,
+			"tolerance": 1,
+			"ok": false,
+			"status": "explained",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			],
+			"explanation": {
+				"summary": "Department by department, the explorer’s special-fund total for 2025-26 matches Schedule 9 except in 1 department(s). Each difference is a documented disagreement between official DOF publications (department budget detail vs. the statewide summary schedule). The explorer keeps the department detail so every tree adds up; Schedule 9’s figure is the official statewide total.",
+				"items": [
+					{
+						"label": "2665 High-Speed Rail Authority — special funds, 2025-26: department detail $4,561,802K vs. Schedule 9 $4,547,802K",
+						"amount": 14000,
+						"cause": "High-Speed Rail Authority capital outlay from the Greenhouse Gas Reduction Fund (3228), 2025-26: the department’s Summary of Projects and Detail of Appropriations (2665 PDF p. 5, Phase 1 Blended System; “TOTALS, EXPENDITURES $4,432,744” after a −$8,000K “2025-26 Cap-and-Invest Auction Proceeds Adjustment”) and rwaCntl report $4,432,744K. The fund’s own condition statement (3900 Air Resources Board FCS p. 3, “2665 High-Speed Rail Authority (Capital Outlay) 4,418,744”) and Schedule 9 (p. 5, capital outlay) report $4,418,744K — $14,000K less.",
+						"sources": [
+							{
+								"label": "2665 department budget detail — Summary of Projects / Detail of Appropriations (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/2500/2665.pdf",
+								"page": 5
+							},
+							{
+								"label": "3900 fund condition statements — Greenhouse Gas Reduction Fund condition statement (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/GovernorsBudget/3890/3900FCS.pdf",
+								"page": 3
+							},
+							{
+								"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+								"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf",
+								"page": 5
+							}
+						]
+					}
+				],
+				"unexplained": 0
+			}
+		},
+		{
+			"id": "explorer-bond-cy",
+			"label": "2025-26: explorer bond spending total (meta.json) = Schedule 9",
+			"expected": 10520393,
+			"actual": 10520393,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-federal-cy",
+			"label": "2025-26: explorer federal spending total (meta.json) = Schedule 9",
+			"expected": 178422080,
+			"actual": 178422080,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-general-by",
+			"label": "2026-27: explorer general spending total (meta.json) = Schedule 9",
+			"expected": 251477209,
+			"actual": 251477209,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-special-by",
+			"label": "2026-27: explorer special spending total (meta.json) = Schedule 9",
+			"expected": 95129056,
+			"actual": 95129056,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-bond-by",
+			"label": "2026-27: explorer bond spending total (meta.json) = Schedule 9",
+			"expected": 5103532,
+			"actual": 5103532,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		},
+		{
+			"id": "explorer-federal-by",
+			"label": "2026-27: explorer federal spending total (meta.json) = Schedule 9",
+			"expected": 187189993,
+			"actual": 187189993,
+			"difference": 0,
+			"tolerance": 1,
+			"ok": true,
+			"status": "ties",
+			"note": "Explorer totals are summed from ebudget department detail (expenditures by fund); Schedule 9 is DOF’s statewide summary by department.",
+			"sources": [
+				{
+					"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+					"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+				}
+			]
+		}
+	],
+	"sources": [
+		{
+			"label": "DOF Summary Schedule 1 — General Budget Summary (Enacted)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH1.pdf"
+		},
+		{
+			"label": "DOF Summary Schedule 8 — Comparative Statement of Revenues (Enacted)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH8.pdf"
+		},
+		{
+			"label": "DOF Summary Schedule 9 — Comparative Statement of Expenditures (Enacted)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH9.pdf"
+		},
+		{
+			"label": "DOF Summary Schedule 10 — Summary of Fund Condition Statements (Enacted)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/BS_SCH10.pdf"
+		},
+		{
+			"label": "Budget Summary — Summary Charts (Enacted)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummaryCharts.pdf"
+		},
+		{
+			"label": "Governor's Budget Summary 2026-27 — Introduction",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/BudgetSummary/Introduction.pdf"
+		},
+		{
+			"label": "May Revision 2026-27 — Introduction",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/Introduction.pdf"
+		},
+		{
+			"label": "Enacted Budget Summary 2026-27 — Introduction",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/Introduction.pdf"
+		},
+		{
+			"label": "May Revision — Summary Charts, “General Fund Budget Summary” (millions, transcribed)",
+			"url": "https://ebudget.ca.gov/2026-27/pdf/Revised/BudgetSummary/SummaryCharts.pdf",
+			"page": 2
+		},
+		{
+			"label": "ebudget.ca.gov API: statistics (agency totals, all funds)",
+			"url": "https://ebudget.ca.gov/api/budget/e/2026-27/statistics"
+		},
+		{
+			"label": "ebudget.ca.gov API: budgetSummaryChapter (chapter index)",
+			"url": "https://ebudget.ca.gov/api/budget/e/2026-27/budgetSummaryChapter"
+		}
+	],
+	"notes": [
+		"Amounts are in thousands of dollars as printed in DOF Summary Schedules; narrative figures are converted from “$X billion/million”.",
+		"Figures marked “transcribed” come from Summary Charts printed as images and were keyed by hand (millions); each is cross-checked against Schedule 1 where both exist.",
+		"Transfers to the BSA, Safety Net Reserve and Surplus Holding Account are taken from those funds’ Schedule 10 rows (revenues = transfers in); “other transfers” is the remainder of Schedule 8 net transfers & loans.",
+		"Check status: “ties” = within tolerance; “explained” = the sources genuinely differ and documented, cited causes account for the whole difference; “differs” = unexplained.",
+		"Explorer spending excludes fund 0201 Medical Providers Interim Payment Fund (Health Care Services; ebudget class “federal”): it is financed by General Fund / Federal Trust Fund loans and its expenditures are moved to the regular Budget Act items (Gov. Code 16531.1; DOF Manual of State Funds, fund 0201), and Schedule 9 does not count it. Where ebudget’s expenditures-by-fund API differs from a department’s printed Detail of Appropriations (2026-27 Enacted: 9889 PSSSA, 2025-26 −$3,370,962K in the API vs. −$3,870,962K printed, which matches Schedule 9), the explorer uses the printed figure.",
+		"2025-26 general funds: explorer $245,298,604K vs. DOF Schedule 9 $245,302,935K (official statewide total), difference −$4,331K — 1996 General Obligation Bonds-BCS +$3,048K (DOF Summary Schedule 9 — Comparative Statement of Expenditures p. 4); 3340 California Conservation Corps −$6,396K (3340 department budget detail — Summary of Projects p. 7; DOF Summary Schedule 9 — Comparative Statement of Expenditures p. 6); 8570 Department of Food and Agriculture −$983K (8570 department budget detail — Summary of Projects p. 15; 8570 department budget detail — Detail of Appropriations — capital outlay p. 16; DOF Summary Schedule 9 — Comparative Statement of Expenditures p. 14). Details: reconciliation page, check explorer-general-cy.",
+		"2025-26 special funds: explorer $91,143,884K vs. DOF Schedule 9 $91,129,884K (official statewide total), difference +$14,000K — 2665 High-Speed Rail Authority +$14,000K (2665 department budget detail — Summary of Projects / Detail of Appropriations p. 5; 3900 fund condition statements — Greenhouse Gas Reduction Fund condition statement p. 3; DOF Summary Schedule 9 — Comparative Statement of Expenditures p. 5). Details: reconciliation page, check explorer-special-cy."
+	],
+	"warnings": []
+}

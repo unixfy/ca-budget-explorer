@@ -1,0 +1,18 @@
+{
+	"defaultYear": "2026-27",
+	"defaultPit": "e",
+	"datasets": [
+		{
+			"fiscalYear": "2026-27",
+			"pit": "e",
+			"publication": "Enacted Budget",
+			"path": "2026-27/e"
+		},
+		{
+			"fiscalYear": "fixture",
+			"pit": "e",
+			"publication": "Enacted (fixture sample data)",
+			"path": "fixture/e"
+		}
+	]
+}

@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+@import '@fontsource/barlow/400.css';
+@import '@fontsource/barlow/400-italic.css';
+@import '@fontsource/barlow/500.css';
+@import '@fontsource/barlow/600.css';
+@import '@fontsource/barlow/700.css';
+@import '@fontsource/barlow-semi-condensed/500.css';
+@import '@fontsource/barlow-semi-condensed/600.css';
+@import '@fontsource/barlow-semi-condensed/700.css';
+@plugin '@tailwindcss/typography';
+@plugin 'daisyui' {
+	themes:
+		light --default,
+		dark --prefersdark;
+}
+
+/*
+ * The atlas. A Thomas Guide page: cool map-white ground, ink type, road classes for
+ * hierarchy (freeway yellow = selection, arterial orange = action), water and park
+ * for revenue and reserves. Night mode is the same atlas under a car's dome light.
+ */
+@plugin 'daisyui/theme' {
+	name: 'light';
+	default: true;
+	color-scheme: light;
+	--color-base-100: #f3f6f4;
+	--color-base-200: #e6ece8;
+	--color-base-300: #c9d3cd;
+	--color-base-content: #15191c;
+	--color-primary: #a8441b;
+	--color-primary-content: #ffffff;
+	--color-secondary: #f2c230;
+	--color-secondary-content: #15191c;
+	--color-accent: #2f6f9f;
+	--color-accent-content: #ffffff;
+	--color-neutral: #15191c;
+	--color-neutral-content: #f3f6f4;
+	--color-info: #2f6f9f;
+	--color-info-content: #ffffff;
+	--color-success: #3c7a45;
+	--color-success-content: #ffffff;
+	--color-warning: #f2c230;
+	--color-warning-content: #15191c;
+	--color-error: #b3261e;
+	--color-error-content: #ffffff;
+	--radius-selector: 0.125rem;
+	--radius-field: 0.125rem;
+	--radius-box: 0.125rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+	name: 'dark';
+	prefersdark: true;
+	color-scheme: dark;
+	--color-base-100: #0f151c;
+	--color-base-200: #161e27;
+	--color-base-300: #2a3541;
+	--color-base-content: #e8edef;
+	--color-primary: #f59a5c;
+	--color-primary-content: #0f151c;
+	--color-secondary: #f2c94c;
+	--color-secondary-content: #0f151c;
+	--color-accent: #7fbce0;
+	--color-accent-content: #0f151c;
+	--color-neutral: #e8edef;
+	--color-neutral-content: #0f151c;
+	--color-info: #7fbce0;
+	--color-info-content: #0f151c;
+	--color-success: #8cc98f;
+	--color-success-content: #0f151c;
+	--color-warning: #f2c94c;
+	--color-warning-content: #0f151c;
+	--color-error: #ff8a80;
+	--color-error-content: #0f151c;
+	--radius-selector: 0.125rem;
+	--radius-field: 0.125rem;
+	--radius-box: 0.125rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
+
+@theme {
+	--font-sans: 'Barlow', ui-sans-serif, system-ui, sans-serif;
+	--font-map: 'Barlow Semi Condensed', 'Barlow', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		font-variant-numeric: lining-nums;
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		background: var(--color-base-100);
+		color: var(--color-base-content);
+	}
+	::selection {
+		background: color-mix(in oklab, var(--color-secondary) 70%, transparent);
+		color: var(--color-secondary-content);
+	}
+	:focus-visible {
+		outline: 2px solid var(--color-base-content);
+		outline-offset: 2px;
+	}
+	a {
+		text-underline-offset: 0.2em;
+		text-decoration-thickness: 1px;
+	}
+	input,
+	textarea {
+		caret-color: var(--color-primary);
+	}
+	table {
+		font-variant-numeric: tabular-nums;
+	}
+	* {
+		scrollbar-color: var(--color-base-300) transparent;
+	}
+}
+
+@layer components {
+	/* Map label voice: condensed caps, the way an atlas names streets and cities. */
+	.map-label {
+		font-family: var(--font-map);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	/* Index line: label ······· page grid. */
+	.dot-leader {
+		flex: 1 1 auto;
+		min-width: 1.5rem;
+		border-bottom: 2px dotted color-mix(in oklab, var(--color-base-content) 35%, transparent);
+		transform: translateY(-0.3em);
+	}
+	/* Hairline legend / inset box, the atlas's only container. */
+	.atlas-inset {
+		border: 1px solid var(--color-base-content);
+		background: var(--color-base-100);
+	}
+}
+
+/* Turn to page: a short horizontal page turn between routes (motion-safe only). */
+@media (prefers-reduced-motion: no-preference) {
+	::view-transition-old(root) {
+		animation: atlas-page-out 220ms cubic-bezier(0.4, 0, 1, 1) both;
+	}
+	::view-transition-new(root) {
+		animation: atlas-page-in 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+	html[data-turn='back']::view-transition-old(root) {
+		animation-name: atlas-page-out-back;
+	}
+	html[data-turn='back']::view-transition-new(root) {
+		animation-name: atlas-page-in-back;
+	}
+}
+@keyframes atlas-page-out {
+	to {
+		opacity: 0;
+		transform: translateX(-2.5%);
+	}
+}
+@keyframes atlas-page-in {
+	from {
+		opacity: 0;
+		transform: translateX(4%);
+	}
+}
+@keyframes atlas-page-out-back {
+	to {
+		opacity: 0;
+		transform: translateX(2.5%);
+	}
+}
+@keyframes atlas-page-in-back {
+	from {
+		opacity: 0;
+		transform: translateX(-4%);
+	}
+}
