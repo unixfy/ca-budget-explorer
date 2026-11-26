@@ -15,6 +15,8 @@ import type {
 	SearchEntry
 } from './schema';
 import { PIT_LABELS } from './schema';
+import type { Reconciliation } from './reconciliation';
+import type { SourcesCatalog } from './sources-catalog';
 
 /** Data file name (without .json) and URL segment of each drillable tree. */
 export type TreeName = 'expenditures' | 'revenues' | 'bytype';
@@ -132,6 +134,10 @@ export const getTree = (dir: string, tree: TreeName, f?: Fetch) =>
 export const getFunds = (dir: string, f?: Fetch) =>
 	getJSON<Record<string, Fund>>(`${dir}/funds.json`, f);
 export const getFlows = (dir: string, f?: Fetch) => getJSON<Flows>(`${dir}/flows.json`, f);
+export const getReconciliation = (dir: string, f?: Fetch) =>
+	getJSON<Reconciliation>(`${dir}/reconciliation.json`, f);
+export const getSourcesCatalog = (dir: string, f?: Fetch) =>
+	getJSON<SourcesCatalog>(`${dir}/sources-catalog.json`, f);
 export const getSearch = (dir: string, f?: Fetch) =>
 	getJSON<SearchEntry[]>(`${dir}/search.json`, f);
 export const getDepartment = (dir: string, orgCode: string, f?: Fetch) =>

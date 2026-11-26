@@ -1,4 +1,4 @@
-import { getReconciliation } from '#lib/data/reconciliation.ts';
+import { getReconciliation } from '#lib/data/load.ts';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ parent, fetch }) => {

@@ -1,14 +1,11 @@
 /**
- * Shape of static/data/{fy}/{pit}/sources-catalog.json (built by scripts/etl/sources-catalog.ts)
- * plus a fetch-and-cache loader.
+ * Shape of static/data/{fy}/{pit}/sources-catalog.json (built by scripts/etl/sources-catalog.ts).
  *
  * The catalog is a tree of every place California budget information is published:
  *   root -> publisher -> publication -> document type -> document / endpoint (or series)
  * Branches the explorer actually downloads carry measured volumes (files, bytes, pages, how many
  * nodes of our data files cite them); the rest are hand-curated "not used (yet)" references.
  */
-import { dataUrl, DataError } from './load.ts';
-
 export type CatalogLevel = 'root' | 'publisher' | 'publication' | 'docType' | 'document';
 export type CatalogFormat = 'JSON' | 'PDF' | 'PNG' | 'XLSX' | 'CSV' | 'HTML' | 'DOCX';
 /** The explorer's own data files (static/data/{fy}/{pit}/*.json). */
@@ -100,25 +97,4 @@ export interface SourcesCatalog {
 	stats: CatalogStats;
 	products: { id: Product; label: string; file: string; nodes?: number }[];
 	notes: string[];
-}
-
-const cache = new Map<string, Promise<SourcesCatalog>>();
-
-export async function getSourcesCatalog(
-	dir: string,
-	f: typeof fetch = fetch
-): Promise<SourcesCatalog> {
-	const url = dataUrl(`${dir}/sources-catalog.json`);
-	let p = cache.get(url);
-	if (!p) {
-		p = f(url).then(async (r) => {
-			if (!r.ok) throw new DataError(`sources-catalog.json: HTTP ${r.status}`, r.status, url);
-			const t = await r.text();
-			if (/^\s*</.test(t)) throw new DataError('sources-catalog.json not found', 404, url);
-			return JSON.parse(t) as SourcesCatalog;
-		});
-		cache.set(url, p);
-		p.catch(() => cache.delete(url));
-	}
-	return p;
 }

@@ -1,13 +1,11 @@
 /**
- * Shape of static/data/{fy}/{pit}/reconciliation.json (built by scripts/etl/reconciliation.ts)
- * plus a fetch-and-cache loader. Amounts are in THOUSANDS of dollars, as printed by DOF,
- * unless a field says otherwise. Every figure carries (or inherits) an official source.
+ * Shape of static/data/{fy}/{pit}/reconciliation.json (built by scripts/etl/reconciliation.ts).
+ * Amounts are in THOUSANDS of dollars, as printed by DOF, unless a field says otherwise. Every figure carries (or inherits) an official source.
  */
-import { dataUrl, DataError } from './load.ts';
-import type { SourceRef } from './schema.ts';
+import type { SourceRef, Triple as Tri } from './schema.ts';
+import type { YearKey } from '../format.ts';
 
-export type YearKey = 'py' | 'cy' | 'by';
-export type Tri = Record<YearKey, number | null>;
+export type { YearKey, Tri };
 
 /** One fiscal year of the General Fund bridge (DOF Schedule 1 / 8 / 10). */
 export interface GfBridgeYear {
@@ -228,33 +226,6 @@ export interface Reconciliation {
 	sources: SourceRef[];
 	notes: string[];
 	warnings: string[];
-}
-
-const cache = new Map<string, Promise<Reconciliation | null>>();
-
-/**
- * Fetch `{dir}/reconciliation.json`, memoised per URL. Resolves to `null` when the file is
- * not published for this dataset (404 or SPA HTML fallback) so pages can show an empty state.
- */
-export function getReconciliation(
-	dir: string,
-	f: typeof fetch = fetch
-): Promise<Reconciliation | null> {
-	const url = dataUrl(`${dir}/reconciliation.json`);
-	let p = cache.get(url);
-	if (!p) {
-		p = f(url).then(async (r) => {
-			if (r.status === 404) return null;
-			if (!r.ok)
-				throw new DataError(`Could not load reconciliation.json (HTTP ${r.status})`, r.status, url);
-			const text = await r.text();
-			if (/^\s*</.test(text)) return null;
-			return JSON.parse(text) as Reconciliation;
-		});
-		cache.set(url, p);
-		p.catch(() => cache.delete(url));
-	}
-	return p;
 }
 
 /**

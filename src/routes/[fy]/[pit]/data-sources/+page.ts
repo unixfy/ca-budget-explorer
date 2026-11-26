@@ -1,4 +1,4 @@
-import { getSourcesCatalog } from '#lib/data/sources-catalog.ts';
+import { getSourcesCatalog } from '#lib/data/load.ts';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ parent, fetch }) => {
