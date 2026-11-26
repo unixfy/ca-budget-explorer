@@ -4,9 +4,7 @@ declare global {
 		// interface Locals {}
 		// interface PageData {}
 		// interface PageState {}
-		interface Platform {
-			env?: { ASSETS?: { fetch: typeof fetch } };
-		}
+		// interface Platform {}
 	}
 }
 
