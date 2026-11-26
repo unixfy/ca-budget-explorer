@@ -1,7 +1,7 @@
-import type { HandleFetch } from '@sveltejs/kit';
+import type { HandleFetch } from '@sveltejs/kit/hooks';
 import { env } from 'cloudflare:workers';
 
-const assets = (env as { ASSETS?: { fetch: typeof fetch } }).ASSETS;
+const assets = env.ASSETS;
 
 // SvelteKit fetches static/ files during SSR over the network (the worker calling its own URL),
 // which 404s on deployed Workers. Serve /data/* straight from the assets binding instead.

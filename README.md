@@ -8,7 +8,9 @@ drillable to every published line item, built only from official sources (ebudge
 ```sh
 npm install
 npm run dev          # http://localhost:5173 -> /2026-27/e
-npm run build        # static SPA in build/
+npm run build        # Cloudflare Worker (server-rendered) in .svelte-kit/cloudflare/
+npm run preview      # build, then serve the production Worker locally (wrangler dev)
+npm run check        # type check
 ```
 
 ## Data

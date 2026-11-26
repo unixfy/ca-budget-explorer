@@ -175,7 +175,7 @@
 					onblur={() => (hover = null)}
 				>
 					<g data-col style="transform-box: fill-box; transform-origin: center bottom">
-						{#each st.segs as g, j (g.s.id)}
+						{#each st.segs as g (g.s.id)}
 							{@const hh = Math.max(1, y(g.y0) - y(g.y1))}
 							<rect x={cx} y={y(g.y1)} width={bw} height={hh} fill={g.s.color} />
 							{#if g.s.hatch}
