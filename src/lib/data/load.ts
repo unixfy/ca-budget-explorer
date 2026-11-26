@@ -4,7 +4,6 @@
  * between drill-down levels never re-downloads a tree.
  */
 import { asset } from '$app/paths';
-import { browser } from '$app/environment';
 import type {
 	BudgetNode,
 	DatasetMeta,
@@ -51,7 +50,7 @@ async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
 		});
 		// Server: no cross-request cache, so every SSR fetch goes through SvelteKit's `fetch`
 		// and gets inlined into the page for hydration.
-		if (browser) {
+		if (typeof window !== 'undefined') {
 			cache.set(url, p);
 			p.catch(() => cache.delete(url));
 		}
