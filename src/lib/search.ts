@@ -39,14 +39,15 @@ export interface CountedResults {
 export function searchCounted(items: Prepared[], q: string, limit = 50): CountedResults {
 	const tokens = norm(q).split(/\s+/).filter(Boolean);
 	if (!tokens.length) return { results: [], total: 0, byKind: new Map() };
+	const wordStart = tokens.map((t) => new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
 	const scored: { e: SearchEntry; s: number }[] = [];
 	for (const it of items) {
 		let s = 0;
 		let ok = true;
-		for (const t of tokens) {
+		for (const [i, t] of tokens.entries()) {
 			if (it.e.code && it.e.code.toLowerCase() === t) s += 120;
 			else if (it.name.startsWith(t)) s += 60;
-			else if (new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`).test(it.name)) s += 40;
+			else if (wordStart[i].test(it.name)) s += 40;
 			else if (it.name.includes(t)) s += 25;
 			else if (it.hay.includes(t)) s += 8;
 			else {
