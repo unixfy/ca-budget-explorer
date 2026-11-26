@@ -27,7 +27,7 @@ Three things together set it apart from ebudget.ca.gov, LAO publications and gen
 ## Operating Context
 
 - People mostly arrive cold, with a question, often from a link or a search. The default route is the latest enacted budget (`/2026-27/e`).
-- Datasets are keyed by fiscal year and point in time (`p` Governor's Budget, `m` May Revision, `e` Enacted), and the header switches between them. Only 2026-27 Enacted is published so far (plus a fixture dataset for development).
+- Datasets are keyed by fiscal year and point in time (`p` Governor's Budget, `m` May Revision, `e` Enacted), and the header switches between them. Only 2026-27 Enacted is published so far.
 - Global settings are year (budget, current, or prior year), compare year, fund filter, and theme. They persist per browser.
 - Fund filter semantics follow DOF. "All funds" ($793.7B in 2026-27) includes reimbursements and nongovernmental cost funds, which double-count. "State funds" (General + special + bond) is DOF's headline figure.
 

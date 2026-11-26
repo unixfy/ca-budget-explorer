@@ -62,26 +62,7 @@ async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
 
 // ---------------------------------------------------------------- manifest / datasets
 
-const FALLBACK_MANIFEST: Manifest = {
-	defaultYear: 'fixture',
-	defaultPit: 'e',
-	datasets: [
-		{ fiscalYear: 'fixture', pit: 'e', publication: 'Enacted (fixture)', path: 'fixture/e' }
-	]
-};
-
-/** The fixture is sample data for `npm run dev` only; deployed builds never list or serve it. */
-const dev = import.meta.env.DEV;
-const isFixture = (fy: string) => fy === 'fixture';
-
-export async function getManifest(f: Fetch = fetch): Promise<Manifest> {
-	if (dev) {
-		const m = await getJSON<Manifest>('manifest.json', f).catch(() => undefined);
-		return m?.datasets?.length ? m : FALLBACK_MANIFEST;
-	}
-	const m = await getJSON<Manifest>('manifest.json', f);
-	return { ...m, datasets: m.datasets.filter((d) => !isFixture(d.fiscalYear)) };
-}
+export const getManifest = (f?: Fetch) => getJSON<Manifest>('manifest.json', f);
 
 export function defaultDataset(m: Manifest): { fy: string; pit: Pit } {
 	const hit =
@@ -96,7 +77,7 @@ const isPit = (p: string): p is Pit => p in PIT_LABELS;
 /**
  * Directory (relative to static/data) of a dataset. Uses the manifest `path` when present
  * (tolerating "static/data/…", "/data/…" or "…/meta.json" spellings), else `{fy}/{pit}`,
- * so datasets not yet listed in the manifest (e.g. the fixture) are still reachable.
+ * so datasets not yet listed in the manifest are still reachable.
  */
 export function datasetDir(m: Manifest, fy: string, pit: string): string {
 	const d = m.datasets.find((x) => x.fiscalYear === fy && x.pit === pit);
@@ -121,7 +102,6 @@ export interface Dataset {
 
 export async function getDataset(fy: string, pit: string, f: Fetch = fetch): Promise<Dataset> {
 	if (!isPit(pit)) throw new DataError(`Unknown publication "${pit}"`, 404);
-	if (!dev && isFixture(fy)) throw new DataError(`Unknown fiscal year "${fy}"`, 404);
 	const manifest = await getManifest(f);
 	const dir = datasetDir(manifest, fy, pit);
 	const meta = await getMeta(dir, f);

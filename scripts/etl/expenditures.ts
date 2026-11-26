@@ -1627,7 +1627,7 @@ if (!ONLY) {
 }
 const pitRank: Record<string, number> = { e: 3, m: 2, p: 1 };
 const isYear = (s: string) => /^\d{4}-\d{2}$/.test(s);
-// real fiscal years first (newest first), then non-year entries (e.g. UI fixtures) in their existing order
+// real fiscal years first (newest first), then any non-year entries in their existing order
 manifest.datasets.sort(
 	(a, b) =>
 		Number(isYear(b.fiscalYear)) - Number(isYear(a.fiscalYear)) ||

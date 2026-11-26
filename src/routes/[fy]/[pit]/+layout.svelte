@@ -16,7 +16,6 @@
 			? `${fiscalYear} budget, ${date.charAt(0).toLowerCase()}${date.slice(1)}`
 			: `${fiscalYear} ${pub} budget · ${date}`;
 	});
-	const fixture = $derived(ds.meta.notes.some((n) => /fixture/i.test(n)) || ds.fy === 'fixture');
 </script>
 
 <a
@@ -25,13 +24,6 @@
 	>Skip to content</a
 >
 <AppHeader {ds} onsearch={() => (searchOpen = true)} />
-
-{#if fixture}
-	<div class="bg-warning/15 px-4 py-1.5 text-center text-xs">
-		<strong>Sample data.</strong> This dataset is a development fixture — amounts are illustrative, not
-		official figures.
-	</div>
-{/if}
 
 <main id="main" class="mx-auto max-w-screen-2xl px-4 pt-5 pb-6">
 	{@render children()}
