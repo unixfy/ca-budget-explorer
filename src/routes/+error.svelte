@@ -11,7 +11,7 @@
 </svelte:head>
 
 <main class="mx-auto flex min-h-[70vh] max-w-lg flex-col justify-center px-4 py-12">
-	<PageTab page="?" label={notFound ? 'Not in this atlas' : 'Page didn’t load'} />
+	<PageTab label={notFound ? 'Page not found' : 'Page didn’t load'} />
 	<h1 class="mt-4 text-3xl leading-tight font-bold tracking-tight text-balance md:text-4xl">
 		{notFound ? 'This page isn’t in the atlas' : 'Something went wrong'}
 	</h1>
@@ -27,7 +27,7 @@
 	<div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
 		<a
 			class="map-label inline-flex min-h-11 items-center bg-primary px-4 text-sm text-primary-content no-underline"
-			href={href('/')}>Go to the Key Map</a
+			href={href('/')}>Go to the overview</a
 		>
 		{#if !notFound}
 			<button

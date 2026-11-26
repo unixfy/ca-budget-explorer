@@ -107,7 +107,7 @@
 			{width}
 			{height}
 			role="group"
-			aria-label="Key Map of the {blocks.length} agencies, sized by dollars. Use the arrow keys to move between agencies and Enter to turn to an agency's page."
+			aria-label="Map of the {blocks.length} agencies, sized by dollars. Use the arrow keys to move between agencies and Enter to open an agency's page."
 			class="block select-none"
 		>
 			{#each blocks as b, i (b.n.id)}

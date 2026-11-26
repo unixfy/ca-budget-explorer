@@ -112,7 +112,7 @@
 		atlas ? atlas.ref(data.expTrail[data.expTrail.length - 1].id)?.own : undefined
 	);
 	const prefix = $derived([
-		{ label: 'Spending · Key Map', href: routes.tree(ds.fy, ds.pit, 'expenditures') },
+		{ label: 'Spending', href: routes.tree(ds.fy, ds.pit, 'expenditures') },
 		...data.expTrail.slice(1, -1).map((n, i) => ({
 			page: atlas?.ref(n.id)?.own,
 			label: n.name,

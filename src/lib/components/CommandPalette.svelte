@@ -100,7 +100,7 @@
 	bind:this={dialog}
 	class="modal modal-top sm:modal-middle"
 	onclose={() => (open = false)}
-	aria-label="Street index: search the budget"
+	aria-label="Search the budget"
 >
 	<div
 		class="modal-box max-w-2xl rounded-none border border-base-content p-0 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.45)]"
@@ -108,7 +108,7 @@
 		<p
 			class="map-label flex items-center justify-between bg-base-content px-4 py-1.5 text-xs text-base-100"
 		>
-			<span>Street index</span><span class="font-sans normal-case opacity-80">{fy}</span>
+			<span>Search</span><span class="font-sans normal-case opacity-80">{fy}</span>
 		</p>
 		<label
 			class="input w-full rounded-none border-0 border-b border-base-content input-lg focus-within:outline-none"

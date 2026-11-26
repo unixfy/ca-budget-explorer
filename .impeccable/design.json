@@ -411,7 +411,7 @@
 			{
 				"name": "float-dialog",
 				"value": "0 16px 40px -16px rgb(0 0 0 / .45)",
-				"purpose": "Street Index dialog."
+				"purpose": "Search dialog."
 			}
 		],
 		"motion": [
@@ -486,7 +486,7 @@
 			"name": "Index Line",
 			"kind": "custom",
 			"refersTo": "atlas-inset",
-			"description": "Street Index entry: name, dot leader, amount, page and square.",
+			"description": "Search result: name, dot leader, amount, page and square.",
 			"html": "<div class=\"ds-idx\"><a href=\"#\">Medi-Cal</a><span class=\"ds-dot\"></span><span>$196.1B</span><span class=\"ds-ref\">p. 101 · D4</span></div>",
 			"css": ".ds-idx{display:flex;align-items:baseline;gap:8px;font-family:Barlow,sans-serif;color:#15191c;font-variant-numeric:tabular-nums} .ds-idx a{color:#15191c;font-weight:500;text-decoration:none} .ds-idx a:hover{text-decoration:underline} .ds-dot{flex:1;min-width:24px;border-bottom:2px dotted rgba(21,25,28,.35);transform:translateY(-.3em)} .ds-ref{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:12px}"
 		},

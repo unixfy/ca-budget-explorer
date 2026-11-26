@@ -152,13 +152,12 @@
 	const tabOff = 'border-base-300 hover:border-base-content';
 </script>
 
-<svelte:head><title>Street index · California Budget Explorer</title></svelte:head>
+<svelte:head><title>Search · California Budget Explorer</title></svelte:head>
 
-<PageTab page="Index" label="Street index" />
-<h1 class="mt-3 font-sans text-4xl font-bold tracking-tight sm:text-5xl">Street index</h1>
+<PageTab label="Search" />
+<h1 class="mt-3 font-sans text-4xl font-bold tracking-tight sm:text-5xl">Search the budget</h1>
 <p class="mt-2 max-w-[65ch] text-base-content/80">
-	Every agency, department, program, fund and revenue source, with its amount and the page and grid
-	square where the atlas draws it.
+	Every agency, department, program, fund and revenue source, with its amount and the page it’s on.
 </p>
 
 <form onsubmit={submit} class="mt-5 flex max-w-2xl gap-2" role="search">
@@ -186,7 +185,7 @@
 
 {#if failed}
 	<div class="atlas-inset mt-6 max-w-2xl p-4" role="alert">
-		<p class="font-semibold">The street index didn’t load.</p>
+		<p class="font-semibold">Search didn’t load.</p>
 		<p class="mt-1 text-sm text-base-content/80">
 			This is usually a network hiccup. Try again, or browse the
 			<a class="text-primary underline" href={routes.tree(ds.fy, ds.pit, 'expenditures')}
@@ -199,7 +198,7 @@
 		<button class="btn mt-3 btn-sm" onclick={() => attempt++}>Try again</button>
 	</div>
 {:else if !items || !shown || !all}
-	<div class="mt-8" role="status" aria-label="Loading the street index">
+	<div class="mt-8" role="status" aria-label="Loading search">
 		<span class="loading loading-dots"></span>
 	</div>
 {:else if q.trim()}
@@ -240,7 +239,7 @@
 		</div>
 		<p class="mt-3 max-w-[65ch] text-sm text-base-content/80">
 			{countText} Each entry opens its page, which names the official source for the figure. Page numbers
-			are this atlas’s own, not pages of a state document.
+			belong to this explorer, not to any state document.
 		</p>
 
 		<div class="mt-2 max-w-4xl">

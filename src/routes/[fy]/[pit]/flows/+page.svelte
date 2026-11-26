@@ -175,12 +175,12 @@
 			{
 				label: 'Spending areas',
 				color: (biggest && tints.get(biggest.id)) ?? t.neutral,
-				note: 'Each agency keeps its Key Map tint'
+				note: 'Each agency keeps its colour from the overview'
 			},
 			{ label: 'Fund balances and reserves', color: t.park },
 			{ label: 'Transfers between funds', color: t.neutral },
 			{
-				label: 'Route',
+				label: 'Flow of money',
 				kind: 'line',
 				color: t.roads[0],
 				note: 'Width is dollars; colour is the fund it runs through'
@@ -217,7 +217,7 @@
 <svelte:head><title>Follow the money · {yearLabel} · California Budget Explorer</title></svelte:head
 >
 
-<PageTab page="ii" label="Route map" />
+<PageTab label="Money flow" />
 
 <div class="mt-4 grid gap-x-12 gap-y-6 lg:grid-cols-[minmax(0,68ch)_17rem] lg:items-start">
 	<header>

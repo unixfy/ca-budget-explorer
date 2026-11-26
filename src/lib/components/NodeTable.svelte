@@ -140,7 +140,7 @@
 					)}{/if}
 				{#if hasRefs}<th
 						class="map-label text-right"
-						title="Where it is on the map: page and grid square">Page</th
+						title="Page number and map square where this item appears">Page</th
 					>{/if}
 			</tr>
 		</thead>

@@ -28,7 +28,7 @@
 
 <svelte:head><title>Notes & known gaps · Sources · California Budget Explorer</title></svelte:head>
 
-<PageTab page="iv" label="Notes & known gaps" />
+<PageTab label="Sources" />
 <h1 class="mt-3 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
 	Notes &amp; known gaps
 </h1>

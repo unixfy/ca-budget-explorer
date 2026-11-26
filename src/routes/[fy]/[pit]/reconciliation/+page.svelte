@@ -316,7 +316,7 @@
 </script>
 
 <svelte:head
-	><title>Reconciliation · {ds.meta.fiscalYear} · California Budget Explorer</title></svelte:head
+	><title>Does it add up? · {ds.meta.fiscalYear} · California Budget Explorer</title></svelte:head
 >
 
 {#snippet cite(q: Quote | undefined)}
@@ -340,10 +340,10 @@
 
 {#if !r}
 	<section class="mx-auto max-w-2xl py-16 text-center">
-		<PageTab page="iii" label="Does it add up?" />
-		<h1 class="mt-4 text-3xl font-bold tracking-tight md:text-5xl">Reconciliation</h1>
+		<PageTab label="Does it add up?" />
+		<h1 class="mt-4 text-3xl font-bold tracking-tight md:text-5xl">Checking our totals</h1>
 		<p class="mt-4 text-base-content/85">
-			The reconciliation for the {ds.meta.fiscalYear}
+			The totals check for the {ds.meta.fiscalYear}
 			{ds.meta.publication} budget isn’t ready yet. It will check this explorer’s totals against the Department
 			of Finance’s summary tables once they have been compared.
 		</p>
@@ -354,15 +354,17 @@
 			>
 			<a
 				class="inline-flex min-h-11 items-center px-2 text-primary"
-				href={routes.home(ds.fy, ds.pit)}>Back to the Key Map</a
+				href={routes.home(ds.fy, ds.pit)}>Back to the overview</a
 			>
 		</div>
 	</section>
 {:else}
 	{@const by = r.generalFund.years.by}
 	<header class="max-w-3xl">
-		<PageTab page="iii" label="Does it add up?" />
-		<h1 class="mt-4 text-3xl font-bold tracking-tight text-balance md:text-5xl">Reconciliation</h1>
+		<PageTab label="Does it add up?" />
+		<h1 class="mt-4 text-3xl font-bold tracking-tight text-balance md:text-5xl">
+			Checking our totals
+		</h1>
 		<p class="mt-3 text-lg leading-relaxed text-balance">
 			Do this explorer’s numbers match the State’s own published figures? This page checks them for
 			the {r.years.by}
@@ -707,7 +709,7 @@
 	>
 		<div class="flex flex-wrap items-baseline justify-between gap-3">
 			<div>
-				<h2 id="bridge-h" class="text-xl font-bold">The General Fund bridge</h2>
+				<h2 id="bridge-h" class="text-xl font-bold">The General Fund, start to finish</h2>
 				<p class="text-sm text-base-content/75">
 					From the balance carried in, through revenue, transfers and spending, to the balance left
 					at year end.
@@ -743,7 +745,7 @@
 				{/each}
 			</ul>
 			<div class="mt-3">
-				<Waterfall {steps} label="General Fund bridge, {r.years[year]}" />
+				<Waterfall {steps} label="General Fund, start to finish, {r.years[year]}" />
 			</div>
 			{#if g}
 				<div class="mt-4 grid grid-cols-1 gap-4 text-sm leading-relaxed md:grid-cols-3">

@@ -24,7 +24,7 @@
 				p.startsWith(base + '/expenditures') || p.startsWith(base + '/department')
 		},
 		{
-			label: 'By type',
+			label: 'By purpose',
 			href: routes.tree(ds.fy, ds.pit, 'bytype'),
 			match: (p: string) => p.startsWith(base + '/bytype')
 		},
@@ -34,12 +34,12 @@
 			match: (p: string) => p.startsWith(base + '/revenues')
 		},
 		{
-			label: 'Flows',
+			label: 'Money flow',
 			href: routes.flows(ds.fy, ds.pit),
 			match: (p: string) => p.startsWith(base + '/flows')
 		},
 		{
-			label: 'Reconciliation',
+			label: 'Does it add up?',
 			href: routes.reconciliation(ds.fy, ds.pit),
 			match: (p: string) => p.startsWith(base + '/reconciliation')
 		},
@@ -110,7 +110,7 @@
 		<a
 			href={routes.home(ds.fy, ds.pit)}
 			class="flex min-h-11 items-center gap-2 no-underline"
-			aria-label="California Budget Explorer, Key Map"
+			aria-label="California Budget Explorer, overview"
 		>
 			<img src={logo} alt="" width="24" height="24" class="size-6 shrink-0" />
 			<span class="map-label hidden text-sm sm:inline">California Budget Explorer</span>
@@ -146,8 +146,8 @@
 			<button
 				class="map-label inline-flex min-h-11 min-w-11 items-center justify-center gap-2 px-2 text-sm hover:bg-base-200"
 				onclick={onsearch}
-				aria-label="Street index"
-				title="Street index ({mac ? '⌘' : 'Ctrl'} K)"
+				aria-label="Search"
+				title="Search ({mac ? '⌘' : 'Ctrl'} K)"
 			>
 				<svg
 					class="size-4"
@@ -157,7 +157,7 @@
 					stroke-width="2"
 					aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg
 				>
-				<span class="hidden sm:inline">Street index</span>
+				<span class="hidden sm:inline">Search</span>
 				<kbd class="kbd hidden font-sans kbd-xs lg:inline-flex">{mac ? '⌘' : 'Ctrl'} K</kbd>
 			</button>
 

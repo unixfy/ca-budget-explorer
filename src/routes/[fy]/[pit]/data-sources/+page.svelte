@@ -321,7 +321,7 @@
 			label: 'Expected, but not published',
 			color: 'transparent',
 			kind: 'tint',
-			note: 'Dashed roundel with a cross'
+			note: 'Dashed circle with a cross'
 		},
 		{ label: 'Selected or highlighted', color: 'var(--color-secondary)', kind: 'casing' }
 	]);
@@ -331,7 +331,7 @@
 	><title>Where the numbers come from · Sources · California Budget Explorer</title></svelte:head
 >
 
-<PageTab page="iv" label="Where the numbers come from" />
+<PageTab label="Sources" />
 <header class="max-w-3xl">
 	<h1 class="mt-3 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
 		Where the numbers come from
@@ -433,8 +433,8 @@
 								Check the <strong>Sources</strong> box at the end of each page. It names every document
 								behind that view, with page numbers where the source is a PDF.
 							{:else if step === 3}
-								Follow the map below. It shows every source and the pages of this atlas each one
-								feeds; select a page tab on the right of the map to see what it was built from.
+								Follow the map below. It shows every source and the pages of this site each one
+								feeds; select a page name on the right of the map to see what it was built from.
 							{:else}
 								Turn to <a
 									class="text-primary underline underline-offset-2"
@@ -455,7 +455,7 @@
 				<h2 id="tree-h" class="text-2xl font-bold">Every source, and what it feeds</h2>
 				<p class="mt-1 max-w-3xl text-sm leading-relaxed text-base-content/80">
 					Read left to right: who publishes it, which publication, what kind of document, and the
-					documents themselves. Bigger roundels stand for more documents; the tint shows the file
+					documents themselves. Bigger circles stand for more documents; the tint shows the file
 					type. Roads on the right connect each source to the pages of this site it feeds. Most
 					pages draw on several.
 				</p>
@@ -484,7 +484,7 @@
 					here
 				</label>
 				<label class="label cursor-pointer gap-2 text-sm text-base-content">
-					<input type="checkbox" class="toggle toggle-sm" bind:checked={showLinks} /> Show roads to pages
+					<input type="checkbox" class="toggle toggle-sm" bind:checked={showLinks} /> Show links to pages
 				</label>
 			</div>
 		</div>
@@ -522,7 +522,7 @@
 						/>
 					</div>
 					<p class="border-t border-base-300 px-3 py-2 text-xs text-base-content/80">
-						Select a roundel to open it and see details. Keyboard: Tab into the map, then the up and
+						Select a circle to open it and see details. Keyboard: Tab into the map, then the up and
 						down arrows move, right and left open or close, and Enter selects.
 					</p>
 				{:else}

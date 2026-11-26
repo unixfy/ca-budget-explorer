@@ -106,17 +106,17 @@ export function atlasIndex(root: BudgetNode, tree: TreeName): AtlasIndex {
 	return idx;
 }
 
-/** "Key Map" for page 0, otherwise the page number. */
-export const pageName = (page: number) => (page === KEY_PAGE ? 'Key Map' : String(page));
+/** "Overview" for page 0, otherwise the page number. */
+export const pageName = (page: number) => (page === KEY_PAGE ? 'Overview' : String(page));
 
-/** "p. 312 · C4", "Key Map · C4", or "p. 312". */
+/** "p. 312 · C4", "Overview · C4", or "p. 312". */
 export function refLabel(r: AtlasRef): string {
-	const p = r.page === KEY_PAGE ? 'Key Map' : `p. ${r.page}`;
+	const p = r.page === KEY_PAGE ? 'Overview' : `p. ${r.page}`;
 	return r.grid ? `${p} · ${r.grid}` : p;
 }
 
 /** Spoken form for screen readers: "page 312, square C4". */
 export function refSpoken(r: AtlasRef): string {
-	const p = r.page === KEY_PAGE ? 'the Key Map' : `page ${r.page}`;
+	const p = r.page === KEY_PAGE ? 'the overview' : `page ${r.page}`;
 	return r.grid ? `${p}, square ${r.grid}` : p;
 }

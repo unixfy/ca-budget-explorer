@@ -108,7 +108,7 @@ export const PRODUCT_LABEL: Record<Product, string> = {
 	funds: 'Funds',
 	revenues: 'Revenue tree',
 	flows: 'Money flows',
-	reconciliation: 'Reconciliation'
+	reconciliation: 'Does it add up?'
 };
 
 export const LEVEL_LABEL: Record<CatalogNode['level'], string> = {

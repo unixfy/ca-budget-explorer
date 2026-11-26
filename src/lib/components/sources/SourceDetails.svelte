@@ -252,7 +252,7 @@
 		{/if}
 	{:else}
 		<p class="text-base-content/75">
-			Select any roundel on the map, or one of this site’s page tabs on its right, to see what the
+			Select any circle on the map, or one of this site’s page names on its right, to see what the
 			source is, what format and units it uses, and which figures here rely on it.
 		</p>
 	{/if}

@@ -41,7 +41,7 @@
 			</p>
 			<p class="text-xs text-base-content/75">
 				{published}. Amounts in the source are in thousands of dollars and are shown rounded. Page
-				numbers and grid squares are this atlas’s own; official page numbers appear in each source
+				numbers and map squares belong to this explorer; official page numbers appear in each source
 				citation.
 			</p>
 		</div>

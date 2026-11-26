@@ -19,7 +19,7 @@
 	const TREE_LABEL: Record<TreeName, string> = {
 		expenditures: 'Spending',
 		revenues: 'Revenue',
-		bytype: 'Spending by type'
+		bytype: 'Spending by purpose'
 	};
 
 	const node = $derived(trail[trail.length - 1]);
@@ -32,7 +32,7 @@
 	const ROOT_NOTE: Partial<Record<TreeName, string[]>> = {
 		revenues: [
 			'This shows the taxes, fees and other money collected into the state’s General Fund and special funds, as listed by the Department of Finance.',
-			'Federal money and borrowing through bonds are not state revenue, so they aren’t included here. Flows shows all the money coming in.'
+			'Federal money and borrowing through bonds are not state revenue, so they aren’t included here. Money flow shows all the money coming in.'
 		],
 		bytype: [
 			'These groups are this site’s own way of sorting spending by what it pays for, not an official state classification. Each program is placed in one group by a stated rule, so the groups add up to the total.'

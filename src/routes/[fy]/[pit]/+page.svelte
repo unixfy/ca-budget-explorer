@@ -173,7 +173,7 @@
 			};
 		})
 	);
-	// "Where the money goes": by agency, or by type of spending (DOF character of expenditure)
+	// "Where the money goes": by agency, or by purpose (this site’s grouping of programs by what they pay for)
 	let goesBy = $state<'agency' | 'type'>('agency');
 	const types = $derived(
 		(byType?.children ?? []).map((t) => ({
@@ -233,7 +233,7 @@
 	const legendItems = $derived([
 		{
 			label: 'Agency',
-			note: 'Each tint is one agency; white streets inside are its departments',
+			note: 'Each tint is one agency; white lines inside mark its departments',
 			color: CATEGORICAL[settings.mode][1],
 			kind: 'casing' as const
 		},
@@ -326,7 +326,7 @@
 	class="mt-6 grid gap-x-10 gap-y-6 lg:grid-cols-[minmax(0,52rem)_minmax(16rem,21rem)] lg:justify-between"
 >
 	<section aria-labelledby="keymap-heading" class="min-w-0">
-		<h2 id="keymap-heading" class="sr-only">Key Map: the agencies</h2>
+		<h2 id="keymap-heading" class="sr-only">Map of spending by agency</h2>
 		{#if exp && index}
 			<MarginGrid>
 				<KeyMap node={exp} {colors} {index} hrefOf={agencyHref} />
@@ -343,7 +343,7 @@
 			<div
 				class="flex aspect-[10/7] w-full items-center justify-center bg-base-200 sm:ml-5 sm:w-[calc(100%-1.25rem)]"
 			>
-				<span class="loading loading-md loading-dots" aria-label="Loading the Key Map"></span>
+				<span class="loading loading-md loading-dots" aria-label="Loading the map"></span>
 			</div>
 		{/if}
 
@@ -367,7 +367,7 @@
 						d="M10 4v8"
 					/></svg
 				>
-				{aerial ? 'Close aerial view' : 'Aerial view (3D)'}
+				{aerial ? 'Close 3D view' : '3D view'}
 			</button>
 			<a class="map-label inline-flex min-h-11 items-center text-sm" href="#where-money-goes"
 				>Agencies as a list</a
@@ -394,8 +394,8 @@
 					>
 						{#snippet fallback()}
 							<div class="flex h-full items-center justify-center p-6 text-center text-sm">
-								The aerial view needs 3D graphics (WebGL), which this browser isn’t offering. The
-								Key Map above shows the same agencies.
+								The 3D view needs WebGL graphics, which this browser isn’t offering. The map above
+								shows the same agencies.
 							</div>
 						{/snippet}
 					</BudgetCity>
@@ -422,15 +422,17 @@
 						style="letter-spacing: 0">100</text
 					>
 				</svg>
-				<span>Page number: the agency’s own page in this atlas</span>
+				<span>Page number: select it to open the agency’s page</span>
 			</p>
 		</Legend>
 
 		<section class="atlas-inset p-3 text-sm" aria-labelledby="howto-heading">
-			<h2 id="howto-heading" class="map-label mb-2 text-xs">How to read this atlas</h2>
+			<h2 id="howto-heading" class="map-label mb-2 text-xs">How to read this map</h2>
 			<ol class="list-decimal space-y-1 pl-5 marker:font-semibold">
 				<li>Blocks are sized by dollars, so the biggest agencies take the most room.</li>
-				<li>The number in the black circle is the page: select a block to turn to it.</li>
+				<li>
+					The number in the black circle is the agency’s page number. Select a block to open it.
+				</li>
 				<li>Every figure names the official document and page it comes from.</li>
 			</ol>
 		</section>
@@ -490,7 +492,7 @@
 			<div class="mb-3 flex flex-wrap items-center gap-x-4 gap-y-2">
 				<h2 class="text-2xl font-bold tracking-tight">Where the money goes</h2>
 				<div class="flex" role="group" aria-label="Group spending by">
-					{#each [['agency', 'By agency'], ['type', 'By type']] as const as [k, l] (k)}
+					{#each [['agency', 'By agency'], ['type', 'By purpose']] as const as [k, l] (k)}
 						<button
 							class="map-label min-h-11 border border-base-content px-3 text-xs sm:min-h-8 {goesBy ===
 							k
@@ -504,7 +506,7 @@
 			</div>
 			{#if goesBy === 'type'}
 				{#if byType}
-					<RankedBars items={types} top={9} label="Spending by type" />
+					<RankedBars items={types} top={9} label="Spending by purpose" />
 					<p class="mt-3 max-w-prose text-sm leading-relaxed text-base-content/80">
 						Every program, from every department, grouped by what it pays for: e.g. K-12 schools
 						combines the Department of Education, school facility grants and the Proposition 98
@@ -513,14 +515,14 @@
 					<p class="mt-2">
 						<a
 							class="inline-flex items-center gap-1 text-sm text-primary"
-							href={routes.tree(ds.fy, ds.pit, 'bytype')}>Explore by type {@render arrow()}</a
+							href={routes.tree(ds.fy, ds.pit, 'bytype')}>Explore by purpose {@render arrow()}</a
 						>
 					</p>
 				{:else if byType === null}
 					<p class="text-sm text-base-content/80">
-						Spending by type didn’t load. <a
+						Spending by purpose didn’t load. <a
 							class="link"
-							href={routes.tree(ds.fy, ds.pit, 'bytype')}>Open the By type page</a
+							href={routes.tree(ds.fy, ds.pit, 'bytype')}>Open the By purpose page</a
 						>.
 					</p>
 				{:else}
@@ -573,7 +575,7 @@
 				Largest departments
 			</h2>
 			<p class="mt-1 text-sm text-base-content/80">
-				The twelve biggest, with the page and square where each sits on its agency’s map.
+				The twelve biggest, with the page number and map square where each one appears.
 			</p>
 			{#if exp}
 				<ol class="mt-3 divide-y divide-base-content/15">

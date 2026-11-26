@@ -77,7 +77,7 @@
 		fy = page.params.fy ?? '',
 		pit = page.params.pit ?? '',
 		tree,
-		treeLabel = 'Key Map'
+		treeLabel = 'Spending'
 	}: Props = $props();
 	const uid = $props.id();
 
@@ -198,9 +198,9 @@
 		return index.ref(n.id)?.own;
 	};
 	const viewLabel: Record<View, string> = {
-		city: 'Aerial view',
-		treemap: 'Treemap',
-		sunburst: 'Sunburst'
+		city: '3D city',
+		treemap: 'Blocks',
+		sunburst: 'Rings'
 	};
 </script>
 
@@ -212,7 +212,7 @@
 		prefix={prefixCrumbs}
 		label={compact ? 'Path within this department' : 'Breadcrumb'}
 		pageOf={index ? pageOf : undefined}
-		rootLabel={index ? `${treeLabel} · Key Map` : undefined}
+		rootLabel={index ? treeLabel : undefined}
 	/>
 
 	<header class="flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
@@ -443,7 +443,7 @@
 			{/if}
 			{#if node.positions}
 				<section class="border-t border-base-content pt-3">
-					<h2 class="map-label mb-1 text-xs">Positions</h2>
+					<h2 class="map-label mb-1 text-xs">Staff positions</h2>
 					<p class="text-xl font-semibold tabular-nums">
 						{node.positions[settings.year]?.toLocaleString('en-US', { maximumFractionDigits: 1 }) ??
 							'—'}
