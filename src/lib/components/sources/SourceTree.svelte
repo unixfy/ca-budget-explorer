@@ -287,7 +287,7 @@
 	>
 		<g transform="translate({M.l},{M.t})">
 			<!-- column headers -->
-			<g aria-hidden="true" fill={ink.secondary} class="map-label" style="font-size:11px">
+			<g aria-hidden="true" fill={ink.secondary} class="map-label" style="font-size:12px">
 				<text x={COL[1] - 4} y={-12}>Publisher</text>
 				<text x={COL[2] - 4} y={-12}>Publication</text>
 				<text x={COL[3] - 4} y={-12}>Kind of document</text>
@@ -472,7 +472,7 @@
 						x="0"
 						dy="0.34em"
 						class="map-label"
-						style="font-size:11px"
+						style="font-size:12px"
 						fill={sel ? ink.surface : ink.primary}>{PRODUCT_LABEL[pr.id]}</text
 					>
 				</g>

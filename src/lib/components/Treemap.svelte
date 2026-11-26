@@ -364,7 +364,7 @@
 										y={ry + 12.5}
 										font-size="12"
 										font-weight="700"
-										class="font-map tabular-nums fill-base-100">{ref.own}</text
+										class="fill-base-100 font-map tabular-nums">{ref.own}</text
 									>
 								{/if}
 								<path

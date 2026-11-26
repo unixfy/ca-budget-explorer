@@ -186,3 +186,32 @@
 		transform: translateX(-4%);
 	}
 }
+
+/* Atlas index tables: every data table gets the condensed-caps header band and hairlines. */
+@layer components {
+	.table :where(thead th) {
+		font-family: var(--font-map);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		background: var(--color-base-200);
+		color: var(--color-base-content);
+	}
+	.table :where(tbody tr) {
+		border-color: var(--color-base-300);
+	}
+}
+
+/* Buttons speak in the map-label voice: condensed caps, crisp, flat. */
+@layer components {
+	.btn {
+		font-family: var(--font-map);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		box-shadow: none;
+	}
+	.btn-ghost:hover {
+		background: var(--color-base-200);
+	}
+}

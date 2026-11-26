@@ -154,8 +154,7 @@
 						text-anchor="end"
 						font-size="12"
 						class="font-map tabular-nums"
-						fill={ink.secondary}
-						>{money(t, { digits: t && t < 1e6 ? 1 : 0 })}</text
+						fill={ink.secondary}>{money(t, { digits: t && t < 1e6 ? 1 : 0 })}</text
 					>
 				</g>
 			{/each}

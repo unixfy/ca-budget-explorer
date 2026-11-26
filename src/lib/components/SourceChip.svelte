@@ -24,7 +24,7 @@
 	<span
 		class="inline-flex max-w-full flex-wrap items-baseline gap-x-1.5 text-xs text-base-content/80"
 	>
-		<span class="map-label text-[0.6875rem] text-base-content">Source</span>
+		<span class="map-label text-xs text-base-content">Source</span>
 		<span aria-hidden="true">·</span>
 		<a
 			class="inline-flex min-w-0 items-baseline gap-1 text-primary underline-offset-2 hover:underline"

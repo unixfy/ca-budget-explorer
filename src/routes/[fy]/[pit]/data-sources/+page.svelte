@@ -386,7 +386,7 @@
 						</a>
 						{#if p.id === `${cat.root.children?.find((c) => c.used)?.id}/${cat.pit}`}
 							<span
-								class="map-label ml-1 border border-base-content px-1.5 py-0.5 text-[0.6875rem] leading-none"
+								class="map-label ml-1 border border-base-content px-1.5 py-0.5 text-xs leading-none"
 								>Main source</span
 							>
 						{/if}

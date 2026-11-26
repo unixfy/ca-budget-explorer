@@ -1,5 +1,5 @@
 /**
- * Client-side data loading for the static JSON files described in schema.ts.
+ * Data loading (server render and browser) for the static JSON files described in schema.ts.
  * Everything is fetched lazily from /data/** and memoised per URL, so navigating
  * between drill-down levels never re-downloads a tree.
  */
@@ -48,8 +48,12 @@ async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
 			if (/^\s*</.test(text)) throw new DataError(`Could not load ${rel} (not found)`, 404, url);
 			return JSON.parse(text) as T;
 		});
-		cache.set(url, p);
-		p.catch(() => cache.delete(url));
+		// Server: no cross-request cache, so every SSR fetch goes through SvelteKit's `fetch`
+		// and gets inlined into the page for hydration.
+		if (typeof window !== 'undefined') {
+			cache.set(url, p);
+			p.catch(() => cache.delete(url));
+		}
 	}
 	return p;
 }
@@ -64,14 +68,17 @@ const FALLBACK_MANIFEST: Manifest = {
 	]
 };
 
+/** The fixture is sample data for `npm run dev` only; deployed builds never list or serve it. */
+const dev = import.meta.env.DEV;
+const isFixture = (fy: string) => fy === 'fixture';
+
 export async function getManifest(f: Fetch = fetch): Promise<Manifest> {
-	try {
-		const m = await getJSON<Manifest>('manifest.json', f);
-		if (!m?.datasets?.length) return FALLBACK_MANIFEST;
-		return m;
-	} catch {
-		return FALLBACK_MANIFEST;
+	if (dev) {
+		const m = await getJSON<Manifest>('manifest.json', f).catch(() => undefined);
+		return m?.datasets?.length ? m : FALLBACK_MANIFEST;
 	}
+	const m = await getJSON<Manifest>('manifest.json', f);
+	return { ...m, datasets: m.datasets.filter((d) => !isFixture(d.fiscalYear)) };
 }
 
 export function defaultDataset(m: Manifest): { fy: string; pit: Pit } {
@@ -112,6 +119,7 @@ export interface Dataset {
 
 export async function getDataset(fy: string, pit: string, f: Fetch = fetch): Promise<Dataset> {
 	if (!isPit(pit)) throw new DataError(`Unknown publication "${pit}"`, 404);
+	if (!dev && isFixture(fy)) throw new DataError(`Unknown fiscal year "${fy}"`, 404);
 	const manifest = await getManifest(f);
 	const dir = datasetDir(manifest, fy, pit);
 	const meta = await getMeta(dir, f);

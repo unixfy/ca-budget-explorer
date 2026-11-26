@@ -15,6 +15,7 @@
 	import { settings, hasWebGL } from '#lib/settings.svelte.ts';
 	import type { CityBlock, CityDistrict, CityScene } from '#lib/viz/city.ts';
 	import Tooltip from './Tooltip.svelte';
+	import { OTHER } from '#lib/viz/palette.ts';
 
 	interface Props {
 		node: BudgetNode;
@@ -84,7 +85,7 @@
 				z0: c.y0,
 				x1: c.x1,
 				z1: c.y1,
-				color: colors.get(c.data.node.id) ?? '#888',
+				color: colors.get(c.data.node.id) ?? OTHER[settings.mode],
 				label: displayName(c.data.node),
 				value: c.value ?? 0
 			})
@@ -99,7 +100,7 @@
 				x1: l.x1,
 				z1: l.y1,
 				h: 1.5 + 44 * Math.sqrt((l.value ?? 0) / maxV),
-				color: colors.get(top.data.node.id) ?? '#888'
+				color: colors.get(top.data.node.id) ?? OTHER[settings.mode]
 			};
 		});
 		const heights = new Map<string, number>();
@@ -221,21 +222,30 @@
 		{:else}
 			<div class="absolute right-4 bottom-4 z-10 flex flex-wrap items-center justify-end gap-2">
 				{#if listHref}
-					<a class="btn bg-base-100/90 btn-sm max-sm:min-h-11" href={listHref}>Show as a list</a>
+					<a
+						class="map-label inline-flex min-h-9 items-center border border-base-content bg-base-100 px-2.5 text-xs max-sm:min-h-11"
+						href={listHref}>Show as a list</a
+					>
 				{/if}
 				{#if engaged}
-					<button class="btn btn-neutral btn-sm max-sm:min-h-11" onclick={release}>
+					<button
+						class="map-label inline-flex min-h-9 items-center gap-1 bg-base-content px-2.5 text-xs text-base-100 max-sm:min-h-11"
+						onclick={release}
+					>
 						Done exploring <kbd class="kbd hidden kbd-xs sm:inline-flex">Esc</kbd>
 					</button>
 				{:else}
-					<button class="btn bg-base-100/90 btn-sm max-sm:min-h-11" onclick={engage}>
+					<button
+						class="map-label inline-flex min-h-9 items-center border border-base-content bg-base-100 px-2.5 text-xs max-sm:min-h-11"
+						onclick={engage}
+					>
 						Explore the city
 					</button>
 				{/if}
 			</div>
 			{#if engaged}
 				<p
-					class="pointer-events-none absolute bottom-16 left-1/2 w-max max-w-[90%] -translate-x-1/2 rounded-field bg-base-100/90 px-3 py-1 text-center text-xs text-base-content shadow-sm sm:bottom-4"
+					class="pointer-events-none absolute bottom-16 left-1/2 w-max max-w-[90%] -translate-x-1/2 border border-base-content bg-base-100 px-3 py-1 text-center text-xs text-base-content shadow-sm sm:bottom-4"
 					aria-live="polite"
 				>
 					Drag to turn, scroll or pinch to zoom, click a building to open it.
@@ -246,9 +256,11 @@
 			{#each topDistricts as d, i (d.key)}
 				<div
 					bind:this={labelEls[i]}
-					class="absolute top-0 left-0 flex max-w-[15rem] items-center rounded-full bg-base-100/90 px-2 py-0.5 text-xs font-medium whitespace-nowrap shadow transition-opacity"
+					class="absolute top-0 left-0 flex max-w-[15rem] items-center border border-base-content bg-base-100 px-1.5 py-0.5 text-xs font-medium whitespace-nowrap transition-opacity"
 				>
-					<span class="mr-1 inline-block size-2 shrink-0 rounded-full" style:background={d.color}
+					<span
+						class="mr-1 inline-block size-2.5 shrink-0 border border-base-content"
+						style:background={d.color}
 					></span><span class="min-w-0 truncate">{d.label}</span>
 					<span class="ml-1 shrink-0 text-base-content/75">{money(d.value)}</span>
 				</div>

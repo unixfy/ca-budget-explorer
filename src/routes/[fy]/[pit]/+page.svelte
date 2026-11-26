@@ -417,7 +417,7 @@
 						x="12"
 						y="16"
 						text-anchor="middle"
-						font-size="11"
+						font-size="12"
 						class="map-label fill-base-100"
 						style="letter-spacing: 0">100</text
 					>

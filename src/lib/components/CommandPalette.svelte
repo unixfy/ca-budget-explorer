@@ -100,14 +100,21 @@
 	bind:this={dialog}
 	class="modal modal-top sm:modal-middle"
 	onclose={() => (open = false)}
-	aria-label="Search the budget"
+	aria-label="Street index: search the budget"
 >
-	<div class="modal-box max-w-2xl p-0">
+	<div
+		class="modal-box max-w-2xl rounded-none border border-base-content p-0 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.45)]"
+	>
+		<p
+			class="map-label flex items-center justify-between bg-base-content px-4 py-1.5 text-xs text-base-100"
+		>
+			<span>Street index</span><span class="font-sans normal-case opacity-80">{fy}</span>
+		</p>
 		<label
-			class="input w-full rounded-b-none border-0 border-b border-base-300 input-lg focus-within:outline-none"
+			class="input w-full rounded-none border-0 border-b border-base-content input-lg focus-within:outline-none"
 		>
 			<svg
-				class="size-5 opacity-60"
+				class="size-5 text-base-content/75"
 				viewBox="0 0 24 24"
 				fill="none"
 				stroke="currentColor"
@@ -133,9 +140,12 @@
 				<li class="space-y-2 p-4 text-sm">
 					<p>Search isn’t available right now. Check your connection and try again.</p>
 					<div class="flex flex-wrap gap-2">
-						<button class="btn btn-sm" onclick={retry}>Try again</button>
+						<button
+							class="map-label min-h-11 bg-primary px-3 text-sm text-primary-content"
+							onclick={retry}>Try again</button
+						>
 						<a
-							class="btn btn-ghost btn-sm"
+							class="inline-flex min-h-11 items-center px-2 text-primary"
 							href={routes.tree(fy, pit, 'expenditures')}
 							onclick={() => (open = false)}>Browse spending instead</a
 						>
@@ -159,7 +169,10 @@
 					<p class="mt-2 flex flex-wrap items-center gap-2">
 						Try
 						{#each examples as x (x)}
-							<button class="btn btn-sm" onclick={() => tryExample(x)}>{x}</button>
+							<button
+								class="min-h-11 border border-base-content px-3 hover:bg-secondary/40"
+								onclick={() => tryExample(x)}>{x}</button
+							>
 						{/each}
 					</p>
 				</li>
@@ -167,13 +180,15 @@
 			{#each results as r, i (r.id + r.tree)}
 				<li id="cmdk-{i}" role="option" aria-selected={i === active}>
 					<button
-						class="flex w-full items-center gap-3 rounded-field px-3 py-2 text-left {i === active
-							? 'bg-base-200'
+						class="flex w-full items-baseline gap-3 px-3 py-2 text-left {i === active
+							? 'bg-secondary/35'
 							: ''}"
 						onclick={() => go(r)}
 						onpointermove={() => (active = i)}
 					>
-						<span class="badge shrink-0 badge-ghost badge-sm">{KIND_LABEL[r.kind]}</span>
+						<span class="map-label w-24 shrink-0 truncate text-xs text-base-content/75"
+							>{KIND_LABEL[r.kind]}</span
+						>
 						<span class="min-w-0 flex-1">
 							<span class="block truncate font-medium" title={r.name}
 								>{r.name}{r.code ? ` · ${r.code}` : ''}</span
@@ -182,7 +197,8 @@
 								>{r.path.join(' › ') || (r.tree === 'revenues' ? 'Revenues' : 'Expenditures')}</span
 							>
 						</span>
-						<span class="text-sm text-base-content/80 tabular-nums">{money(r.by)}</span>
+						<span class="dot-leader hidden sm:block" aria-hidden="true"></span>
+						<span class="text-sm tabular-nums">{money(r.by)}</span>
 					</button>
 				</li>
 			{/each}

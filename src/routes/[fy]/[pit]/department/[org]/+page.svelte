@@ -261,7 +261,7 @@
 					<div>
 						<h2 class="mb-2 text-xl font-semibold">{t.title}</h2>
 						<div class="overflow-x-auto border-y border-base-content">
-							<table class="[&_thead_th]:font-map [&_thead_th]:uppercase [&_thead_th]:tracking-wider table table-sm [&_thead]:bg-base-200">
+							<table class="table table-sm">
 								<thead
 									><tr
 										>{#each t.columns as c, j (j)}<th class={j ? 'text-right' : ''}>{c}</th

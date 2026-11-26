@@ -124,9 +124,9 @@ export class CityScene {
 		this.ground.position.y = -0.02;
 		this.ground.receiveShadow = true;
 		this.scene.add(this.ground);
-		this.grid = new THREE.GridHelper(SIZE * 3, 30, 0x888888, 0x888888);
+		this.grid = new THREE.GridHelper(SIZE * 3, 30, 0x15191c, 0x15191c);
 		(this.grid.material as THREE.Material).transparent = true;
-		(this.grid.material as THREE.Material).opacity = 0.12;
+		(this.grid.material as THREE.Material).opacity = 0.14;
 		this.scene.add(this.grid);
 		this.setDark(!!opts.dark);
 
@@ -143,8 +143,10 @@ export class CityScene {
 		this.loop();
 	}
 
+	/** Atlas ground: map white by day, ink navy under the dome light; the grid is the map's casing. */
 	setDark(dark: boolean) {
-		this.groundMat.color.set(dark ? 0x141413 : 0xf1f0ec);
+		this.groundMat.color.set(dark ? 0x161e27 : 0xe6ece8);
+		(this.grid.material as THREE.LineBasicMaterial).color.set(dark ? 0x93a1a6 : 0x15191c);
 	}
 
 	/**

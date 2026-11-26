@@ -22,9 +22,7 @@ export const routes = {
 	sources: (fy: string, pit: string) => href(`/${fy}/${pit}/sources`),
 	/** Tree of every data source behind (and around) the budget. */
 	dataSources: (fy: string, pit: string, product?: string) =>
-		href(
-			`/${fy}/${pit}/data-sources${product ? `?product=${encodeURIComponent(product)}` : ''}`
-		),
+		href(`/${fy}/${pit}/data-sources${product ? `?product=${encodeURIComponent(product)}` : ''}`),
 	search: (fy: string, pit: string, q = '') =>
 		href(`/${fy}/${pit}/search${q ? `?q=${encodeURIComponent(q)}` : ''}`)
 };
