@@ -17,7 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import { RevFetcher } from './lib/rev-fetch.ts';
+import { EBudget } from './lib/ebudget.ts';
 import { readRows } from './lib/rev-pdf.ts';
 import { parseSchedule9, type S9Character } from './lib/rev-parse.ts';
 import { GROUPS, RULES, classify, describeRule, type Character } from './lib/spend-types.ts';
@@ -268,7 +268,12 @@ async function main() {
 	let s9: ReturnType<typeof parseSchedule9> | null = null;
 	let s9src: SourceRef | null = null;
 	try {
-		const f = await new RevFetcher(FY, PIT, { rawRoot: args.raw, refresh: args.refresh }).init();
+		const f = await new EBudget({
+			fy: FY,
+			pit: PIT,
+			rawRoot: args.raw,
+			refresh: args.refresh
+		}).init();
 		const url = f.summaryPdfUrl('BS_SCH9.pdf');
 		const buf = await f.pdf(url);
 		if (buf) {

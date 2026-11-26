@@ -20,7 +20,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import { RevFetcher, EBUDGET } from './lib/rev-fetch.ts';
+import { EBudget, EBUDGET_ORIGIN as EBUDGET } from './lib/ebudget.ts';
 import { readRows, parseAmount, splitRow, type Row } from './lib/rev-pdf.ts';
 import { departmentDifferences, type SourceHelpers } from './lib/recon-explained.ts';
 import {
@@ -340,7 +340,12 @@ const CHART_TRANSCRIPTIONS: Record<
 
 async function main() {
 	log(`reconciliation ETL ${FY}/${PIT}`);
-	const f = await new RevFetcher(FY, PIT, { rawRoot: args.raw, refresh: args.refresh }).init();
+	const f = await new EBudget({
+		fy: FY,
+		pit: PIT,
+		rawRoot: args.raw,
+		refresh: args.refresh
+	}).init();
 	const ai = f.appInfo;
 	const Y: Record<YearKey, string> = { py: ai.previousYear, cy: ai.currentYear, by: ai.budgetYear };
 	const pub = ai.publication;
@@ -608,12 +613,14 @@ async function main() {
 		{ pit: 'm', name: 'May Revision' },
 		{ pit: 'e', name: 'Enacted Budget Summary' }
 	];
-	const fetchers: Partial<Record<'p' | 'm' | 'e', RevFetcher>> = { [PIT]: f };
+	const fetchers: Partial<Record<'p' | 'm' | 'e', EBudget>> = { [PIT]: f };
 	for (const p of pubs) {
 		if (p.pit === 'm' && PIT === 'p') continue; // later publications don't exist yet
 		if (p.pit === 'e' && PIT !== 'e') continue;
 		try {
-			const pf = (fetchers[p.pit] ??= await new RevFetcher(FY, p.pit, {
+			const pf = (fetchers[p.pit] ??= await new EBudget({
+				fy: FY,
+				pit: p.pit,
 				rawRoot: args.raw,
 				refresh: args.refresh
 			}).init());
@@ -916,7 +923,7 @@ async function main() {
 	const stages: PlanStage[] = [];
 	if (PIT === 'e' || PIT === 'm') {
 		try {
-			const pf = (fetchers.p ??= await new RevFetcher(FY, 'p', { rawRoot: args.raw }).init());
+			const pf = (fetchers.p ??= await new EBudget({ fy: FY, pit: 'p', rawRoot: args.raw }).init());
 			const url = pf.summaryPdfUrl('BS_SCH1.pdf');
 			const buf = await pf.pdf(url);
 			const b = buf ? parseSchedule1(await readRows(buf))[FY]?.gf : undefined;
@@ -945,7 +952,7 @@ async function main() {
 	}
 	const mt = CHART_TRANSCRIPTIONS[FY]?.m;
 	if (PIT === 'e' && mt) {
-		const mf = (fetchers.m ??= await new RevFetcher(FY, 'm', { rawRoot: args.raw }).init());
+		const mf = (fetchers.m ??= await new EBudget({ fy: FY, pit: 'm', rawRoot: args.raw }).init());
 		const k = (n: number) => n * 1000;
 		stages.push({
 			pit: 'm',

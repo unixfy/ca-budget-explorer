@@ -6,7 +6,8 @@
  * Run after the other ETLs. Reads, never fetches:
  *   - static/data/{fy}/{pit}/*.json (+ departments/*.json): every `sources` array (SourceRef) is
  *     matched to a catalog node, giving "how many nodes/figures cite this source", per data file;
- *   - data-raw/{fy}/{pit}/** and data-raw/{fy}/{p,m}/rev/** (what the ETLs actually downloaded):
+ *   - data-raw/{fy}/{pit}/** and the Budget Summary files of data-raw/{fy}/{p,m}/** (what the ETLs
+ *     actually downloaded):
  *     file counts, bytes and PDF page counts (pdfjs; --no-pages skips page counting);
  *   - data-raw/{fy}/{pit}/exp-validation.json and reconciliation.json for pain-point examples;
  *   - scripts/etl/reconciliation.ts (text only) to count hand-transcribed chart figures;
@@ -73,9 +74,7 @@ const PIT_NAME = { p: "Governor's Budget", m: 'May Revision', e: 'Enacted Budget
 const PDF_FOLDER: Record<string, string> = { p: '', m: 'Revised', e: 'Enacted' };
 const appInfo: Partial<Record<'p' | 'm' | 'e', AppInfo>> = {};
 for (const p of PITS) {
-	const ai =
-		readJson<AppInfo>(path.join(RAW, FY, p, 'api', 'appInfo.json')) ??
-		readJson<AppInfo>(path.join(RAW, FY, p, 'rev', 'api', 'appInfo.json'));
+	const ai = readJson<AppInfo>(path.join(RAW, FY, p, 'api', 'appInfo.json'));
 	if (ai) {
 		appInfo[p] = ai;
 		if (p !== 'p' && ai.publication) PDF_FOLDER[p] = ai.publication;
@@ -251,9 +250,9 @@ const walkFiles = (dir: string): string[] =>
 /** Turn a cache path back into the official URL it was downloaded from. */
 function urlForRaw(rel: string, pit: string): string | null {
 	const r = rel.split(path.sep).join('/');
-	let m = r.match(/^(?:rev\/)?api\/(.+)\.json$/);
+	let m = r.match(/^api\/(.+)\.json$/);
 	if (m) return `${EB}/api/budget/${pit}/${FY}/${m[1]}`;
-	m = r.match(/^rev\/pdf\/[\d-]+\/pdf\/(.+)$/) ?? r.match(/^pdf\/(.+)$/);
+	m = r.match(/^pdf\/(.+)$/);
 	if (m) return `${EB}/${FY}/pdf/${m[1]}`;
 	if (/(^|\/)getLink\.json$/.test(r)) return `${EB}/api/home/getLink`;
 	return null;
@@ -261,35 +260,30 @@ function urlForRaw(rel: string, pit: string): string | null {
 let rawFiles = 0;
 let rawBytes = 0;
 const rawUnmatched: string[] = [];
-const rawSeen = new Set<string>();
 for (const p of PITS) {
 	const base = path.join(RAW, FY, p);
-	// the dataset's own publication: everything; earlier publications: only what the revenue /
-	// reconciliation ETLs pull in for this dataset (their rev/ cache).
-	const roots = p === PIT ? [base] : [path.join(base, 'rev')];
-	for (const root of roots)
-		for (const file of walkFiles(root)) {
-			if (/\.(404|missing|tmp)$/.test(file) || file.endsWith('exp-validation.json')) continue;
-			const rel = path.relative(base, file);
-			const url = urlForRaw(rel, p);
-			const id = url ? nodeIdForUrl(url) : null;
-			if (!id) {
-				rawUnmatched.push(file);
-				continue;
-			}
-			// the same document cached by two ETLs counts once
-			const key = `${id}|${url}`;
-			const size = fs.statSync(file).size;
-			if (rawSeen.has(key)) continue;
-			rawSeen.add(key);
-			rawFiles++;
-			rawBytes += size;
-			addVol(id, file, size);
+	// the dataset's own publication: everything; earlier publications: only what the
+	// reconciliation ETL pulls in for this dataset (Budget Summary chapters and schedules).
+	const fromEarlier = /^(api\/(appInfo|budgetSummaryChapter)\.json|pdf\/(.+\/)?BudgetSummary\/.+)$/;
+	for (const file of walkFiles(base)) {
+		if (/\.(404|tmp)$/.test(file) || file.endsWith('exp-validation.json')) continue;
+		const rel = path.relative(base, file);
+		if (p !== PIT && !fromEarlier.test(rel.split(path.sep).join('/'))) continue;
+		const url = urlForRaw(rel, p);
+		const id = url ? nodeIdForUrl(url) : null;
+		if (!id) {
+			rawUnmatched.push(file);
+			continue;
 		}
+		const size = fs.statSync(file).size;
+		rawFiles++;
+		rawBytes += size;
+		addVol(id, file, size);
+	}
 }
 {
 	const gl = path.join(RAW, 'getLink.json');
-	if (fs.existsSync(gl) && !rawSeen.has(`eb/site/getLink|${EB}/api/home/getLink`)) {
+	if (fs.existsSync(gl)) {
 		rawFiles++;
 		rawBytes += fs.statSync(gl).size;
 		addVol('eb/site/getLink', gl, fs.statSync(gl).size);
@@ -414,7 +408,7 @@ const agencyNames = new Map(
 // org-level agency records name the PDF folders (e.g. 6000 Education)
 for (const a of pdfAgencyDirs)
 	if (!agencyNames.has(a)) {
-		const raw = readJson<unknown>(path.join(RAW, FY, PIT, 'rev', 'api', 'org', `${a}.json`));
+		const raw = readJson<unknown>(path.join(RAW, FY, PIT, 'api', 'org', `${a}.json`));
 		const o = (Array.isArray(raw) ? raw[0] : raw) as {
 			legalTitl?: string;
 			webTitl?: string;
@@ -440,7 +434,7 @@ const officialGf = readJson<{ official?: { generalFund?: number } }>(
 )?.official?.generalFund;
 const chapters = (p: string) =>
 	readJson<{ title: string; fileName: string }[]>(
-		path.join(RAW, FY, p, 'rev', 'api', 'budgetSummaryChapter.json')
+		path.join(RAW, FY, p, 'api', 'budgetSummaryChapter.json')
 	) ?? [];
 const fmtB = (thousands?: number | null) =>
 	thousands == null ? '?' : `$${(thousands / 1e6).toFixed(1)} billion`;

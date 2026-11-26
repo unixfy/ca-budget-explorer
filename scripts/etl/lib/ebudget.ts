@@ -126,19 +126,30 @@ export class EBudget {
 		return `${this.pdfRoot}GovernorsBudget/${agencyCd}/${orgCd}.pdf`;
 	}
 
-	/** GET JSON from the API (cached). Returns `fallback` on 404/empty if provided. */
+	/** Summary Schedules / Budget Summary chapter PDF. */
+	summaryPdfUrl(file: string): string {
+		return `${this.pdfRoot}BudgetSummary/${file}`;
+	}
+
+	/** A department's Fund Condition Statements PDF. */
+	fcsPdfUrl(agencyCd: string, orgCd: string): string {
+		return `${this.pdfRoot}GovernorsBudget/${agencyCd}/${orgCd}FCS.pdf`;
+	}
+
+	/**
+	 * GET JSON from the API (cached). Returns `fallback` (if given) only when the endpoint is
+	 * not published (404 / empty); network errors and repeated 5xx always throw, so a flaky
+	 * download can never silently drop data from the output.
+	 */
 	async api<T = unknown>(p: string, fallback?: T): Promise<T> {
 		const file = path.join(this.rawDir, 'api', p.replace(/^\//, '') + '.json');
 		try {
 			const buf = await this.fetchCached(this.apiUrl(p), file, 'json');
 			const txt = buf.toString('utf8').trim();
-			if (!txt) {
-				if (fallback !== undefined) return fallback;
-				throw new NotFoundError(`empty response: ${p}`);
-			}
+			if (!txt) throw new NotFoundError(`empty response: ${p}`);
 			return JSON.parse(txt) as T;
 		} catch (e) {
-			if (fallback !== undefined) return fallback;
+			if (fallback !== undefined && e instanceof NotFoundError) return fallback;
 			throw e;
 		}
 	}

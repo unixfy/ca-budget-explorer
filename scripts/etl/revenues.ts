@@ -18,7 +18,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import { RevFetcher } from './lib/rev-fetch.ts';
+import { EBudget } from './lib/ebudget.ts';
 import { readRows, splitRow } from './lib/rev-pdf.ts';
 import {
 	parseSchedule8,
@@ -30,13 +30,7 @@ import {
 	type S8Source,
 	type FcsFund
 } from './lib/rev-parse.ts';
-import type {
-	BudgetNode,
-	Flows,
-	FlowNode,
-	SourceRef,
-	Triple
-} from '../../src/lib/data/schema.ts';
+import type { BudgetNode, Flows, FlowNode, SourceRef, Triple } from '../../src/lib/data/schema.ts';
 
 const { values: args } = parseArgs({
 	options: {
@@ -68,7 +62,12 @@ const nonzero = (t: Tri, tol = 0) => YRS.some((k) => Math.abs(t[k]) > tol);
 const T = (t: Tri): Triple => ({ py: t.py, cy: t.cy, by: t.by });
 
 async function main() {
-	const f = await new RevFetcher(FY, PIT, { rawRoot: args.raw, refresh: args.refresh }).init();
+	const f = await new EBudget({
+		fy: FY,
+		pit: PIT,
+		rawRoot: args.raw,
+		refresh: args.refresh
+	}).init();
 	const ai = f.appInfo;
 	log(
 		`Revenue ETL ${FY}/${PIT}: ${ai.publication} (${ai.publicationDate}); api prefix "${f.prefix}"`
@@ -538,7 +537,7 @@ async function main() {
 const fmt = (k: number) => `$${(k / 1e6).toFixed(2)}B`;
 
 async function buildFlows(o: {
-	f: RevFetcher;
+	f: EBudget;
 	s8: ReturnType<typeof parseSchedule8>;
 	s9: ReturnType<typeof parseSchedule9> | null;
 	s9ref?: SourceRef;
