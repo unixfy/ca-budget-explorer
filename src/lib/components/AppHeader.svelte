@@ -115,7 +115,7 @@
 			<img src={logo} alt="" width="24" height="24" class="size-6 shrink-0" />
 			<span class="map-label hidden text-sm sm:inline">California Budget Explorer</span>
 			<span class="map-label text-sm sm:hidden"
-				><span class="max-[359px]:hidden">CA </span>Budget Explorer</span
+				><span class="max-[359px]:hidden">CA</span> Budget Explorer</span
 			>
 		</a>
 
