@@ -419,10 +419,10 @@
 								<li>
 									<button
 										type="button"
-										class="flex w-full items-baseline gap-2 text-left text-primary hover:underline"
+										class="flex w-full items-end gap-2 text-left text-primary hover:underline"
 										onclick={() => navigate([...trail, c])}
 									>
-										<span class="truncate">{c.name}</span>
+										<span class="min-w-0 break-words">{c.name}</span>
 										<span class="dot-leader" aria-hidden="true"></span>
 										<span class="text-base-content/80 tabular-nums"
 											>{money(c.amounts[settings.year])}</span

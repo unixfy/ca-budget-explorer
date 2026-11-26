@@ -17,8 +17,9 @@
 </script>
 
 <li class="py-1.5">
-	<div class="flex items-baseline gap-2">
-		<a {href} class="min-w-0 truncate font-medium no-underline hover:underline" title={label}
+	<!-- a long name wraps and the leader runs on from its last line, as in a printed index -->
+	<div class="flex items-end gap-2">
+		<a {href} class="min-w-0 font-medium text-pretty break-words no-underline hover:underline"
 			>{label}</a
 		>
 		<span class="dot-leader" aria-hidden="true"></span>

@@ -27,8 +27,8 @@
 		pageOf,
 		rootLabel
 	}: Props = $props();
-	/** full names, visually truncated; the full name is always in the title */
-	const crumb = 'inline-block max-w-[12rem] truncate align-bottom sm:max-w-[18rem]';
+	/** full names, wrapping when long: the running head is the reader's path, so it isn't cut */
+	const crumb = 'break-words';
 	const nameOf = (n: BudgetNode, i: number) => (i === 0 && rootLabel ? rootLabel : n.name);
 </script>
 
@@ -70,7 +70,7 @@
 				{#if i || prefix.length}{@render sep()}{/if}
 				{#if i === trail.length - 1}
 					<span aria-current="page" class="font-bold text-base-content" title={n.name}
-						>{@render pg(pageOf?.(n, i))}<span class="{crumb} sm:max-w-[28rem]">{name}</span></span
+						>{@render pg(pageOf?.(n, i))}<span class={crumb}>{name}</span></span
 					>
 				{:else if hrefFor}
 					<a

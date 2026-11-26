@@ -84,7 +84,7 @@
 	const edgeOf = (l: SankeyLink<FlowNode>) => (settings.mode === 'light' ? casing : linkColor(l));
 
 	/**
-	 * Every node gets a label. Labels wrap to two lines (cut in the middle if still too long)
+	 * Every node gets a label. Labels wrap to three lines (cut in the middle if still too long)
 	 * and are spread apart so small nodes keep a label, joined to their node by a leader line.
 	 */
 	const labels = $derived.by(() => {
@@ -96,7 +96,7 @@
 			const left = ci === 0;
 			const chars = ci === 0 || ci === lastCol ? sideChars : 22;
 			const items = col.map((n) => {
-				const lines = wrapLabel(n.data.name, chars, 2);
+				const lines = wrapLabel(n.data.name, chars, 3);
 				const value = money(n.value);
 				const inline = lines[lines.length - 1].length + value.length + 1 <= chars + 6;
 				const h = (lines.length + (inline ? 0 : 1)) * LINE;

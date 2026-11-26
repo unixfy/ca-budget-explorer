@@ -18,6 +18,7 @@
 	import { settings } from '#lib/settings.svelte.ts';
 	import { CASING, inkOn } from '#lib/viz/palette.ts';
 	import { nearestInDirection } from '#lib/components/tree/a11y.ts';
+	import { wrapText } from '#lib/viz/labels.ts';
 
 	interface Props {
 		node: BudgetNode;
@@ -90,29 +91,9 @@
 		}
 	}
 
-	/** Greedy word wrap for map caps (~0.62em per condensed capital incl. tracking). */
-	function wrap(s: string, px: number, font: number, maxLines: number): string[] {
-		const per = Math.floor(px / (font * 0.62));
-		if (per < 4 || maxLines < 1) return [];
-		const lines: string[] = [];
-		let cur = '';
-		for (const w of s.split(/\s+/)) {
-			const next = cur ? `${cur} ${w}` : w;
-			if (next.length <= per) cur = next;
-			else {
-				if (cur) lines.push(cur);
-				cur = w.length > per ? w.slice(0, per - 1) + '…' : w;
-			}
-		}
-		if (cur) lines.push(cur);
-		if (lines.length > maxLines) {
-			const kept = lines.slice(0, maxLines);
-			const last = kept[maxLines - 1];
-			kept[maxLines - 1] = (last.length >= per ? last.slice(0, per - 1) : last) + '…';
-			return kept;
-		}
-		return lines;
-	}
+	/** map caps run ~0.62em per condensed capital, tracking included */
+	const wrap = (s: string, px: number, font: number, maxLines: number) =>
+		wrapText(s, px, font * 0.62, maxLines);
 
 	const casing = $derived(CASING[settings.mode]);
 	const val = (n: BudgetNode) => valueOf(n, settings.year, settings.fund);

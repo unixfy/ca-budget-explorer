@@ -15,6 +15,7 @@
 	import { settings } from '#lib/settings.svelte.ts';
 	import { CASING, inkOn } from '#lib/viz/palette.ts';
 	import { refLabel, refSpoken, type AtlasRef } from '#lib/atlas.ts';
+	import { wrapText } from '#lib/viz/labels.ts';
 	import { nearestInDirection } from './tree/a11y.ts';
 	import Tooltip from './Tooltip.svelte';
 
@@ -66,9 +67,14 @@
 			.tile(treemapSquarify.ratio(1.4))
 			.size([Math.max(10, width), height])
 			.paddingOuter((d) => (d.depth === 0 ? 1 : 0))
-			.paddingTop((d) =>
-				d.depth === 0 ? 1 : d.depth === 1 && d.x1 - d.x0 >= 44 && d.y1 - d.y0 > 50 ? 22 : 0
-			)
+			.paddingTop((d) => {
+				if (d.depth === 0) return 1;
+				const w = d.x1 - d.x0;
+				const h = d.y1 - d.y0;
+				if (d.depth !== 1 || w < 44 || h <= 50) return 0;
+				// room for the header as drawn: a wrapped name takes 14px a line
+				return 8 + LINE * Math.max(1, headerOf(d.data.node, d.value ?? 0, w, h).rows);
+			})
 			.paddingInner(0)
 			.round(true)(h);
 	});
@@ -198,12 +204,36 @@
 
 	const fits = (t: { x0: number; x1: number; y0: number; y1: number }, w: number, h: number) =>
 		t.x1 - t.x0 > w && t.y1 - t.y0 > h;
-	/** clip a label to `px`; condensed caps run about 7.5px a character at 12px */
-	const clip = (s: string, px: number, per = 7) => {
-		const max = Math.floor(px / per);
-		if (max < 4) return '';
-		return s.length > max ? s.slice(0, max - 1).trimEnd() + '…' : s;
-	};
+	const LINE = 14;
+	/**
+	 * A block's header: its name wrapped to as many lines as the block's height allows
+	 * (1 line, 2 from 90px, 3 from 140px), with its amount inline when it fits, else beneath.
+	 * Shared by the layout (header band height) and the drawing so the two always agree.
+	 */
+	function headerOf(n: BudgetNode, value: number, w: number, h: number) {
+		const own = refOf?.([n])?.own;
+		const rw = roundelW(own);
+		const room = w - ((own || opens(n)) && w >= rw + 12 && h >= 22 ? rw + 8 : 0);
+		const none = { lines: [] as string[], amount: null as string | null, inline: true, rows: 0 };
+		if (w < 44 || h < 18) return none;
+		const maxL = h >= 140 ? 3 : h >= 90 ? 2 : 1;
+		// the roundel sits beside the first line only; later lines get the block's full width
+		const wrap = (lines: number) => wrapText(n.name, w - 14, 7.5, lines, room - 8);
+		if (w < 150) {
+			const lines = wrap(maxL);
+			return { ...none, lines, rows: lines.length };
+		}
+		const amount = money(value);
+		if (maxL === 1) {
+			const lines = wrapText(n.name, room - 72, 7.5, 1);
+			return { lines, amount, inline: true, rows: 1 };
+		}
+		let lines = wrap(maxL);
+		const lastW = lines.length > 1 ? w - 14 : room - 8;
+		const inline = (lines.at(-1)?.length ?? 0) * 7.5 + amount.length * 7 + 10 <= lastW;
+		if (!inline && lines.length >= maxL) lines = wrap(maxL - 1);
+		return { lines, amount, inline, rows: lines.length + (inline ? 0 : 1) };
+	}
 	const hint = (n: BudgetNode, via: Via, own?: number) => {
 		const what = own ? `turn to page ${own}` : opens(n) ? 'see what’s inside' : 'see details';
 		if (via === 'touch') return `Tap again to ${what}`;
@@ -259,7 +289,8 @@
 					{@const ref = refs.get(n.id)}
 					{@const rw = roundelW(ref?.own)}
 					{@const mark = (ref?.own || opens(n)) && w >= rw + 12 && h >= 22}
-					{@const room = w - (mark ? rw + 8 : 0)}
+					{@const hd = headerOf(n, t.value ?? 0, w, h)}
+					{@const hx = t.x0 + (w >= 150 ? 6 : 5)}
 					<g
 						bind:this={tileEls[i]}
 						role="button"
@@ -304,7 +335,10 @@
 									pointer-events="none"
 									aria-hidden="true"
 								>
-									{clip(s.data.node.name, s.x1 - s.x0 - 8, 6.5)}
+									{#each wrapText(s.data.node.name, s.x1 - s.x0 - 8, 6.5, Math.min(3, Math.floor((s.y1 - s.y0 - 8) / LINE))) as l, li (li)}<tspan
+											x={s.x0 + 5}
+											dy={li ? LINE : 0}>{l}</tspan
+										>{/each}
 								</text>
 							{/if}
 						{/each}
@@ -319,9 +353,9 @@
 							stroke-width="1.5"
 							pointer-events="none"
 						/>
-						{#if w >= 150 && h >= 18}
+						{#if hd.lines.length || hd.amount}
 							<text
-								x={t.x0 + 6}
+								x={hx}
 								y={t.y0 + 15}
 								font-size="12"
 								class="map-label"
@@ -329,27 +363,15 @@
 								pointer-events="none"
 								aria-hidden="true"
 							>
-								{clip(n.name, room - 72, 7.5)}
-								<tspan class="font-sans tracking-normal normal-case tabular-nums" font-weight="500"
-									>&nbsp;{money(t.value)}</tspan
-								>
-							</text>
-						{:else if w >= 44 && h >= 18}
-							<text
-								x={t.x0 + 5}
-								y={t.y0 + 15}
-								font-size="12"
-								class="map-label"
-								fill={inkOn(c)}
-								pointer-events="none"
-								aria-hidden="true"
-							>
-								{clip(n.name, room - 8, 7.5)}
-								{#if h >= 36 && !t.children}<tspan
-										x={t.x0 + 5}
-										dy="15"
+								{#each hd.lines as l, li (li)}<tspan x={hx} dy={li ? LINE : 0}>{l}</tspan>{/each}
+								{#if hd.amount && hd.inline}<tspan
 										class="font-sans tracking-normal normal-case tabular-nums"
-										font-weight="500">{money(t.value)}</tspan
+										font-weight="500">&nbsp;{hd.amount}</tspan
+									>{:else if hd.amount || (!t.children && h >= (hd.rows + 1) * LINE + 8)}<tspan
+										x={hx}
+										dy={LINE}
+										class="font-sans tracking-normal normal-case tabular-nums"
+										font-weight="500">{hd.amount ?? money(t.value)}</tspan
 									>{/if}
 							</text>
 						{/if}

@@ -61,8 +61,9 @@
 			>
 				<div class="flex items-baseline gap-2 text-sm">
 					<span
-						class="min-w-0 truncate {r.href ? 'group-hover:underline' : 'text-base-content/75'}"
-						title={r.name}>{r.name}</span
+						class="min-w-0 text-pretty break-words {r.href
+							? 'group-hover:underline'
+							: 'text-base-content/75'}">{r.name}</span
 					>
 					<span class="ml-auto shrink-0 tabular-nums">
 						<span class="font-semibold">{money(r.value)}</span>

@@ -186,15 +186,18 @@
 						onclick={() => go(r)}
 						onpointermove={() => (active = i)}
 					>
-						<span class="map-label w-24 shrink-0 truncate text-xs text-base-content/75"
+						<span class="map-label hidden w-24 shrink-0 text-xs text-base-content/75 sm:block"
 							>{KIND_LABEL[r.kind]}</span
 						>
+						<!-- names wrap rather than truncate: near-identical names differ only at the end -->
 						<span class="min-w-0 flex-1">
-							<span class="block truncate font-medium" title={r.name}
+							<span class="block font-medium text-pretty break-words"
 								>{r.name}{r.code ? ` · ${r.code}` : ''}</span
 							>
-							<span class="block truncate text-xs text-base-content/75"
-								>{r.path.join(' › ') || (r.tree === 'revenues' ? 'Revenues' : 'Expenditures')}</span
+							<span class="block text-xs break-words text-base-content/75"
+								><span class="map-label sm:hidden">{KIND_LABEL[r.kind]} · </span>{r.path.join(
+									' › '
+								) || (r.tree === 'revenues' ? 'Revenues' : 'Expenditures')}</span
 							>
 						</span>
 						<span class="dot-leader hidden sm:block" aria-hidden="true"></span>
