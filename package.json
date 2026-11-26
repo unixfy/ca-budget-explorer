@@ -21,7 +21,8 @@
 		"etl:exp": "node scripts/etl/expenditures.ts",
 		"etl:recon": "node scripts/etl/reconciliation.ts",
 		"etl:type": "node scripts/etl/bytype.ts",
-		"etl:sources": "node scripts/etl/sources-catalog.ts"
+		"etl:sources": "node scripts/etl/sources-catalog.ts",
+		"test": "node --test scripts/etl/lib/*.test.ts"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
