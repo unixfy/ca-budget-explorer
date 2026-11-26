@@ -39,11 +39,20 @@ export class DataError extends Error {
 	}
 }
 
-async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
+/**
+ * Server only (set by hooks.server.ts on Cloudflare): reads /data straight from the static
+ * assets. SvelteKit's `fetch` copies every response into the page HTML for hydration, which
+ * made pages 0.6–1.3 MB; data read this way is fetched (and cached) by the browser instead.
+ */
+let serverRead: ((url: string) => Promise<Response>) | undefined;
+export const setServerRead = (read: typeof serverRead) => (serverRead = read);
+
+/** `inline`: small files every page needs (manifest, meta) stay in the HTML. */
+async function getJSON<T>(rel: string, f: Fetch = fetch, inline = false): Promise<T> {
 	const url = dataUrl(rel);
 	let p = cache.get(url) as Promise<T> | undefined;
 	if (!p) {
-		p = f(url).then(async (r) => {
+		p = (serverRead && !inline ? serverRead(url) : f(url)).then(async (r) => {
 			if (!r.ok) throw new DataError(`Could not load ${rel} (HTTP ${r.status})`, r.status, url);
 			const text = await r.text();
 			// SPA fallback servers answer unknown paths with index.html — treat that as 404.
@@ -62,7 +71,7 @@ async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
 
 // ---------------------------------------------------------------- manifest / datasets
 
-export const getManifest = (f?: Fetch) => getJSON<Manifest>('manifest.json', f);
+export const getManifest = (f?: Fetch) => getJSON<Manifest>('manifest.json', f, true);
 
 export function defaultDataset(m: Manifest): { fy: string; pit: Pit } {
 	const hit =
@@ -108,7 +117,8 @@ export async function getDataset(fy: string, pit: string, f: Fetch = fetch): Pro
 	return { fy, pit, dir, manifest, meta };
 }
 
-export const getMeta = (dir: string, f?: Fetch) => getJSON<DatasetMeta>(`${dir}/meta.json`, f);
+export const getMeta = (dir: string, f?: Fetch) =>
+	getJSON<DatasetMeta>(`${dir}/meta.json`, f, true);
 export const getTree = (dir: string, tree: TreeName, f?: Fetch) =>
 	getJSON<BudgetNode>(`${dir}/${tree}.json`, f);
 export const getFunds = (dir: string, f?: Fetch) =>

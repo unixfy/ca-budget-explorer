@@ -1,3 +1,4 @@
+import { browser } from '$app/env';
 import { getTree } from '#lib/data/load.ts';
 import type { PageLoad } from './$types';
 
@@ -9,6 +10,8 @@ import type { PageLoad } from './$types';
  */
 export const load: PageLoad = async ({ parent, fetch }) => {
 	const { ds } = await parent();
+	// the page only reads the trees in the browser ($effect), so the server never downloads them
+	if (!browser) return { exp: new Promise<never>(() => {}), rev: new Promise<never>(() => {}) };
 	const exp = getTree(ds.dir, 'expenditures', fetch);
 	const rev = getTree(ds.dir, 'revenues', fetch).catch(() => null);
 	// handled by the page; avoid an unhandled-rejection warning if it fails before then
