@@ -122,6 +122,11 @@
 	* {
 		scrollbar-color: var(--color-base-300) transparent;
 	}
+	/* contain absolutely-positioned .sr-only text in sideways-scrolling tables; without it
+	   that text escapes the scroll box and widens the whole page on phones */
+	:where(.overflow-x-auto) {
+		position: relative;
+	}
 }
 
 @layer components {

@@ -213,10 +213,11 @@
 		bind:this={svgEl}
 		{width}
 		height={height + HEAD + 8}
+		viewBox="0 0 {width} {height + HEAD + 8}"
 		role="group"
 		aria-label="Flow of funds from revenue sources through funds to spending areas"
 		aria-describedby="{uid}-help"
-		class="block overflow-visible font-map"
+		class="block h-auto max-w-full overflow-visible font-map"
 		onpointerleave={() => {
 			hoverId = null;
 			clearTip();

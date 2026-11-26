@@ -162,7 +162,10 @@
 	/** chart height follows the available width, so phones don't get a tall, thin chart */
 	let vizW = $state(800);
 	const vizH = $derived(
-		Math.round(Math.min(compact ? 380 : 480, Math.max(260, vizW * (compact ? 0.75 : 0.7))))
+		// square on phones (like the Key Map's taller phone sheet) so blocks have room for labels
+		Math.round(
+			Math.min(compact ? 380 : 480, Math.max(260, vizW * (vizW < 640 ? 1 : compact ? 0.75 : 0.7)))
+		)
 	);
 	/** children with negative amounts can't be drawn as areas; say so instead of hiding them */
 	const negatives = $derived(

@@ -245,9 +245,10 @@
 			bind:this={svg}
 			{width}
 			{height}
+			viewBox="0 0 {width} {height}"
 			role="group"
 			aria-label="Map of {node.name}, {tiles.length} parts. Use arrow keys to move between parts."
-			class="block overflow-hidden select-none"
+			class="block h-auto max-w-full overflow-hidden select-none"
 		>
 			<g bind:this={group}>
 				{#each tiles as t, i (t.data.node.id)}

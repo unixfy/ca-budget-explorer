@@ -124,9 +124,10 @@
 			bind:this={svg}
 			{width}
 			{height}
+			viewBox="0 0 {width} {height}"
 			role="group"
 			aria-label={label}
-			class="block overflow-visible"
+			class="block h-auto max-w-full overflow-visible"
 		>
 			<defs>
 				<pattern

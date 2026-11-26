@@ -133,8 +133,9 @@
 				>{ds.meta.fiscalYear} {ds.meta.publication}</span
 			>
 			<button
-				class="map-label inline-flex min-h-11 items-center gap-2 px-2 text-sm hover:bg-base-200"
+				class="map-label inline-flex min-h-11 min-w-11 items-center justify-center gap-2 px-2 text-sm hover:bg-base-200"
 				onclick={onsearch}
+				aria-label="Street index"
 				title="Street index ({mac ? '⌘' : 'Ctrl'} K)"
 			>
 				<svg
@@ -145,7 +146,7 @@
 					stroke-width="2"
 					aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg
 				>
-				<span>Street index</span>
+				<span class="hidden sm:inline">Street index</span>
 				<kbd class="kbd hidden font-sans kbd-xs lg:inline-flex">{mac ? '⌘' : 'Ctrl'} K</kbd>
 			</button>
 

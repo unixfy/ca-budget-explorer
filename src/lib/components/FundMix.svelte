@@ -51,7 +51,7 @@
 				></div>
 			{/each}
 		</div>
-		<ul class="mt-2 grid gap-x-4 gap-y-1 text-sm sm:grid-cols-2">
+		<ul class="mt-2 grid grid-cols-1 gap-x-4 gap-y-1 text-sm sm:grid-cols-2">
 			{#each parts as p (p.t)}
 				<li class="flex items-baseline gap-2">
 					<span

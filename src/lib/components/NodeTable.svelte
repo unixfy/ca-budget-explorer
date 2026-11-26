@@ -78,13 +78,15 @@
 	}
 	const aria = (k: SortKey) => (sort === k ? (asc ? 'ascending' : 'descending') : 'none');
 	const yearCols: YearKey[] = ['py', 'cy', 'by'];
+	// phones show only the year being read; the other two return from sm up
+	const yearCls = (y: YearKey) => (y === settings.year ? 'text-right' : 'text-right max-sm:hidden');
 </script>
 
 {#snippet th(k: SortKey, label: string, cls = 'text-right', help?: string)}
 	<th class={cls} aria-sort={aria(k)} title={help}>
 		<button
 			type="button"
-			class="map-label inline-flex cursor-pointer items-center gap-1 hover:text-primary"
+			class="map-label inline-flex cursor-pointer items-center gap-1 hover:text-primary pointer-coarse:min-h-11"
 			onclick={() => setSort(k)}
 		>
 			{label}
@@ -123,7 +125,7 @@
 			<tr class="border-base-content/40 bg-base-200 text-xs text-base-content">
 				{@render th('name', kindLabel, 'text-left', kind ? KIND_HELP[kind] : undefined)}
 				{#each yearCols as y (y)}
-					{@render th(y, years[y])}
+					{@render th(y, years[y], yearCls(y))}
 				{/each}
 				{@render th(
 					'delta',
@@ -162,14 +164,14 @@
 								<span>{n.name}</span>
 							{/if}
 							{#if n.code}<span
-									class="font-map text-xs text-base-content/70 tabular-nums"
+									class="hidden font-map text-xs text-base-content/70 tabular-nums sm:inline"
 									title="Budget code">{n.code}</span
 								>{/if}
 						</div>
 					</td>
 					{#each yearCols as y (y)}
 						<td
-							class="text-right tabular-nums {y === settings.year
+							class="{yearCls(y)} tabular-nums {y === settings.year
 								? 'font-semibold'
 								: 'text-base-content/75'}"
 							title={moneyFull(val(n, y))}
@@ -208,7 +210,7 @@
 				<tr>
 					<th class="text-left">Total</th>
 					{#each yearCols as y (y)}
-						<th class="text-right tabular-nums">{money(val(node, y))}</th>
+						<th class="{yearCls(y)} tabular-nums">{money(val(node, y))}</th>
 					{/each}
 					<th class="text-right"
 						><DeltaBadge from={val(node, settings.compare)} to={parentVal} /></th

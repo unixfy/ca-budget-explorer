@@ -407,7 +407,7 @@
 				You’ll see different totals for {r.years.by} spending. Each is correct; they count different things.
 			</p>
 			<dl class="mt-4 space-y-3 text-sm leading-relaxed">
-				<div class="grid gap-x-4 sm:grid-cols-[8rem_1fr]">
+				<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[8rem_1fr]">
 					<dt class="text-xl font-bold tabular-nums" title={moneyFull(r.allFunds.state)}>
 						{money(r.allFunds.state)}
 					</dt>
@@ -417,7 +417,7 @@
 					</dd>
 				</div>
 				{#if r.allFunds.federal != null}
-					<div class="grid gap-x-4 sm:grid-cols-[8rem_1fr]">
+					<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[8rem_1fr]">
 						<dt
 							class="text-xl font-bold tabular-nums"
 							title={moneyFull(r.allFunds.state + r.allFunds.federal)}
@@ -431,7 +431,7 @@
 					</div>
 				{/if}
 				{#if r.allFunds.ebudgetAllFunds}
-					<div class="grid gap-x-4 sm:grid-cols-[8rem_1fr]">
+					<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[8rem_1fr]">
 						<dt
 							class="text-xl font-bold tabular-nums"
 							title={moneyFull(r.allFunds.ebudgetAllFunds)}
@@ -472,7 +472,7 @@
 						></div>
 					{/each}
 				</div>
-				<ul class="mt-2 grid gap-1 text-xs sm:grid-cols-2">
+				<ul class="mt-2 grid grid-cols-1 gap-1 text-xs sm:grid-cols-2">
 					{#each allParts as p (p.l)}
 						<li class="flex items-center gap-1.5">
 							<span
@@ -496,7 +496,7 @@
 	<!-- ───────────── Terms ───────────── -->
 	<section class="mt-8 max-w-4xl" aria-labelledby="terms-h">
 		<h2 id="terms-h" class="text-lg font-bold">Terms used on this page</h2>
-		<dl class="mt-2 grid gap-x-8 gap-y-2 text-sm leading-relaxed md:grid-cols-2">
+		<dl class="mt-2 grid grid-cols-1 gap-x-8 gap-y-2 text-sm leading-relaxed md:grid-cols-2">
 			<div>
 				<dt class="inline font-semibold">Schedules 1, 8, 9 and 10:</dt>
 				<dd class="inline text-base-content/85">
@@ -546,7 +546,7 @@
 			{countWord(r.differences.length)}
 			{r.differences.length === 1 ? 'reason' : 'reasons'} totals differ between tables, pages and publications.
 		</p>
-		<div class="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+		<div class="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
 			{#each r.differences as d (d.id)}
 				<article
 					class="flex flex-col border-t border-base-content !p-0 p-4 px-0 !pt-4 pt-4 pb-0 text-sm"
@@ -746,7 +746,7 @@
 				<Waterfall {steps} label="General Fund bridge, {r.years[year]}" />
 			</div>
 			{#if g}
-				<div class="mt-4 grid gap-4 text-sm leading-relaxed md:grid-cols-3">
+				<div class="mt-4 grid grid-cols-1 gap-4 text-sm leading-relaxed md:grid-cols-3">
 					<p>
 						<strong>Revenue isn’t the whole story.</strong> The General Fund collects
 						{money(g.revenues ?? g.revenuesAndTransfers)}{#if g.transfers.total != null}, but net
@@ -789,7 +789,7 @@
 						<tbody class="tabular-nums">
 							{#each [['Beginning balance', (x: typeof g) => x.beginningBalance], ['Revenues (Schedule 8)', (x: typeof g) => x.revenues], ['Transfers & loans (net)', (x: typeof g) => x.transfers.total], ['  of which Rainy Day Fund', (x: typeof g) => x.transfers.bsa], ['  of which Surplus Holding Account', (x: typeof g) => x.transfers.surplusHolding], ['  of which Safety Net Reserve', (x: typeof g) => x.transfers.safetyNet], ['  of which other', (x: typeof g) => x.transfers.other], ['Revenues & transfers', (x: typeof g) => x.revenuesAndTransfers], ['Expenditures', (x: typeof g) => x.expenditures], ['Ending fund balance', (x: typeof g) => x.endingBalance], ['  Encumbrances', (x: typeof g) => x.encumbrances], ['  SFEU', (x: typeof g) => x.sfeu]] as const as [label, fn] (label)}
 								<tr>
-									<td class="whitespace-pre">{label}</td>
+									<td class="whitespace-pre-wrap">{label}</td>
 									{#each YEARS as y (y)}
 										{@const v = fn(r.generalFund.years[y])}
 										<td class="text-right">{v == null ? '—' : v.toLocaleString('en-US')}</td>
@@ -804,7 +804,7 @@
 		<div class="mt-4"><SourceList sources={r.generalFund.sources} compact /></div>
 	</section>
 	<!-- ───────────── Reserves ───────────── -->
-	<section class="mt-6 grid gap-6 lg:grid-cols-5" aria-labelledby="res-h">
+	<section class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-5" aria-labelledby="res-h">
 		<div class="border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 lg:col-span-3">
 			<h2 id="res-h" class="text-xl font-bold">Reserves over three years</h2>
 			<p class="mb-3 text-sm text-base-content/75">
@@ -863,7 +863,7 @@
 				reserve actions, with quotes from the budget documents.</span
 			>
 		</summary>
-		<div class="mt-4 grid gap-6 lg:grid-cols-2">
+		<div class="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
 			<div>
 				<h3 class="font-semibold">January: a small gap now, a big one next year</h3>
 				{#if shortfall}
@@ -948,7 +948,7 @@
 			</div>
 		</div>
 
-		<div class="mt-8 grid gap-6 lg:grid-cols-2">
+		<div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
 			{#if measColumns.length}
 				<div>
 					<h3 class="font-semibold">Enacted revenue measures, growing over time</h3>
@@ -1046,7 +1046,7 @@
 	</details>
 
 	<!-- ───────────── Other fund types ───────────── -->
-	<section class="mt-6 grid gap-6 lg:grid-cols-2" aria-label="Other funds">
+	<section class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2" aria-label="Other funds">
 		<div class="border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 text-sm">
 			<h2 class="text-lg font-bold">Special funds: dedicated money, plus the reserves</h2>
 			<p class="mt-1 leading-relaxed text-base-content/85">
@@ -1065,7 +1065,7 @@
 				<tbody class="tabular-nums">
 					{#each [['Beginning balance', r.specialFunds.begin], ['+ Revenues & transfers', r.specialFunds.revenues], ['− Expenditures', r.specialFunds.expenditures], ['= Ending balance', r.specialFunds.end], ['  of which reserve accounts', r.specialFunds.reserveAccounts]] as const as [l, t] (l)}
 						<tr>
-							<td class="whitespace-pre">{l}</td>
+							<td class="whitespace-pre-wrap">{l}</td>
 							{#each YEARS as y (y)}<td class="text-right" title={moneyFull(t[y])}>{money(t[y])}</td
 								>{/each}
 						</tr>

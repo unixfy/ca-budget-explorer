@@ -485,7 +485,7 @@
 </div>
 
 <section class="mt-12 border-t border-base-content pt-6">
-	<div class="grid gap-x-10 gap-y-10 lg:grid-cols-2">
+	<div class="grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-2">
 		<div id="where-money-goes" class="min-w-0 scroll-mt-32">
 			<div class="mb-3 flex flex-wrap items-center gap-x-4 gap-y-2">
 				<h2 class="text-2xl font-bold tracking-tight">Where the money goes</h2>

@@ -359,7 +359,7 @@
 	</div>
 {:else}
 	<!-- ───────────── answer first ───────────── -->
-	<div class="mt-8 grid max-w-5xl gap-8 md:grid-cols-2">
+	<div class="mt-8 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
 		<section aria-labelledby="pubs-h">
 			<h2 id="pubs-h" class="text-2xl font-bold">The official publications</h2>
 			<ul class="mt-3 divide-y divide-base-300 border-y border-base-300">
