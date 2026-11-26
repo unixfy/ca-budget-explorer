@@ -92,8 +92,7 @@
 				aria-hidden="true"
 				viewBox="0 0 10 10"
 				class="size-2.5 shrink-0 {sort === k ? '' : 'invisible'}"
-				fill="currentColor"
-				><path d={asc ? 'M5 2 9 8H1z' : 'M5 8 1 2h8z'} /></svg
+				fill="currentColor"><path d={asc ? 'M5 2 9 8H1z' : 'M5 8 1 2h8z'} /></svg
 			>
 		</button>
 	</th>
@@ -137,8 +136,9 @@
 						'text-right',
 						'Number of full-time staff positions'
 					)}{/if}
-				{#if hasRefs}<th class="map-label text-right" title="Where it is on the map: page and grid square"
-						>Page</th
+				{#if hasRefs}<th
+						class="map-label text-right"
+						title="Where it is on the map: page and grid square">Page</th
 					>{/if}
 			</tr>
 		</thead>
@@ -180,7 +180,10 @@
 					<td class="text-right"><DeltaBadge from={val(n, settings.compare)} to={v} /></td>
 					<td class="w-28 text-right tabular-nums">
 						<div class="flex items-center justify-end gap-2">
-							<div aria-hidden="true" class="hidden h-1.5 w-12 overflow-hidden bg-base-300 sm:block">
+							<div
+								aria-hidden="true"
+								class="hidden h-1.5 w-12 overflow-hidden bg-base-300 sm:block"
+							>
 								<div
 									class="h-full bg-base-content/70"
 									style:width="{Math.max(0, Math.min(1, share ?? 0)) * 100}%"
@@ -194,7 +197,8 @@
 				</tr>
 			{:else}
 				<tr
-					><td colspan={colCount} class="text-center text-base-content/75">No line items below this level.</td
+					><td colspan={colCount} class="text-center text-base-content/75"
+						>No line items below this level.</td
 					></tr
 				>
 			{/each}

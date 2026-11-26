@@ -56,7 +56,10 @@
 		{#each prefix as p, i (p.href)}
 			<li class="flex items-center">
 				{#if i}{@render sep()}{/if}
-				<a href={p.href} title={p.label} class="no-underline hover:text-base-content hover:underline"
+				<a
+					href={p.href}
+					title={p.label}
+					class="no-underline hover:text-base-content hover:underline"
 					>{@render pg(p.page)}<span class={crumb}>{p.label}</span></a
 				>
 			</li>

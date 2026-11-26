@@ -322,11 +322,13 @@
 {#snippet cite(q: Quote | undefined)}
 	{#if q}
 		<figure class="mt-3 border-l border-base-300 pl-3">
-			<blockquote class="text-sm leading-relaxed italic opacity-85">“{q.text}”</blockquote>
-			<figcaption class="mt-1 text-xs opacity-70">
+			<blockquote class="text-sm leading-relaxed text-base-content/85 italic">
+				“{q.text}”
+			</blockquote>
+			<figcaption class="mt-1 text-xs text-base-content/75">
 				—
 				<a
-					class="link link-hover"
+					class="text-primary"
 					href={q.source.page ? `${q.source.url}#page=${q.source.page}` : q.source.url}
 					target="_blank"
 					rel="noopener noreferrer">{q.doc}{q.source.page ? `, p. ${q.source.page}` : ''}</a
@@ -340,14 +342,20 @@
 	<section class="mx-auto max-w-2xl py-16 text-center">
 		<PageTab page="iii" label="Does it add up?" />
 		<h1 class="mt-4 text-3xl font-bold tracking-tight md:text-5xl">Reconciliation</h1>
-		<p class="mt-4 opacity-85">
+		<p class="mt-4 text-base-content/85">
 			The reconciliation for the {ds.meta.fiscalYear}
 			{ds.meta.publication} budget isn’t ready yet. It will check this explorer’s totals against the Department
 			of Finance’s summary tables once they have been compared.
 		</p>
 		<div class="mt-6 flex justify-center gap-2">
-			<a class="btn btn-primary" href={routes.flows(ds.fy, ds.pit)}>Follow the money instead</a>
-			<a class="btn btn-ghost" href={routes.home(ds.fy, ds.pit)}>Back to the overview</a>
+			<a
+				class="map-label inline-flex min-h-11 items-center bg-primary px-4 text-sm text-primary-content no-underline"
+				href={routes.flows(ds.fy, ds.pit)}>Follow the money instead</a
+			>
+			<a
+				class="inline-flex min-h-11 items-center px-2 text-primary"
+				href={routes.home(ds.fy, ds.pit)}>Back to the Key Map</a
+			>
 		</div>
 	</section>
 {:else}
@@ -366,7 +374,7 @@
 	<!-- ───────────── The audit, first ───────────── -->
 	<section id="audit" class="atlas-inset mt-6 max-w-4xl p-4 sm:p-5" aria-labelledby="audit-h">
 		<h2 id="audit-h" class="text-xl font-bold">Does it add up?</h2>
-		<p class="mt-1 text-sm leading-relaxed opacity-85">
+		<p class="mt-1 text-sm leading-relaxed text-base-content/85">
 			We recompute {r.checks.length} totals from the Department of Finance’s printed tables and compare
 			them with this explorer and with the budget summary. Nothing is adjusted to make them match.
 		</p>
@@ -379,15 +387,15 @@
 				<span class="text-3xl font-bold tabular-nums">{explained.length}</span>
 				<span class="text-sm">differ, with every dollar of the difference explained</span>
 			</li>
-			<li class="flex items-baseline gap-2" class:text-warning={failed.length > 0}>
+			<li class="flex items-baseline gap-2" class:bg-secondary={failed.length > 0}>
 				<span class="text-3xl font-bold tabular-nums">{failed.length}</span>
 				<span class="text-sm">differ for reasons not yet found</span>
 			</li>
 		</ul>
 		<p class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-			<a class="link" href="#checks">See every check</a>
-			<a class="link" href="#totals">Which spending total should I use?</a>
-			<a class="link" href="#why-h">Why totals differ</a>
+			<a class="text-primary" href="#checks">See every check</a>
+			<a class="text-primary" href="#totals">Which spending total should I use?</a>
+			<a class="text-primary" href="#why-h">Why totals differ</a>
 		</p>
 	</section>
 
@@ -395,7 +403,7 @@
 	{#if r.allFunds.state != null}
 		<section id="totals" class="mt-8 max-w-4xl" aria-labelledby="totals-h">
 			<h2 id="totals-h" class="text-xl font-bold">Which spending total?</h2>
-			<p class="mt-1 text-sm leading-relaxed opacity-85">
+			<p class="mt-1 text-sm leading-relaxed text-base-content/85">
 				You’ll see different totals for {r.years.by} spending. Each is correct; they count different things.
 			</p>
 			<dl class="mt-4 space-y-3 text-sm leading-relaxed">
@@ -446,7 +454,7 @@
 			</dl>
 			{#if allParts.length && r.allFunds.ebudgetAllFunds}
 				<div
-					class="mt-4 flex h-6 w-full gap-[2px] overflow-hidden rounded"
+					class="mt-4 flex h-7 w-full gap-px overflow-hidden border border-base-content bg-base-content"
 					role="img"
 					aria-label="All funds composition: {allParts
 						.map((p) => `${p.l} ${money(p.v)}${p.counted ? '' : ' (left out)'}`)
@@ -454,7 +462,7 @@
 				>
 					{#each allParts as p (p.l)}
 						<div
-							class="h-full first:rounded-l last:rounded-r"
+							class="h-full"
 							style:width="{((p.v ?? 0) / allTotal) * 100}%"
 							style:background={p.c}
 							style:background-image={p.counted
@@ -468,7 +476,7 @@
 					{#each allParts as p (p.l)}
 						<li class="flex items-center gap-1.5">
 							<span
-								class="inline-block size-2.5 shrink-0 rounded-sm"
+								class="inline-block size-2.5 shrink-0 border border-base-content"
 								style:background={p.c}
 								aria-hidden="true"
 							></span>
@@ -491,40 +499,40 @@
 		<dl class="mt-2 grid gap-x-8 gap-y-2 text-sm leading-relaxed md:grid-cols-2">
 			<div>
 				<dt class="inline font-semibold">Schedules 1, 8, 9 and 10:</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					summary tables the Department of Finance publishes with each budget: 1 is the overall
 					summary, 8 lists revenue, 9 lists spending, and 10 shows each fund’s balance.
 				</dd>
 			</div>
 			<div>
 				<dt class="inline font-semibold">General Fund:</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					the State’s main account, paid for mostly by income, sales and corporation taxes.
 				</dd>
 			</div>
 			<div>
 				<dt class="inline font-semibold">Encumbrances:</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					money already promised to contracts and orders that haven’t been paid yet, so it can’t be
 					spent on anything else.
 				</dd>
 			</div>
 			<div>
 				<dt class="inline font-semibold">SFEU (Special Fund for Economic Uncertainties):</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					the General Fund’s flexible reserve. A positive SFEU at year end is how the State defines
 					a balanced budget.
 				</dd>
 			</div>
 			<div>
 				<dt class="inline font-semibold">BSA (Budget Stabilization Account):</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					the constitutional Rainy Day Fund, which can only be drawn in a budget emergency.
 				</dd>
 			</div>
 			<div>
 				<dt class="inline font-semibold">PSSSA (Public School System Stabilization Account):</dt>
-				<dd class="inline opacity-85">
+				<dd class="inline text-base-content/85">
 					a reserve for schools and community colleges, used when their guaranteed funding falls.
 				</dd>
 			</div>
@@ -534,7 +542,7 @@
 	<!-- ───────────── Why numbers differ ───────────── -->
 	<section class="mt-8" aria-labelledby="why-h">
 		<h2 id="why-h" class="text-xl font-bold">Why the numbers don’t match</h2>
-		<p class="text-sm opacity-85">
+		<p class="text-sm text-base-content/85">
 			{countWord(r.differences.length)}
 			{r.differences.length === 1 ? 'reason' : 'reasons'} totals differ between tables, pages and publications.
 		</p>
@@ -544,13 +552,13 @@
 					class="flex flex-col border-t border-base-content !p-0 p-4 px-0 !pt-4 pt-4 pb-0 text-sm"
 				>
 					<h3 class="leading-snug font-semibold">{d.title}</h3>
-					<p class="mt-1 text-xs opacity-75">{toneLabel[d.tone]}</p>
+					<p class="mt-1 text-xs text-base-content/75">{toneLabel[d.tone]}</p>
 					{#if d.amount != null}
 						<div class="mt-2 text-xl font-bold tabular-nums" title={moneyFull(d.amount)}>
 							{money(d.amount)}
 						</div>
 					{/if}
-					<p class="mt-1 flex-1 leading-relaxed opacity-85">{d.body}</p>
+					<p class="mt-1 flex-1 leading-relaxed text-base-content/85">{d.body}</p>
 					<div class="mt-2"><SourceList sources={d.sources} compact title="Source" /></div>
 				</article>
 			{/each}
@@ -564,14 +572,14 @@
 		aria-labelledby="chk-h"
 	>
 		<h2 id="chk-h" class="text-lg font-bold">Every check</h2>
-		<p class="mt-1 opacity-85">
+		<p class="mt-1 text-base-content/85">
 			{tied.length} of {r.checks.length} match.
 			{#if explained.length}{explained.length} differ, and documented causes account for the whole difference.{/if}
 			{#if failed.length}{failed.length} differ for reasons not yet found.{/if}
 		</p>
 		{#if explained.length}
 			<h3 class="mt-4 font-semibold">Explained differences</h3>
-			<p class="mt-1 text-xs opacity-75">
+			<p class="mt-1 text-xs text-base-content/75">
 				The two official sources genuinely disagree (or measure slightly different things). The
 				documented causes below account for the whole difference; nothing is adjusted to make the
 				numbers match.
@@ -580,14 +588,14 @@
 				{#each explained as c (c.id)}
 					<li class="border-t border-base-300 py-3">
 						<div class="font-semibold">{plainText(c.label)}</div>
-						<div class="tabular-nums opacity-85">
+						<div class="text-base-content/85 tabular-nums">
 							Expected {moneyFull(c.expected)}, found {moneyFull(c.actual)} (difference {money(
 								c.difference,
 								{ sign: true }
 							)})
 						</div>
 						{#if c.explanation}
-							<p class="mt-1 text-xs leading-relaxed opacity-85">
+							<p class="mt-1 text-xs leading-relaxed text-base-content/85">
 								{plainText(c.explanation.summary)}
 							</p>
 							<ul class="mt-2 space-y-2 border-l border-base-300 pl-3">
@@ -597,7 +605,7 @@
 											{plainText(it.label)}
 											<span class="tabular-nums">({money(it.amount, { sign: true })})</span>
 										</div>
-										<p class="mt-0.5 leading-relaxed opacity-85">{plainText(it.cause)}</p>
+										<p class="mt-0.5 leading-relaxed text-base-content/85">{plainText(it.cause)}</p>
 										<div class="mt-1">
 											<SourceList sources={it.sources} compact title="Sources" />
 										</div>
@@ -605,7 +613,9 @@
 								{/each}
 							</ul>
 						{/if}
-						{#if c.note}<div class="mt-1 text-xs opacity-75">{plainText(c.note)}</div>{/if}
+						{#if c.note}<div class="mt-1 text-xs text-base-content/75">
+								{plainText(c.note)}
+							</div>{/if}
 					</li>
 				{/each}
 			</ul>
@@ -616,15 +626,15 @@
 				{#each failed as c (c.id)}
 					<li class="bg-secondary/20 p-3">
 						<div class="font-semibold">{plainText(c.label)}</div>
-						<div class="tabular-nums opacity-85">
+						<div class="text-base-content/85 tabular-nums">
 							Expected {moneyFull(c.expected)}, found {moneyFull(c.actual)} (difference {money(
 								c.difference,
 								{ sign: true }
 							)})
 						</div>
-						{#if c.note}<div class="text-xs opacity-75">{plainText(c.note)}</div>{/if}
+						{#if c.note}<div class="text-xs text-base-content/75">{plainText(c.note)}</div>{/if}
 						{#if c.explanation}
-							<div class="text-xs opacity-75">
+							<div class="text-xs text-base-content/75">
 								Documented causes cover {money(c.difference - c.explanation.unexplained, {
 									sign: true
 								})}; {money(c.explanation.unexplained, { sign: true })} is unexplained.
@@ -638,7 +648,9 @@
 			<summary class="cursor-pointer font-semibold">All {r.checks.length} checks</summary>
 			<div class="overflow-x-auto">
 				<table class="table mt-2 table-xs">
-					<caption class="text-left text-xs opacity-75">Amounts in thousands of dollars</caption>
+					<caption class="text-left text-xs text-base-content/75"
+						>Amounts in thousands of dollars</caption
+					>
 					<thead
 						><tr
 							><th scope="col">Result</th><th scope="col">Check</th><th
@@ -668,22 +680,22 @@
 	<!-- ───────────── The General Fund in detail ───────────── -->
 	<section class="mt-12 max-w-4xl border-t border-base-300 pt-8" aria-labelledby="gf-h">
 		<h2 id="gf-h" class="text-2xl font-bold">The General Fund in detail</h2>
-		<p class="mt-2 leading-relaxed opacity-85">{r.problem.summary}</p>
+		<p class="mt-2 leading-relaxed text-base-content/85">{r.problem.summary}</p>
 	</section>
 
 	<section class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4" aria-label="General Fund key figures">
 		{#each [{ k: 'Revenues & transfers', v: by.revenuesAndTransfers, c: C.revenue, d: 'General Fund, Schedule 1' }, { k: 'Spending', v: by.expenditures, c: C.spending, d: 'General Fund, Schedule 1' }, { k: 'Drawn from balance', v: by.beginningBalance - by.endingBalance, c: C.committed, d: `${money(by.beginningBalance)} → ${money(by.endingBalance)}` }, { k: 'Combined reserves', v: r.reserves.combined.by, c: C.bsa, d: r.reserves.withHolding.by !== r.reserves.combined.by ? `${money(r.reserves.withHolding.by)} incl. Surplus Holding` : 'BSA + PSSSA + SFEU' }] as s (s.k)}
 			<div class="border-t border-base-content !p-0 p-4 px-0 !pt-4 pt-4 pb-0">
-				<div class="flex items-center gap-2 text-sm font-semibold opacity-85">
+				<div class="flex items-center gap-2 text-sm font-semibold text-base-content/85">
 					<span
-						class="inline-block size-2.5 shrink-0 rounded-sm"
+						class="inline-block size-2.5 shrink-0 border border-base-content"
 						style:background={s.c}
 						aria-hidden="true"
 					></span>
 					{s.k}
 				</div>
 				<div class="mt-1 text-2xl font-bold tabular-nums" title={moneyFull(s.v)}>{money(s.v)}</div>
-				<div class="text-xs opacity-75">{s.d}</div>
+				<div class="text-xs text-base-content/75">{s.d}</div>
 			</div>
 		{/each}
 	</section>
@@ -696,18 +708,19 @@
 		<div class="flex flex-wrap items-baseline justify-between gap-3">
 			<div>
 				<h2 id="bridge-h" class="text-xl font-bold">The General Fund bridge</h2>
-				<p class="text-sm opacity-75">
+				<p class="text-sm text-base-content/75">
 					From the balance carried in, through revenue, transfers and spending, to the balance left
 					at year end.
 				</p>
 			</div>
-			<div role="tablist" aria-label="Fiscal year" class="tabs tabs-box tabs-sm">
+			<div role="tablist" aria-label="Fiscal year" class="inline-flex border border-base-content">
 				{#each YEARS as y, i (y)}
 					<button
 						role="tab"
 						id="yr-tab-{y}"
-						class="tab"
-						class:tab-active={year === y}
+						class="map-label min-h-11 px-3 text-sm {year === y
+							? 'bg-base-content text-base-100'
+							: 'hover:bg-base-200'}"
 						aria-selected={year === y}
 						aria-controls="yr-panel"
 						tabindex={year === y ? 0 : -1}
@@ -721,8 +734,11 @@
 			<ul class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Legend">
 				{#each wfLegend as l (l.l)}
 					<li class="flex items-center gap-1.5">
-						<span class="inline-block size-3 rounded-sm" style:background={l.c} aria-hidden="true"
-						></span><span class="opacity-85">{l.l}</span>
+						<span
+							class="inline-block size-3 border border-base-content"
+							style:background={l.c}
+							aria-hidden="true"
+						></span><span class="text-base-content/85">{l.l}</span>
 					</li>
 				{/each}
 			</ul>
@@ -791,7 +807,7 @@
 	<section class="mt-6 grid gap-6 lg:grid-cols-5" aria-labelledby="res-h">
 		<div class="border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 lg:col-span-3">
 			<h2 id="res-h" class="text-xl font-bold">Reserves over three years</h2>
-			<p class="mb-3 text-sm opacity-75">
+			<p class="mb-3 text-sm text-base-content/75">
 				Balances at year end. The official “combined reserves” are
 				{money(r.reserves.combined.by)} in {r.years
 					.by}{#if r.reserves.withHolding.by !== r.reserves.combined.by}; with the Surplus Holding
@@ -809,7 +825,7 @@
 				<article class="border-t border-base-content !p-0 p-4 px-0 !pt-4 pt-4 pb-0 text-sm">
 					<div class="flex items-center gap-2">
 						<span
-							class="inline-block size-3 rounded-sm"
+							class="inline-block size-3 border border-base-content"
 							style:background={C[a.id]}
 							aria-hidden="true"
 						></span>
@@ -818,12 +834,12 @@
 							>{money(a.balance.by)}</span
 						>
 					</div>
-					<p class="mt-1 text-xs leading-relaxed opacity-75">{a.description}</p>
+					<p class="mt-1 text-xs leading-relaxed text-base-content/75">{a.description}</p>
 					<dl class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs">
 						{#each YEARS as y (y)}
 							{#if a.change[y] != null}
 								<div>
-									<dt class="inline opacity-75">{r.years[y]}:</dt>
+									<dt class="inline text-base-content/75">{r.years[y]}:</dt>
 									<dd class="inline font-semibold tabular-nums">
 										{a.change[y] === 0
 											? 'no change'
@@ -842,7 +858,7 @@
 	<details class="mt-6 border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0">
 		<summary class="cursor-pointer">
 			<h2 id="prob-h" class="inline text-xl font-bold">The budget problem and how it was solved</h2>
-			<span class="mt-1 block text-sm opacity-75"
+			<span class="mt-1 block text-sm text-base-content/75"
 				>January’s projected shortfall, the May Revision’s solutions, new revenue measures and
 				reserve actions, with quotes from the budget documents.</span
 			>
@@ -862,7 +878,7 @@
 					{@render cite(quote(shortfall.quoteId))}
 					{@render cite(quote(outDeficit?.quoteId))}
 				{:else}
-					<p class="mt-1 text-sm opacity-75">
+					<p class="mt-1 text-sm text-base-content/75">
 						The narrative for this publication does not state a shortfall.
 					</p>
 				{/if}
@@ -878,7 +894,7 @@
 								<span
 									>{f.label}{#if q}
 										<a
-											class="link text-xs link-hover opacity-75"
+											class="link text-xs text-base-content/75 link-hover"
 											href={q.source.page ? `${q.source.url}#page=${q.source.page}` : q.source.url}
 											target="_blank"
 											rel="noopener noreferrer"
@@ -895,7 +911,7 @@
 					Solutions for {r.problem.solutions[0]?.year ?? r.years.by}
 				</h3>
 				{#if solColumns.length && r.problem.solutions.length}
-					<p class="mb-2 text-sm opacity-75">
+					<p class="mb-2 text-sm text-base-content/75">
 						{money(r.problem.solutions.reduce((a, s) => a + s.amount, 0))} of solutions in the May Revision
 						against the January gap — the extra margin, with higher revenue, also funds the reserve deposits
 						and the Surplus Holding Account below.
@@ -914,7 +930,7 @@
 								<strong>{s.label} — {s.printed}.</strong>
 								{s.description}
 								{#if q}<a
-										class="link link-hover opacity-75"
+										class="link text-base-content/75 link-hover"
 										href={q.source.page ? `${q.source.url}#page=${q.source.page}` : q.source.url}
 										target="_blank"
 										rel="noopener noreferrer"
@@ -923,9 +939,11 @@
 							</li>
 						{/each}
 					</ul>
-					<p class="mt-2 text-xs opacity-75">{r.problem.solutionsNote}</p>
+					<p class="mt-2 text-xs text-base-content/75">{r.problem.solutionsNote}</p>
 				{:else}
-					<p class="text-sm opacity-75">No solution categories were published for this budget.</p>
+					<p class="text-sm text-base-content/75">
+						No solution categories were published for this budget.
+					</p>
 				{/if}
 			</div>
 		</div>
@@ -934,7 +952,7 @@
 			{#if measColumns.length}
 				<div>
 					<h3 class="font-semibold">Enacted revenue measures, growing over time</h3>
-					<p class="mb-2 text-sm opacity-75">
+					<p class="mb-2 text-sm text-base-content/75">
 						Most of the multi-year fix is revenue that is small in {r.years.by} and larger later — aimed
 						at the structural deficit rather than the budget year.
 					</p>
@@ -958,7 +976,7 @@
 							<span
 								>{f!.label}{f!.year ? ` (${f!.year})` : ''}{#if q}
 									<a
-										class="link text-xs link-hover opacity-75"
+										class="link text-xs text-base-content/75 link-hover"
 										href={q.source.page ? `${q.source.url}#page=${q.source.page}` : q.source.url}
 										target="_blank"
 										rel="noopener noreferrer"
@@ -987,7 +1005,7 @@
 								<th></th>
 								{#each stages as s (s.pit)}
 									<th class="text-right"
-										>{s.label}<br /><span class="text-xs font-normal opacity-75"
+										>{s.label}<br /><span class="text-xs font-normal text-base-content/75"
 											>{s.date.replace(/^\w+ on /, '')}</span
 										></th
 									>
@@ -1003,7 +1021,7 @@
 										<td class="text-right">
 											<div class="flex items-center justify-end gap-2">
 												<span
-													class="hidden h-2 rounded-full sm:inline-block"
+													class="hidden h-2 sm:inline-block"
 													style:width="{Math.max(2, (s[k] / (mx || 1)) * 80)}px"
 													style:background={i === stages.length - 1 ? pal[0] : gray}
 													aria-hidden="true"
@@ -1017,7 +1035,7 @@
 						</tbody>
 					</table>
 				</div>
-				<p class="mt-1 text-xs opacity-75">
+				<p class="mt-1 text-xs text-base-content/75">
 					{#each stages.filter((s) => s.transcribed) as s (s.pit)}{s.label} figures are transcribed from
 						a printed chart (millions).
 					{/each}
@@ -1031,7 +1049,7 @@
 	<section class="mt-6 grid gap-6 lg:grid-cols-2" aria-label="Other funds">
 		<div class="border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 text-sm">
 			<h2 class="text-lg font-bold">Special funds: dedicated money, plus the reserves</h2>
-			<p class="mt-1 leading-relaxed opacity-85">
+			<p class="mt-1 leading-relaxed text-base-content/85">
 				Special funds (gas taxes, fees, dedicated taxes) are spent on what they were raised for.
 				Because reserve accounts are special funds too, reserve deposits count as special-fund
 				revenue:
@@ -1058,14 +1076,14 @@
 		</div>
 		<div class="border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 text-sm">
 			<h2 class="text-lg font-bold">Federal and bond funds: spent, not raised</h2>
-			<p class="mt-1 leading-relaxed opacity-85">
+			<p class="mt-1 leading-relaxed text-base-content/85">
 				{money(r.federalAndBond.federal.by)} in federal grants and {money(r.federalAndBond.bond.by)} of
 				bond-financed spending appear in total spending but in no state revenue schedule — they are paid
 				for by Washington and by borrowing.
 			</p>
-			<p class="mt-2 leading-relaxed opacity-85">
+			<p class="mt-2 leading-relaxed text-base-content/85">
 				They are why this explorer’s “State + federal funds” total is larger than the state-funds
-				figure. <a class="link" href="#totals">Compare the totals</a>
+				figure. <a class="text-primary" href="#totals">Compare the totals</a>
 			</p>
 			<div class="mt-3">
 				<SourceList sources={r.federalAndBond.sources} compact />
@@ -1076,7 +1094,7 @@
 	{#if notes.length}
 		<details class="mt-6 border-t border-base-content !p-0 p-5 px-0 !pt-4 pt-4 pb-0 text-sm">
 			<summary class="cursor-pointer font-bold">Notes on method</summary>
-			<ul class="mt-2 list-disc space-y-1 pl-5 leading-relaxed opacity-85">
+			<ul class="mt-2 list-disc space-y-1 pl-5 leading-relaxed text-base-content/85">
 				{#each notes as n, i (i)}<li>{n}</li>{/each}
 			</ul>
 		</details>

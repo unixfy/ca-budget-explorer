@@ -1,4 +1,4 @@
-/** Global UI settings (runes), persisted to localStorage. Client-only app (ssr = false). */
+/** Global UI settings (runes), persisted to localStorage. Server render uses the defaults; init() runs in the browser. */
 import type { FundFilter, YearKey } from './format';
 import type { Mode } from './viz/palette';
 

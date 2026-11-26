@@ -1,0 +1,568 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-11-09T16:53:13.110Z",
+	"title": "Design System: California Budget Explorer",
+	"extensions": {
+		"colorMeta": {
+			"arterial-orange": {
+				"role": "primary",
+				"displayName": "Arterial Orange",
+				"canonical": "#a8441b",
+				"tonalRamp": [
+					"oklch(15% 0.072 40.5)",
+					"oklch(26.4% 0.11 40.5)",
+					"oklch(37.9% 0.133 40.5)",
+					"oklch(49.3% 0.142 40.5)",
+					"oklch(60.7% 0.135 40.5)",
+					"oklch(72.1% 0.114 40.5)",
+					"oklch(83.6% 0.078 40.5)",
+					"oklch(95% 0.027 40.5)"
+				]
+			},
+			"freeway-yellow": {
+				"role": "secondary",
+				"displayName": "Freeway Yellow",
+				"canonical": "#f2c230",
+				"tonalRamp": [
+					"oklch(15% 0.081 89)",
+					"oklch(26.4% 0.123 89)",
+					"oklch(37.9% 0.149 89)",
+					"oklch(49.3% 0.158 89)",
+					"oklch(60.7% 0.151 89)",
+					"oklch(72.1% 0.127 89)",
+					"oklch(83.6% 0.087 89)",
+					"oklch(95% 0.03 89)"
+				]
+			},
+			"water-blue": {
+				"role": "tertiary",
+				"displayName": "Water Blue",
+				"canonical": "#2f6f9f",
+				"tonalRamp": [
+					"oklch(15% 0.051 244.2)",
+					"oklch(26.4% 0.078 244.2)",
+					"oklch(37.9% 0.094 244.2)",
+					"oklch(49.3% 0.1 244.2)",
+					"oklch(60.7% 0.095 244.2)",
+					"oklch(72.1% 0.08 244.2)",
+					"oklch(83.6% 0.055 244.2)",
+					"oklch(95% 0.019 244.2)"
+				]
+			},
+			"park-green": {
+				"role": "tertiary",
+				"displayName": "Park Green",
+				"canonical": "#3c7a45",
+				"tonalRamp": [
+					"oklch(15% 0.053 147)",
+					"oklch(26.4% 0.081 147)",
+					"oklch(37.9% 0.098 147)",
+					"oklch(49.3% 0.104 147)",
+					"oklch(60.7% 0.1 147)",
+					"oklch(72.1% 0.084 147)",
+					"oklch(83.6% 0.057 147)",
+					"oklch(95% 0.02 147)"
+				]
+			},
+			"map-white": {
+				"role": "neutral",
+				"displayName": "Map White",
+				"canonical": "#f3f6f4",
+				"tonalRamp": [
+					"oklch(15% 0.002 157.2)",
+					"oklch(26.4% 0.003 157.2)",
+					"oklch(37.9% 0.004 157.2)",
+					"oklch(49.3% 0.004 157.2)",
+					"oklch(60.7% 0.004 157.2)",
+					"oklch(72.1% 0.003 157.2)",
+					"oklch(83.6% 0.002 157.2)",
+					"oklch(95% 0.001 157.2)"
+				]
+			},
+			"map-white-shade": {
+				"role": "neutral",
+				"displayName": "Map White Shade",
+				"canonical": "#e6ece8",
+				"tonalRamp": [
+					"oklch(15% 0.004 157.1)",
+					"oklch(26.4% 0.006 157.1)",
+					"oklch(37.9% 0.008 157.1)",
+					"oklch(49.3% 0.008 157.1)",
+					"oklch(60.7% 0.008 157.1)",
+					"oklch(72.1% 0.007 157.1)",
+					"oklch(83.6% 0.005 157.1)",
+					"oklch(95% 0.002 157.1)"
+				]
+			},
+			"hairline": {
+				"role": "neutral",
+				"displayName": "Hairline",
+				"canonical": "#c9d3cd",
+				"tonalRamp": [
+					"oklch(15% 0.007 159.9)",
+					"oklch(26.4% 0.011 159.9)",
+					"oklch(37.9% 0.013 159.9)",
+					"oklch(49.3% 0.014 159.9)",
+					"oklch(60.7% 0.013 159.9)",
+					"oklch(72.1% 0.011 159.9)",
+					"oklch(83.6% 0.007 159.9)",
+					"oklch(95% 0.003 159.9)"
+				]
+			},
+			"ink": {
+				"role": "neutral",
+				"displayName": "Ink",
+				"canonical": "#15191c",
+				"tonalRamp": [
+					"oklch(15% 0.004 240.3)",
+					"oklch(26.4% 0.007 240.3)",
+					"oklch(37.9% 0.008 240.3)",
+					"oklch(49.3% 0.009 240.3)",
+					"oklch(60.7% 0.008 240.3)",
+					"oklch(72.1% 0.007 240.3)",
+					"oklch(83.6% 0.005 240.3)",
+					"oklch(95% 0.002 240.3)"
+				]
+			},
+			"error-red": {
+				"role": "error",
+				"displayName": "Error Red",
+				"canonical": "#b3261e",
+				"tonalRamp": [
+					"oklch(15% 0.091 28.7)",
+					"oklch(26.4% 0.139 28.7)",
+					"oklch(37.9% 0.168 28.7)",
+					"oklch(49.3% 0.178 28.7)",
+					"oklch(60.7% 0.17 28.7)",
+					"oklch(72.1% 0.143 28.7)",
+					"oklch(83.6% 0.098 28.7)",
+					"oklch(95% 0.034 28.7)"
+				]
+			},
+			"night-ground": {
+				"role": "neutral",
+				"displayName": "Night Ground",
+				"canonical": "#0f151c",
+				"tonalRamp": [
+					"oklch(15% 0.009 252.6)",
+					"oklch(26.4% 0.013 252.6)",
+					"oklch(37.9% 0.016 252.6)",
+					"oklch(49.3% 0.017 252.6)",
+					"oklch(60.7% 0.016 252.6)",
+					"oklch(72.1% 0.014 252.6)",
+					"oklch(83.6% 0.009 252.6)",
+					"oklch(95% 0.003 252.6)"
+				]
+			},
+			"night-shade": {
+				"role": "neutral",
+				"displayName": "Night Shade",
+				"canonical": "#161e27",
+				"tonalRamp": [
+					"oklch(15% 0.011 251.7)",
+					"oklch(26.4% 0.016 251.7)",
+					"oklch(37.9% 0.02 251.7)",
+					"oklch(49.3% 0.021 251.7)",
+					"oklch(60.7% 0.02 251.7)",
+					"oklch(72.1% 0.017 251.7)",
+					"oklch(83.6% 0.012 251.7)",
+					"oklch(95% 0.004 251.7)"
+				]
+			},
+			"night-hairline": {
+				"role": "neutral",
+				"displayName": "Night Hairline",
+				"canonical": "#2a3541",
+				"tonalRamp": [
+					"oklch(15% 0.013 250.9)",
+					"oklch(26.4% 0.02 250.9)",
+					"oklch(37.9% 0.025 250.9)",
+					"oklch(49.3% 0.026 250.9)",
+					"oklch(60.7% 0.025 250.9)",
+					"oklch(72.1% 0.021 250.9)",
+					"oklch(83.6% 0.014 250.9)",
+					"oklch(95% 0.005 250.9)"
+				]
+			},
+			"night-ink": {
+				"role": "neutral",
+				"displayName": "Night Ink",
+				"canonical": "#e8edef",
+				"tonalRamp": [
+					"oklch(15% 0.003 223.5)",
+					"oklch(26.4% 0.005 223.5)",
+					"oklch(37.9% 0.006 223.5)",
+					"oklch(49.3% 0.006 223.5)",
+					"oklch(60.7% 0.006 223.5)",
+					"oklch(72.1% 0.005 223.5)",
+					"oklch(83.6% 0.003 223.5)",
+					"oklch(95% 0.001 223.5)"
+				]
+			},
+			"night-arterial": {
+				"role": "primary",
+				"displayName": "Night Arterial",
+				"canonical": "#f59a5c",
+				"tonalRamp": [
+					"oklch(15% 0.068 53.6)",
+					"oklch(26.4% 0.104 53.6)",
+					"oklch(37.9% 0.126 53.6)",
+					"oklch(49.3% 0.134 53.6)",
+					"oklch(60.7% 0.128 53.6)",
+					"oklch(72.1% 0.108 53.6)",
+					"oklch(83.6% 0.074 53.6)",
+					"oklch(95% 0.025 53.6)"
+				]
+			},
+			"night-freeway": {
+				"role": "secondary",
+				"displayName": "Night Freeway",
+				"canonical": "#f2c94c",
+				"tonalRamp": [
+					"oklch(15% 0.075 90.5)",
+					"oklch(26.4% 0.114 90.5)",
+					"oklch(37.9% 0.138 90.5)",
+					"oklch(49.3% 0.146 90.5)",
+					"oklch(60.7% 0.14 90.5)",
+					"oklch(72.1% 0.118 90.5)",
+					"oklch(83.6% 0.08 90.5)",
+					"oklch(95% 0.028 90.5)"
+				]
+			},
+			"night-water": {
+				"role": "tertiary",
+				"displayName": "Night Water",
+				"canonical": "#7fbce0",
+				"tonalRamp": [
+					"oklch(15% 0.041 235.2)",
+					"oklch(26.4% 0.063 235.2)",
+					"oklch(37.9% 0.077 235.2)",
+					"oklch(49.3% 0.081 235.2)",
+					"oklch(60.7% 0.078 235.2)",
+					"oklch(72.1% 0.065 235.2)",
+					"oklch(83.6% 0.045 235.2)",
+					"oklch(95% 0.015 235.2)"
+				]
+			},
+			"tint-sun": {
+				"role": "tertiary",
+				"displayName": "Tint Sun",
+				"canonical": "#f6e07a",
+				"tonalRamp": [
+					"oklch(15% 0.064 97.4)",
+					"oklch(26.4% 0.097 97.4)",
+					"oklch(37.9% 0.118 97.4)",
+					"oklch(49.3% 0.125 97.4)",
+					"oklch(60.7% 0.119 97.4)",
+					"oklch(72.1% 0.101 97.4)",
+					"oklch(83.6% 0.069 97.4)",
+					"oklch(95% 0.024 97.4)"
+				]
+			},
+			"tint-park": {
+				"role": "tertiary",
+				"displayName": "Tint Park",
+				"canonical": "#b8dca6",
+				"tonalRamp": [
+					"oklch(15% 0.042 135.3)",
+					"oklch(26.4% 0.064 135.3)",
+					"oklch(37.9% 0.077 135.3)",
+					"oklch(49.3% 0.082 135.3)",
+					"oklch(60.7% 0.078 135.3)",
+					"oklch(72.1% 0.066 135.3)",
+					"oklch(83.6% 0.045 135.3)",
+					"oklch(95% 0.016 135.3)"
+				]
+			},
+			"tint-water": {
+				"role": "tertiary",
+				"displayName": "Tint Water",
+				"canonical": "#a6d0ee",
+				"tonalRamp": [
+					"oklch(15% 0.031 239.5)",
+					"oklch(26.4% 0.048 239.5)",
+					"oklch(37.9% 0.058 239.5)",
+					"oklch(49.3% 0.061 239.5)",
+					"oklch(60.7% 0.058 239.5)",
+					"oklch(72.1% 0.049 239.5)",
+					"oklch(83.6% 0.034 239.5)",
+					"oklch(95% 0.012 239.5)"
+				]
+			},
+			"tint-peach": {
+				"role": "tertiary",
+				"displayName": "Tint Peach",
+				"canonical": "#f4b8a0",
+				"tonalRamp": [
+					"oklch(15% 0.039 42.8)",
+					"oklch(26.4% 0.06 42.8)",
+					"oklch(37.9% 0.073 42.8)",
+					"oklch(49.3% 0.077 42.8)",
+					"oklch(60.7% 0.074 42.8)",
+					"oklch(72.1% 0.062 42.8)",
+					"oklch(83.6% 0.043 42.8)",
+					"oklch(95% 0.015 42.8)"
+				]
+			},
+			"tint-lilac": {
+				"role": "tertiary",
+				"displayName": "Tint Lilac",
+				"canonical": "#e3bfdf",
+				"tonalRamp": [
+					"oklch(15% 0.03 329.7)",
+					"oklch(26.4% 0.046 329.7)",
+					"oklch(37.9% 0.055 329.7)",
+					"oklch(49.3% 0.059 329.7)",
+					"oklch(60.7% 0.056 329.7)",
+					"oklch(72.1% 0.047 329.7)",
+					"oklch(83.6% 0.032 329.7)",
+					"oklch(95% 0.011 329.7)"
+				]
+			},
+			"tint-tan": {
+				"role": "tertiary",
+				"displayName": "Tint Tan",
+				"canonical": "#f6cd93",
+				"tonalRamp": [
+					"oklch(15% 0.045 75.8)",
+					"oklch(26.4% 0.068 75.8)",
+					"oklch(37.9% 0.082 75.8)",
+					"oklch(49.3% 0.087 75.8)",
+					"oklch(60.7% 0.083 75.8)",
+					"oklch(72.1% 0.07 75.8)",
+					"oklch(83.6% 0.048 75.8)",
+					"oklch(95% 0.017 75.8)"
+				]
+			},
+			"tint-periwinkle": {
+				"role": "tertiary",
+				"displayName": "Tint Periwinkle",
+				"canonical": "#c8c2ec",
+				"tonalRamp": [
+					"oklch(15% 0.03 291.6)",
+					"oklch(26.4% 0.046 291.6)",
+					"oklch(37.9% 0.055 291.6)",
+					"oklch(49.3% 0.059 291.6)",
+					"oklch(60.7% 0.056 291.6)",
+					"oklch(72.1% 0.047 291.6)",
+					"oklch(83.6% 0.032 291.6)",
+					"oklch(95% 0.011 291.6)"
+				]
+			},
+			"tint-rose": {
+				"role": "tertiary",
+				"displayName": "Tint Rose",
+				"canonical": "#f1a8b4",
+				"tonalRamp": [
+					"oklch(15% 0.044 8.4)",
+					"oklch(26.4% 0.068 8.4)",
+					"oklch(37.9% 0.082 8.4)",
+					"oklch(49.3% 0.087 8.4)",
+					"oklch(60.7% 0.083 8.4)",
+					"oklch(72.1% 0.07 8.4)",
+					"oklch(83.6% 0.048 8.4)",
+					"oklch(95% 0.017 8.4)"
+				]
+			},
+			"tint-unincorporated": {
+				"role": "tertiary",
+				"displayName": "Tint Unincorporated",
+				"canonical": "#d5dcd8",
+				"tonalRamp": [
+					"oklch(15% 0.005 161.3)",
+					"oklch(26.4% 0.007 161.3)",
+					"oklch(37.9% 0.009 161.3)",
+					"oklch(49.3% 0.009 161.3)",
+					"oklch(60.7% 0.009 161.3)",
+					"oklch(72.1% 0.007 161.3)",
+					"oklch(83.6% 0.005 161.3)",
+					"oklch(95% 0.002 161.3)"
+				]
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Display",
+				"purpose": "Page title (h1) under every page tab."
+			},
+			"figure": {
+				"displayName": "Figure",
+				"purpose": "Headline amount on each page; tabular."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Section headings, normal case."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Prose at a 65–75ch measure."
+			},
+			"label": {
+				"displayName": "Label (map caps)",
+				"purpose": "Tabs, nav, legend, table headers, map labels, references, buttons."
+			}
+		},
+		"shadows": [
+			{
+				"name": "float-panel",
+				"value": "0 8px 24px -12px rgb(0 0 0 / .35)",
+				"purpose": "View panel floating over the page."
+			},
+			{
+				"name": "float-dialog",
+				"value": "0 16px 40px -16px rgb(0 0 0 / .45)",
+				"purpose": "Street Index dialog."
+			}
+		],
+		"motion": [
+			{
+				"name": "page-turn-out",
+				"value": "220ms cubic-bezier(0.4, 0, 1, 1)",
+				"purpose": "Outgoing page slides 2.5% and fades on navigation (motion-safe only)."
+			},
+			{
+				"name": "page-turn-in",
+				"value": "320ms cubic-bezier(0.16, 1, 0.3, 1)",
+				"purpose": "Incoming page slides in from 4%; direction reverses when going up or Back."
+			}
+		],
+		"breakpoints": [
+			{
+				"name": "sm",
+				"value": "640px"
+			},
+			{
+				"name": "md",
+				"value": "768px"
+			},
+			{
+				"name": "lg",
+				"value": "1024px"
+			},
+			{
+				"name": "xl",
+				"value": "1280px"
+			},
+			{
+				"name": "2xl",
+				"value": "1536px"
+			}
+		]
+	},
+	"components": [
+		{
+			"name": "Page Tab",
+			"kind": "custom",
+			"refersTo": "page-tab-number",
+			"description": "Black page number + outlined page name; opens every page.",
+			"html": "<p class=\"ds-tab\"><span class=\"ds-tab-n\">101</span><span class=\"ds-tab-l\">Health Care Services</span></p>",
+			"css": ".ds-tab{display:inline-flex;font-size:14px;line-height:1;margin:0} .ds-tab-n,.ds-tab-l{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;padding:6px 10px} .ds-tab-n{background:#15191c;color:#f3f6f4;font-variant-numeric:tabular-nums} .ds-tab-l{border:1px solid #15191c;color:#15191c;background:#f3f6f4}"
+		},
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "Arterial-orange action in condensed caps.",
+			"html": "<button class=\"ds-btn\">Turn to page</button>",
+			"css": ".ds-btn{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:14px;min-height:44px;padding:0 16px;background:#a8441b;color:#fff;border:0;border-radius:2px;cursor:pointer} .ds-btn:hover{filter:brightness(1.1)} .ds-btn:focus-visible{outline:2px solid #15191c;outline-offset:2px}"
+		},
+		{
+			"name": "Outline Button",
+			"kind": "button",
+			"refersTo": "button-outline",
+			"description": "Secondary action: ink hairline on map white.",
+			"html": "<button class=\"ds-btn-o\">Try again</button>",
+			"css": ".ds-btn-o{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:14px;min-height:44px;padding:0 16px;background:#f3f6f4;color:#15191c;border:1px solid #15191c;border-radius:2px;cursor:pointer} .ds-btn-o:hover{background:#e6ece8} .ds-btn-o:focus-visible{outline:2px solid #15191c;outline-offset:2px}"
+		},
+		{
+			"name": "Nav Tabs",
+			"kind": "nav",
+			"refersTo": "nav-tab",
+			"description": "Running-head page tabs; active tab is the black page tab.",
+			"html": "<nav class=\"ds-nav\"><a href=\"#\">Overview</a><a href=\"#\" aria-current=\"page\">Spending</a><a href=\"#\">Revenue</a><a href=\"#\">Sources</a></nav>",
+			"css": ".ds-nav{display:flex;border-bottom:1px solid #15191c;background:#f3f6f4} .ds-nav a{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:14px;min-height:44px;display:flex;align-items:center;padding:0 12px;color:#15191c;text-decoration:none} .ds-nav a:hover{background:#e6ece8} .ds-nav a[aria-current]{background:#15191c;color:#f3f6f4} .ds-nav a:focus-visible{outline:2px solid #15191c;outline-offset:2px}"
+		},
+		{
+			"name": "Index Line",
+			"kind": "custom",
+			"refersTo": "atlas-inset",
+			"description": "Street Index entry: name, dot leader, amount, page and square.",
+			"html": "<div class=\"ds-idx\"><a href=\"#\">Medi-Cal</a><span class=\"ds-dot\"></span><span>$196.1B</span><span class=\"ds-ref\">p. 101 · D4</span></div>",
+			"css": ".ds-idx{display:flex;align-items:baseline;gap:8px;font-family:Barlow,sans-serif;color:#15191c;font-variant-numeric:tabular-nums} .ds-idx a{color:#15191c;font-weight:500;text-decoration:none} .ds-idx a:hover{text-decoration:underline} .ds-dot{flex:1;min-width:24px;border-bottom:2px dotted rgba(21,25,28,.35);transform:translateY(-.3em)} .ds-ref{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:12px}"
+		},
+		{
+			"name": "Legend",
+			"kind": "card",
+			"refersTo": "atlas-inset",
+			"description": "Hairline inset naming what each mark means.",
+			"html": "<section class=\"ds-leg\"><h4>Legend</h4><p><i style=\"background:#f6e07a\"></i>Agency, sized by dollars</p><p><i style=\"background:#b8dca6\"></i>Another agency</p><p><b>101</b>Page number</p></section>",
+			"css": ".ds-leg{border:1px solid #15191c;background:#f3f6f4;padding:12px;font-family:Barlow,sans-serif;font-size:14px;color:#15191c;max-width:260px} .ds-leg h4{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:12px;margin:0 0 8px} .ds-leg p{display:flex;align-items:center;gap:8px;margin:6px 0} .ds-leg i{display:inline-block;width:24px;height:14px;border:1px solid #15191c} .ds-leg b{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#15191c;color:#f3f6f4;font-size:10px}"
+		},
+		{
+			"name": "Map Block",
+			"kind": "custom",
+			"refersTo": "map-block",
+			"description": "Cased city-tint block with name, amount and page roundel; yellow outline when here.",
+			"html": "<a href=\"#\" class=\"ds-blk\"><span class=\"ds-r\">100</span><span class=\"ds-n\">Health and Human Services</span><span class=\"ds-v\">$287.4B</span></a>",
+			"css": ".ds-blk{position:relative;display:flex;flex-direction:column;justify-content:flex-end;width:220px;height:140px;padding:10px;background:#f6e07a;border:1.5px solid #15191c;color:#15191c;text-decoration:none;font-family:Barlow,sans-serif} .ds-blk:hover,.ds-blk:focus-visible{outline:3px solid #f2c230;outline-offset:-3px} .ds-r{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;position:absolute;top:8px;left:8px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#15191c;color:#f3f6f4;font-size:11px} .ds-n{font-family: var(--font-map, 'Barlow Semi Condensed', sans-serif); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;font-size:13px} .ds-v{font-weight:600;font-variant-numeric:tabular-nums}"
+		}
+	],
+	"narrative": {
+		"northStar": "Every Number Has a Page",
+		"overview": "The explorer is drawn as the street atlas Californians used to keep in the car, the kind with a key map on the inside cover, numbered pages, a lettered and numbered grid in every margin, and an index at the back. The budget is the territory. Agencies, departments and revenue sources are the shaded blocks, and the reader finds anything the same way they found a street: turn to the page and look in the square. The metaphor does real work rather than decorating the page. Every budget item has a computed page and grid reference (\"p. 312 · C4\"), and every figure names the official page it came from.\n\nThe world lives in the frame and stays out of the reading column. The page tabs, running head, margin grid, legend boxes, index lines and map blocks carry the atlas. Prose sits in a calm sans at a readable measure on a cool map-white ground. Density is that of a reference book: plenty of information, organised by hairlines and space instead of boxes. Light mode is the atlas by day. Night mode is the same atlas read under a car's dome light.\n\nThe look is deliberately neither an official state portal (no seals, no government blue, no Caltrans green), nor partisan (no red/blue coding, no valence colour on increases and cuts), nor academic.",
+		"keyCharacteristics": [
+			"Pastel city tints with dark casing outlines for every mapped entity.",
+			"Condensed caps (Barlow Semi Condensed) for every label, tab and reference; Barlow for reading.",
+			"Black page tabs and numbered roundels; an A–J / 1–7 margin grid around maps.",
+			"Dot-leader index lines that run a name across to its page and square.",
+			"Flat, crisp, 2px corners; hairlines instead of cards."
+		],
+		"rules": [
+			{
+				"name": "The No Valence Rule",
+				"body": "Increases and decreases are both drawn in neutral ink with a small triangle and a sign. Green-for-up and red-for-down editorialise spending, so they never appear.",
+				"section": "colors"
+			},
+			{
+				"name": "The Yellow Means Here Rule",
+				"body": "Freeway yellow marks only the reader's current place or selection. It is never decoration and never a warning by itself. A \"not published\" state may share the hue but must also carry text.",
+				"section": "colors"
+			},
+			{
+				"name": "The Error Is Rare Rule",
+				"body": "Error red is used only for real failures (data didn't load). Gaps in official data are neutral or yellow with words, never red.",
+				"section": "colors"
+			},
+			{
+				"name": "The Street Name Rule",
+				"body": "Condensed caps are for naming and referencing things: labels, tabs, references, table headers, buttons. They are never used for sentences or headings people read as prose.",
+				"section": "typography"
+			},
+			{
+				"name": "The Tabular Money Rule",
+				"body": "Every amount uses tabular figures so columns of dollars align.",
+				"section": "typography"
+			},
+			{
+				"name": "The Printed Page Rule",
+				"body": "Nothing on the page itself has a shadow. A shadow means the layer is floating over the page and can be dismissed.",
+				"section": "elevation"
+			}
+		],
+		"dos": [
+			"Do open every page with a Page Tab and then the h1.",
+			"Do give every budget figure a page reference and every published figure a source citation.",
+			"Do shade entities with the city tints and case them in ink; keep each entity's tint fixed across years and filters.",
+			"Do use freeway yellow only for \"here / selected\", and arterial orange for things to follow.",
+			"Do separate sections with space and rules, and keep prose to a 65–75 character measure."
+		],
+		"donts": [
+			"Don't use red/green (or red/blue) to code increases, cuts, or parties.",
+			"Don't use state seals, government blue, Caltrans green, or anything that reads as an official State site.",
+			"Don't build pages from stacks of cards, rows of KPI tiles, or eyebrow labels above headings.",
+			"Don't put shadows, gradients, or glass on the page itself.",
+			"Don't use condensed caps for sentences or reading text.",
+			"Don't use emoji or unicode glyphs as icons; draw small SVG icons in one stroke weight."
+		]
+	}
+}

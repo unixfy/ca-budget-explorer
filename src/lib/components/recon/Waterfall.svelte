@@ -241,13 +241,7 @@
 							stroke-width="1"
 						/>
 						{#if b.s.hatch}
-							<rect
-								x={bx}
-								y={y(b.y1)}
-								width={bw}
-								height={h(b.y0, b.y1)}
-								fill="url(#wf-hatch)"
-							/>
+							<rect x={bx} y={y(b.y1)} width={bw} height={h(b.y0, b.y1)} fill="url(#wf-hatch)" />
 						{/if}
 					{/if}
 				</g>
@@ -278,7 +272,8 @@
 					font-size="13"
 					font-weight="600"
 					class="font-map tabular-nums"
-					fill={ink.primary}>{b.s.kind === 'delta' && b.s.value > 0 ? '+' : ''}{money(b.s.value)}</text
+					fill={ink.primary}
+					>{b.s.kind === 'delta' && b.s.value > 0 ? '+' : ''}{money(b.s.value)}</text
 				>
 				{#if narrow}
 					<!-- angled so 12px labels fit under narrow bars -->

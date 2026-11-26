@@ -263,7 +263,7 @@
 							ref={refOf(r)}
 						>
 							{#snippet detail()}
-								<span class="map-label text-[0.6875rem]">{KIND_LABEL[r.kind]}</span>{#if trail}<span
+								<span class="map-label text-xs">{KIND_LABEL[r.kind]}</span>{#if trail}<span
 										class="text-base-content/70"
 										aria-hidden="true"
 									>

@@ -62,8 +62,7 @@
 	const prod = $derived(productId ? catalog.products.find((p) => p.id === productId) : null);
 	const backsEntries = (b: Partial<Record<Product, number>> | undefined) =>
 		Object.entries(b ?? {}).sort((x, y) => y[1] - x[1]) as [Product, number][];
-	const tag =
-		'map-label inline-flex items-center border px-1.5 py-0.5 text-[0.6875rem] leading-none';
+	const tag = 'map-label inline-flex items-center border px-1.5 py-0.5 text-xs leading-none';
 </script>
 
 <aside class="atlas-inset p-4 text-sm" aria-live="polite" aria-label="Source details">

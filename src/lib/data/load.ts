@@ -1,9 +1,10 @@
 /**
- * Client-side data loading for the static JSON files described in schema.ts.
+ * Data loading (server render and browser) for the static JSON files described in schema.ts.
  * Everything is fetched lazily from /data/** and memoised per URL, so navigating
  * between drill-down levels never re-downloads a tree.
  */
 import { asset } from '$app/paths';
+import { browser } from '$app/environment';
 import type {
 	BudgetNode,
 	DatasetMeta,
@@ -48,8 +49,12 @@ async function getJSON<T>(rel: string, f: Fetch = fetch): Promise<T> {
 			if (/^\s*</.test(text)) throw new DataError(`Could not load ${rel} (not found)`, 404, url);
 			return JSON.parse(text) as T;
 		});
-		cache.set(url, p);
-		p.catch(() => cache.delete(url));
+		// Server: no cross-request cache, so every SSR fetch goes through SvelteKit's `fetch`
+		// and gets inlined into the page for hydration.
+		if (browser) {
+			cache.set(url, p);
+			p.catch(() => cache.delete(url));
+		}
 	}
 	return p;
 }
