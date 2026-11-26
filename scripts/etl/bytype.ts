@@ -12,7 +12,7 @@
  * Output: static/data/{fy}/{pit}/bytype.json, a BudgetNode tree
  *   type -> group (K-12 schools, Health care...) -> type of payment -> department -> program
  * whose root equals the expenditure tree's total. As a cross-check, character totals are
- * compared with DOF Summary Schedule 9 (cached under data-raw/{fy}/{pit}/rev/).
+ * compared with DOF Summary Schedule 9 (cached under data-raw/{fy}/{pit}/).
  */
 import fs from 'node:fs';
 import path from 'node:path';

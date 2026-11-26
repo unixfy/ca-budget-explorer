@@ -13,7 +13,7 @@
  *   - Schedule 1 / Schedule 6 / ebudget `sankey` API -> reconciliation + history
  *
  * Outputs (thousands of dollars): static/data/{fy}/{pit}/revenues.json (BudgetNode) and
- * flows.json (Flows). Raw downloads cached under data-raw/{fy}/{pit}/rev/.
+ * flows.json (Flows). Raw downloads cached under data-raw/{fy}/{pit}/.
  */
 import fs from 'node:fs';
 import path from 'node:path';

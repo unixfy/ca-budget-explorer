@@ -15,7 +15,7 @@
  *   - ebudget `statistics` API -> official "all funds" total
  *
  * Output: static/data/{fy}/{pit}/reconciliation.json (see src/lib/data/reconciliation.ts).
- * Raw downloads are cached under data-raw/{fy}/{pit}/rev/ (shared with the revenue ETL).
+ * Raw downloads are cached under data-raw/{fy}/{pit}/ (shared with the other ETLs).
  */
 import fs from 'node:fs';
 import path from 'node:path';
