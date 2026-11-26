@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto, afterNavigate } from '$app/navigation';
+	import logo from '#lib/assets/favicon.svg';
 	import { page } from '$app/state';
 	import type { Dataset } from '#lib/data/load.ts';
 	import { PIT_LABELS, type Pit } from '#lib/data/schema.ts';
@@ -111,12 +112,11 @@
 			class="flex min-h-11 items-center gap-2 no-underline"
 			aria-label="California Budget Explorer, Key Map"
 		>
-			<span
-				aria-hidden="true"
-				class="map-label bg-base-content px-1.5 py-0.5 text-xs leading-none text-base-100">CA</span
-			>
+			<img src={logo} alt="" width="24" height="24" class="size-6 shrink-0" />
 			<span class="map-label hidden text-sm sm:inline">California Budget Explorer</span>
-			<span class="map-label text-sm sm:hidden">Budget Explorer</span>
+			<span class="map-label text-sm sm:hidden"
+				><span class="max-[359px]:hidden">CA </span>Budget Explorer</span
+			>
 		</a>
 
 		<nav
