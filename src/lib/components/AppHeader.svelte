@@ -171,7 +171,7 @@
 				>
 					{@render slidersIcon()}
 					<span>View</span>
-					<span class="text-base-content/75 normal-case"
+					<span class="text-base-content/75 normal-case xl:max-2xl:hidden"
 						>{ds.meta.years[settings.year]} · {fundOption.label}</span
 					>
 				</button>
